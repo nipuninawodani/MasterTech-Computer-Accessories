@@ -1,3 +1,4 @@
+<?php include '../PHP/Functions.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,13 +30,13 @@
                   <div class="card-body p-4 p-md-5">
                     <h3 class="mb-4 pb-2">Registration Form</h3>
       
-                    <form action="">
+                    <form method="POST">
       
                       <div class="row">
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="text" id="firstName" class="form-control" />
+                            <input type="text" id="firstName" name="firstName" class="form-control" />
                             <label class="form-label" for="firstName">First Name</label>
                           </div>
       
@@ -43,7 +44,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="text" id="lastName" class="form-control" />
+                            <input type="text" id="lastName" name="lastName" class="form-control" />
                             <label class="form-label" for="lastName">Last Name</label>
                           </div>
       
@@ -60,9 +61,9 @@
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="inlineRadioOptions"
+                              name="gender"
                               id="femaleGender"
-                              value="option1"
+                              value="Female"
                             />
                             <label class="form-check-label" for="femaleGender">Female</label>
                           </div>
@@ -71,9 +72,9 @@
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="inlineRadioOptions"
+                              name="gender"
                               id="maleGender"
-                              value="option2"
+                              value="Male"
                             />
                             <label class="form-check-label" for="maleGender">Male</label>
                           </div>
@@ -82,9 +83,9 @@
                             <input
                               class="form-check-input"
                               type="radio"
-                              name="inlineRadioOptions"
+                              name="gender"
                               id="otherGender"
-                              value="option3"
+                              value="Other"
                             />
                             <label class="form-check-label" for="otherGender">Other</label>
                           </div>
@@ -96,7 +97,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="email" id="emailAddress" class="form-control" />
+                            <input type="email" id="emailAddress" name="emailAddress" class="form-control" />
                             <label class="form-label" for="emailAddress">Email</label>
                           </div>
       
@@ -104,7 +105,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="tel" id="phoneNumber" class="form-control" />
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" />
                             <label class="form-label" for="phoneNumber">Phone Number</label>
                           </div>
                          
@@ -114,8 +115,8 @@
       
                          
                           <div class="form-outline">
-                            <input type="password" id="typePassword" class="form-control" />
-                            <label class="form-label" for="typePassword">Password input</label>
+                            <input type="password" id="password" name="password" class="form-control" />
+                            <label class="form-label" for="password">Password input</label>
                           </div>
                           
       
@@ -124,8 +125,8 @@
       
                          
                           <div class="form-outline">
-                            <input type="password" id="typePassword" class="form-control" />
-                            <label class="form-label" for="Confirm Password">Confirm Password</label>
+                            <input type="password" id="cpassword" name="cpassword" class="form-control" />
+                            <label class="form-label" for="cpassword">Confirm Password</label>
                           </div>
       
                         </div>
@@ -149,7 +150,7 @@
                          
                           <div class="mt-4">
                             <div class="col text-center">
-                            <input class="btn btn-primary btn-lg " type="submit" value="Submit" />
+                            <input class="btn btn-primary btn-lg " type="submit" name="submit" value="Submit" />
                           </div>
                         </div>
 
@@ -174,8 +175,16 @@
                               <i class="fab fa-github"></i>
                             </button>
                           </div>
-      
-                      
+                        <?php
+                        if (isset($_POST["submit"])){
+                          if ($_POST["password"]==$_POST["cpassword"]) {
+                            signup($_POST["firstName"],$_POST["lastName"],$_POST["emailAddress"],$_POST["password"],$_POST["phoneNumber"],$_POST["gender"]);
+                          }
+                          else{
+                            echo "<label align='Center'>Passwords Do Not Match</label>";
+                          }    
+                        }
+                      ?>
       
                     </form>
                   </div>
