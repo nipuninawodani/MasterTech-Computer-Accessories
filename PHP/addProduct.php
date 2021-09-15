@@ -47,7 +47,7 @@
      
     if (!isset($errors)) {
       
-        $sql = 'INSERT INTO product(
+        $sql = "INSERT INTO product(
                     Product_Name,
 					Catagory,
 					Price,
@@ -56,24 +56,24 @@
 					Brand,
 					Warranty
                 ) VALUES (
-                    $productName, 
-					$productCatagory,
-					$productPrice,
-					$productQuantity,
-					$productDescription,
-					$productBrand,
-					$productWarranty
-                )';
+                    '$productName', 
+					'$productCatagory',
+					'$productPrice',
+					'$productQuantity',
+					'$productDescription',
+					'$productBrand',
+					'$productWarranty'
+                )";
 
-    
-  
-
-        $productSaved = TRUE;
-	$productName = $productQuantity = $productDescription = $productCatagory = $productBrand = $productPrice = $productWarranty = NULL;
-		$_SESSION['msg']="Product Inserted Successfully !!";  
-      
-    }
-}
+    	if ($link->query($sql) === TRUE) {
+			$productSaved = TRUE;
+			$productName = $productQuantity = $productDescription = $productCatagory = $productBrand = $productPrice = $productWarranty = NULL;
+			$_SESSION['msg']="Product Inserted Successfully !!";  
+		} else {
+		  	echo "<label align='Center'>Error: " . $sql . "<br>" . $link->error."</label>";
+		}
+	}
+	}
 ?>
 <!DOCTYPE html>
 <html>
