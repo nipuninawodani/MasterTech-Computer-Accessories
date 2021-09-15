@@ -47,42 +47,19 @@
      
     if (!isset($errors)) {
       
-<<<<<<< Updated upstream
-        $sql = 'INSERT INTO product(
-=======
+
+
         $sql = "INSERT INTO product(
-					ProductID,
->>>>>>> Stashed changes
-                    Product_Name,
+          Product_Name,
 					Catagory,
 					Price,
 					NumInStock,
-                    description,
+          description,
 					Brand,
 					Warranty
                 ) VALUES (
-<<<<<<< Updated upstream
-                    $productName, 
-					$productCatagory,
-					$productPrice,
-					$productQuantity,
-					$productDescription,
-					$productBrand,
-					$productWarranty
-                )';
 
-    
-  
-
-        $productSaved = TRUE;
-	$productName = $productQuantity = $productDescription = $productCatagory = $productBrand = $productPrice = $productWarranty = NULL;
-		$_SESSION['msg']="Product Inserted Successfully !!";  
-      
-    }
-}
-=======
-					'$productID',
-                    '$productName', 
+          '$productName', 
 					'$productCatagory',
 					'$productPrice',
 					'$productQuantity',
@@ -100,5 +77,5 @@
 		}
 	}
 	}
->>>>>>> Stashed changes
+
 ?>
