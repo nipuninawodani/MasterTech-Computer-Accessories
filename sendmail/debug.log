@@ -1,0 +1,46 @@
+21/09/18 13.49.39 ** --- MESSAGE BEGIN ---
+21/09/18 13.49.39 ** To: mahela100@gmail.com
+21/09/18 13.49.39 ** Subject: Hello Sendmail
+21/09/18 13.49.39 ** MIME-Version: 1.0
+21/09/18 13.49.39 ** Content-type: text/html; charset=iso-8859-1
+21/09/18 13.49.39 ** From: mastertech.pcaccessories@gmail.com
+21/09/18 13.49.39 ** Reply-To: mastertech.pcaccessories@gmail.com
+21/09/18 13.49.39 ** X-Mailer: PHP/7.3.21
+21/09/18 13.49.39 ** 
+21/09/18 13.49.39 ** <html><body><h1 style="color:#f40;">Hi Jane!</h1><p style="color:#080;font-size:18px;">Will you marry me?</p></body></html>
+21/09/18 13.49.39 ** --- MESSAGE END ---
+21/09/18 13.49.39 ** Connecting to smtp.gmail.com:465
+21/09/18 13.49.40 ** Connected.
+21/09/18 13.49.40 << 220 smtp.gmail.com ESMTP k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.40 >> EHLO Mahela-Laptop<EOL>
+21/09/18 13.49.41 << 250-smtp.gmail.com at your service, [43.250.243.241]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/09/18 13.49.41 ** Authenticating as mastertech.pcaccessories@gmail.com
+21/09/18 13.49.41 >> AUTH LOGIN<EOL>
+21/09/18 13.49.41 << 334 VXNlcm5hbWU6<EOL>
+21/09/18 13.49.41 >> bWFzdGVydGVjaC5wY2FjY2Vzc29yaWVzQGdtYWlsLmNvbQ==<EOL>
+21/09/18 13.49.41 << 334 UGFzc3dvcmQ6<EOL>
+21/09/18 13.49.41 >> MW1odCFrM00=<EOL>
+21/09/18 13.49.42 << 235 2.7.0 Accepted<EOL>
+21/09/18 13.49.42 >> MAIL FROM: <mastertech.pcaccessories@gmail.com><EOL>
+21/09/18 13.49.42 << 250 2.1.0 OK k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.42 >> RCPT TO: <mahela100@gmail.com><EOL>
+21/09/18 13.49.42 << 250 2.1.5 OK k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.42 >> DATA<EOL>
+21/09/18 13.49.43 << 354  Go ahead k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.43 >> Date: Sat, 18 Sep 2021 13:49:43 +0530<EOL>
+21/09/18 13.49.43 >> To: mahela100@gmail.com<EOL>
+21/09/18 13.49.43 >> Subject: Hello Sendmail<EOL>
+21/09/18 13.49.43 >> MIME-Version: 1.0<EOL>
+21/09/18 13.49.43 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21/09/18 13.49.43 >> From: mastertech.pcaccessories@gmail.com<EOL>
+21/09/18 13.49.43 >> Reply-To: mastertech.pcaccessories@gmail.com<EOL>
+21/09/18 13.49.43 >> X-Mailer: PHP/7.3.21<EOL>
+21/09/18 13.49.43 >> <EOL>
+21/09/18 13.49.43 >> <html><body><h1 style="color:#f40;">Hi Jane!</h1><p style="color:#080;font-size:18px;">Will you marry me?</p></body></html><EOL>
+21/09/18 13.49.43 >> .<EOL>
+21/09/18 13.49.44 << 250 2.0.0 OK  1631953185 k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.44 >> QUIT<EOL>
+21/09/18 13.49.44 << 221 2.0.0 closing connection k14sm4624205pgg.92 - gsmtp<EOL>
+21/09/18 13.49.44 ** Disconnected.
+21/09/18 13.49.44 ** Disconnected.
+21/09/18 13.49.44 ** Disconnected.

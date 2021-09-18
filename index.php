@@ -1,0 +1,7 @@
+<?php
+
+header("HTTP/1.1 301 Moved Permanently"); 
+header("Location: Front-End/index.php"); 
+exit();
+
+?>
