@@ -144,4 +144,19 @@ function addresssearch($UserID){
 
 }
 
+
+function viewproduct($ProductID){
+
+	$link = dblink();
+
+	$sql = "SELECT * from product where ProductID= $ProductID";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row;
+
+}
+
 ?>
