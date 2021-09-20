@@ -1,3 +1,8 @@
+<?php include '../PHP/Functions.php'; 
+session_start();
+if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
+  login($_COOKIE['Email'],$_COOKIE['Password'],"True");
+}?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,9 +21,13 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
   </head>
   <body>
     <!-- Start your project here-->
+<<<<<<< HEAD:Front-End/index.html
 
 
 
@@ -67,15 +76,7 @@
 
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-          height="15"
-          alt=""
-          loading="lazy"
-        />
-      </a>
+      
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -94,7 +95,7 @@
       <!-- Left links -->
     </div>
     <!-- Collapsible wrapper -->
-
+    
 
 
 
@@ -153,6 +154,33 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid " style="margin-bottom: 10px;">
+    <!-- Navbar brand -->
+    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <img
+        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+        height="15"
+        alt=""
+        loading="lazy"
+      />
+    </a>
+<div class="col-md-4">
+  <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
+    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" />
+    <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search text-white"></i></span>
+  </form>
+</div>
+<button class="btn btn-outline-light" type="button">
+  Download app<i class="fas fa-download ms-2"></i>
+</button>
+</div>
+</div>
+</nav>
+=======
+    
+<?php include "header.php" ?>
+>>>>>>> 7dc4a331005cc035b6d1e4311c55c9d7c7b737a0:Front-End/index.php
 
 
 
@@ -168,6 +196,7 @@
 
 
     <div class="container">
+
       <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="text-center">
           <img
@@ -390,6 +419,9 @@
 <!-- End of .cotainer -->
 <a href="./Login.html">Login</a>
 <a href="./Profile.html">Profile</a>
+<a href="../material-dashboard-master/template.html">Admin</a>
+<a href="./Cart.html">Cart</a>
+
     <!-- End your project here-->
 
     <!-- MDB -->

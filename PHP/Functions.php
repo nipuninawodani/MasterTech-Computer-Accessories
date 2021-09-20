@@ -10,10 +10,10 @@ function dblink() {
 	return $link;
 } 
 
-function login($email,$password) {
+function login($email,$password,$remember) {
 	$link = dblink();
 
-	$sql = "SELECT * FROM user WHERE Email = '$email' AND Password = '$password'";
+	$sql = "SELECT * FROM user WHERE Email = '$email' AND Password = '".$password."'";
 
 	$result = mysqli_query($link,$sql);
 	if($result==False){
@@ -26,12 +26,17 @@ function login($email,$password) {
 	
 	if ($count == 1) {
 
-		session_start();
-
-		$_SESSION['user'] = $row['Username'];
-		$_SESSION['fr_num'] = $row['Num of Friends'];
-		$_SESSION['ID'] = $row['ID'];
-		} 
+		$_SESSION['User_Name'] = $row['First_Name'].' '.$row['Last_Name'];
+		$_SESSION['UserID'] = $row['UserID'];
+		$_SESSION['UType'] = $row['Type'];
+		$_SESSION['UStatus'] = $row['Status'];
+		$_SESSION['LogedIn'] = TRUE;
+		if($remember=='True'){
+			setcookie("Email", $email, time()+3600, "/","", 0);
+			setcookie("Password", $password, time()+3600, "/","", 0);
+		}
+		header("Location: index.php");
+		}
 	else {
 		echo "Your Login Name or Password is invalid";
 	}
@@ -78,12 +83,65 @@ function signup($fname,$lname,$email,$password,$mobile,$gender){
 		$uid=(int)$row['UserID']+1;
 
 		$sql = "INSERT INTO user (UserID, First_Name, Last_Name, Email, Password, Mobile, Gender, Type, Status)
-				VALUES ('".sprintf("%'.010d\n", $uid)."','$fname','$lname','$email','".md5($password)."','$mobile','$gender','User','Active')";
+				VALUES ('".sprintf("%'.010d\n", $uid)."','$fname','$lname','$email','".md5($password)."','$mobile','$gender','User','Unverified')";
 
 		if ($link->query($sql) === TRUE){
 			echo"Registration Complete You can login using your username and password";
+			sendmail($email,$fname);
 		}      
 	}
+}
+
+function sendmail($to,$name){
+
+	$from = "mastertech.pcaccessories@gmail.com";
+	$to = "mahela100@gmail.com";
+	$subject = "Hello Sendmail";
+	//$message = "This is an test email to test Sendmail. Please do not block my account.";
+	// To send HTML mail, the Content-type header must be set
+	$headers  = 'MIME-Version: 1.0' . "\r\n";
+	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+ 
+	// Create email headers
+	$headers .= 'From: '.$from."\r\n".
+    'Reply-To: '.$from."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    $message = '<html><body>';
+	$message .= '<h1 style="color:#f40;">Hi $name!</h1>';
+	$message .= '<p style="color:#080;font-size:18px;">Your Registration is Successfull</p>';
+	$message .= '</body></html>';
+
+	mail( $to, $subject, $message, $headers );
+
+}
+
+function cardsearch($UserID){
+
+	$link = dblink();
+
+	$sql= "SELECT * FROM payment_options Where UserID = '$UserID' ORDER BY Cardnumber;";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row;
+
+}
+
+function addresssearch($UserID){
+
+	$link = dblink();
+
+	$sql= "SELECT * FROM address Where userID = '$UserID' ORDER BY Address1;";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row;
+
 }
 
 ?>
