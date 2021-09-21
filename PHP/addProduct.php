@@ -43,9 +43,9 @@
     }
 		
 			// product ID
-			$query=mysqli_query($link,"select ProductID from product ORDER BY ProductID DESC LIMIT 1;");
+			$query=mysqli_query($link,"select max(ProductID) as pid from product");
 			$result=mysqli_fetch_array($query);
-			$productID=(int)$result['ProductID']+1;
+			$productID=$result['pid']+1;
 		
 		if (!is_dir(UPLOAD_DIR)) {
 		 mkdir(UPLOAD_DIR, 0777, true);
@@ -119,7 +119,7 @@
 					'$productDescription',
 					'$productBrand',
 					'$productWarranty',
-					'".sprintf("%'.010d\n", $productID)."'
+					'$productID'
                 )";
 		
 			$statement = $link->prepare($sql);
@@ -136,7 +136,7 @@
                         filename
                     ) VALUES (
 						'$ID',
-                        '".sprintf("%'.010d\n", $productID)."',
+                        '$productID',
 						'$uploadedFileName'
                     )";}
 		

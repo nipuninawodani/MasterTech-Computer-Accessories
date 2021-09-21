@@ -1,14 +1,14 @@
 <?php
 
 function dblink() {
-    $conn = mysqli_init();
-	mysqli_ssl_set($conn,NULL,NULL, "/home/site/wwwroot/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL);
-	mysqli_real_connect($conn, 'mastertechserver.mysql.database.azure.com', 'mahela@mastertechserver', 'M4h3l4100Di554', 'mastertech', 3306, MYSQLI_CLIENT_SSL);
-	if (mysqli_connect_errno($conn)) {
-	die('Failed to connect to MySQL: '.mysqli_connect_error());
+  $link = new mysqli('localhost','root','','mastertech');
+	
+	// Check connection
+	if ($link->connect_error) {
+  		die("Database Connection failed: " . $link->connect_error);
 	}
-	return $conn;
-  } 
+	return $link;
+} 
 
 function login($email,$password,$remember) {
 	$link = dblink();
@@ -35,7 +35,7 @@ function login($email,$password,$remember) {
 			setcookie("Email", $email, time()+3600, "/","", 0);
 			setcookie("Password", $password, time()+3600, "/","", 0);
 		}
-		echo '<script type="text/javascript"> window.location = "index.php" </script>';
+		header("Location: index.php");
 		}
 	else {
 		echo "Your Login Name or Password is invalid";
@@ -211,16 +211,6 @@ function updatereview($UserID,$ProductID,$rating,$review){
 
 }
 
-function getimage($ProductID){
-
-	$link = dblink();
-
-	$sql = "SELECT filename from products_images where ProductID= '$ProductID'";
-
-	$result = mysqli_query($link,$sql);
-
-	return $result;
-
-
-}
+function getimage(){}
+s
 ?>
