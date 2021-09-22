@@ -144,4 +144,73 @@ function addresssearch($UserID){
 
 }
 
+
+function viewproduct($ProductID){
+
+	$link = dblink();
+
+	$sql = "SELECT * from product where ProductID= $ProductID";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row;
+
+}
+
+function getrating($UserID,$ProductID){
+
+	$link = dblink();
+
+	$sql = "SELECT Rating from review where ProductID= '$ProductID' AND UserID='$UserID'";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row['Rating'];
+
+}
+
+
+function getreview($UserID,$ProductID){
+
+	$link = dblink();
+
+	$sql = "SELECT Review from review where ProductID= '$ProductID' AND UserID='$UserID'";
+
+	$result = mysqli_query($link,$sql);
+
+	$row = mysqli_fetch_array($result);
+
+	return $row['Review'];
+
+}
+
+function updatereview($UserID,$ProductID,$rating,$review){
+
+	$link = dblink();
+
+	$sql = "SELECT * from review where ProductID= '$ProductID' AND UserID='$UserID'";
+
+	$result = mysqli_query($link,$sql);
+
+	$row=mysqli_fetch_array($result);
+
+	if ($row!=null) {
+		$sql = "UPDATE review SET Rating='$rating',Review='$review' where ProductID= '$ProductID' AND UserID='$UserID'";
+
+		$result = mysqli_query($link,$sql);
+	}
+	else{
+		$sql = "INSERT INTO review(Rating, Review, ProductID, UserID) VALUES ('$rating','$review','$ProductID','$UserID')";
+
+		$result = mysqli_query($link,$sql);
+	}
+
+}
+
+function getimage(){}
+s
 ?>

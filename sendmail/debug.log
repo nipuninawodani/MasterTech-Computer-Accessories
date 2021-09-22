@@ -44,3 +44,49 @@
 21/09/18 13.49.44 ** Disconnected.
 21/09/18 13.49.44 ** Disconnected.
 21/09/18 13.49.44 ** Disconnected.
+21/09/21 00.00.28 ** --- MESSAGE BEGIN ---
+21/09/21 00.00.28 ** To: mahela100@gmail.com
+21/09/21 00.00.28 ** Subject: Hello Sendmail
+21/09/21 00.00.28 ** MIME-Version: 1.0
+21/09/21 00.00.28 ** Content-type: text/html; charset=iso-8859-1
+21/09/21 00.00.28 ** From: mastertech.pcaccessories@gmail.com
+21/09/21 00.00.28 ** Reply-To: mastertech.pcaccessories@gmail.com
+21/09/21 00.00.28 ** X-Mailer: PHP/7.3.21
+21/09/21 00.00.28 ** 
+21/09/21 00.00.28 ** <html><body><h1 style="color:#f40;">Hi $name!</h1><p style="color:#080;font-size:18px;">Your Registration is Successfull</p></body></html>
+21/09/21 00.00.28 ** --- MESSAGE END ---
+21/09/21 00.00.28 ** Connecting to smtp.gmail.com:465
+21/09/21 00.00.29 ** Connected.
+21/09/21 00.00.29 << 220 smtp.gmail.com ESMTP q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.29 >> EHLO Mahela-Laptop<EOL>
+21/09/21 00.00.29 << 250-smtp.gmail.com at your service, [212.104.237.241]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/09/21 00.00.29 ** Authenticating as mastertech.pcaccessories@gmail.com
+21/09/21 00.00.29 >> AUTH LOGIN<EOL>
+21/09/21 00.00.29 << 334 VXNlcm5hbWU6<EOL>
+21/09/21 00.00.29 >> bWFzdGVydGVjaC5wY2FjY2Vzc29yaWVzQGdtYWlsLmNvbQ==<EOL>
+21/09/21 00.00.30 << 334 UGFzc3dvcmQ6<EOL>
+21/09/21 00.00.30 >> MW1odCFrM00=<EOL>
+21/09/21 00.00.30 << 235 2.7.0 Accepted<EOL>
+21/09/21 00.00.30 >> MAIL FROM: <mastertech.pcaccessories@gmail.com><EOL>
+21/09/21 00.00.30 << 250 2.1.0 OK q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.30 >> RCPT TO: <mahela100@gmail.com><EOL>
+21/09/21 00.00.31 << 250 2.1.5 OK q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.31 >> DATA<EOL>
+21/09/21 00.00.31 << 354  Go ahead q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.31 >> Date: Tue, 21 Sep 2021 00:00:31 +0530<EOL>
+21/09/21 00.00.31 >> To: mahela100@gmail.com<EOL>
+21/09/21 00.00.31 >> Subject: Hello Sendmail<EOL>
+21/09/21 00.00.31 >> MIME-Version: 1.0<EOL>
+21/09/21 00.00.31 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21/09/21 00.00.31 >> From: mastertech.pcaccessories@gmail.com<EOL>
+21/09/21 00.00.31 >> Reply-To: mastertech.pcaccessories@gmail.com<EOL>
+21/09/21 00.00.31 >> X-Mailer: PHP/7.3.21<EOL>
+21/09/21 00.00.31 >> <EOL>
+21/09/21 00.00.31 >> <html><body><h1 style="color:#f40;">Hi $name!</h1><p style="color:#080;font-size:18px;">Your Registration is Successfull</p></body></html><EOL>
+21/09/21 00.00.31 >> .<EOL>
+21/09/21 00.00.32 << 250 2.0.0 OK  1632162632 q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.32 >> QUIT<EOL>
+21/09/21 00.00.32 << 221 2.0.0 closing connection q20sm16487022pgu.31 - gsmtp<EOL>
+21/09/21 00.00.32 ** Disconnected.
+21/09/21 00.00.32 ** Disconnected.
+21/09/21 00.00.32 ** Disconnected.

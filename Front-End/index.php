@@ -49,6 +49,16 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
             >Start MDB tutorial</a
           >
         </div>
+                <?php $link = dblink();
+
+    $sql= "SELECT * FROM user";
+
+    $result = mysqli_query($link,$sql); 
+
+    var_dump($link);
+
+    var_dump($result);
+    ?>
         <a href="./Register.php">Register</a>
         <a href="./bootstrap-5-admin-template-main/admin.html">Admin</a>
 
