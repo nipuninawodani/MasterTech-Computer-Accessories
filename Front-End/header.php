@@ -1,4 +1,4 @@
-<!-- Navbar -->
+    <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
@@ -17,40 +17,23 @@
 
     <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="./img/master-tech Soundcheck (1).png"
-          height="40"
-          alt=""
-          loading="lazy"
-        />
-      </a>
+      
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Shop now</a>
+          <a class="nav-link" href="#">SHOP NOW</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="#">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#">CONTACT US</a>
         </li>
-        <div class="search">
-        <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
-          <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-primary" type="button" data-mdb-ripple-color="dark">
-            Search
-          </button>
-        </form>
-      </div>
       </ul>
       <!-- Left links -->
-      
     </div>
     <!-- Collapsible wrapper -->
 
@@ -139,3 +122,26 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid " style="margin-bottom: 10px;">
+    <!-- Navbar brand -->
+    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <img
+        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+        height="15"
+        alt=""
+        loading="lazy"
+      />
+    </a>
+<div class="col-md-4">
+  <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0"  action="search.php" method="GET">
+    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" name="search" />
+    <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search text-white"></i></span>
+  </form>
+</div>
+<button class="btn btn-outline-light" type="button">
+  Download app<i class="fas fa-download ms-2"></i>
+</button>
+</div>
+</div>
+</nav>

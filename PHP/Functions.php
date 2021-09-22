@@ -35,7 +35,7 @@ function login($email,$password,$remember) {
 			setcookie("Email", $email, time()+3600, "/","", 0);
 			setcookie("Password", $password, time()+3600, "/","", 0);
 		}
-		header("Location: index.php");
+		header("Location: ../index.php");
 		}
 	else {
 		echo "Your Login Name or Password is invalid";
@@ -47,15 +47,13 @@ function searchproduct($pname){
 
 	$link = dblink();
 
-	$sql = "SELECT * from product where (UPPER(name) LIKE UPPER('%$name%'))";
+	$sql = "SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Product_Name) LIKE UPPER('%$pname%')) GROUP BY product.ProductID;";
 
 	$result = mysqli_query($link,$sql);
 
 	if($result){
-		while($row = mysqli_fetch_array($result))
-		{
-		}
-	}	       
+		return $result;
+		}       
 
 }
 
@@ -211,6 +209,16 @@ function updatereview($UserID,$ProductID,$rating,$review){
 
 }
 
-function getimage(){}
-s
+function getimage($ProductID){
+
+	$link = dblink();
+
+	$sql = "SELECT filename from products_images where ProductID= '$ProductID'";
+
+	$result = mysqli_query($link,$sql);
+
+	return $result;
+
+
+}
 ?>

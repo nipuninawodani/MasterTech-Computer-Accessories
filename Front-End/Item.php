@@ -46,24 +46,23 @@
                   <div class="row justify-content-center">
                       <div class="d-flex">
                           <div class="card">
+                          	<?php $imgresult=getimage($_GET['ID']); $i=1;?>
                               <div class="d-flex flex-column thumbnails">
-                                  <div id="f1" class="tb tb-active"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
-                                  <div id="f2" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                                  <div id="f3" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                                  <div id="f4" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
+                              	<?php while($imgrow = mysqli_fetch_array($imgresult)){ ?>
+                                  <div id="f<?php echo $i ?>" class="tb"> <img class="thumbnail-img fit-image" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
+                                  <?php $i=$i+1;} ?>
                               </div>
-                              <fieldset id="f11" class="active">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
+                              <?php $imgresult=getimage($_GET['ID']); $i=1;?>
+                              <?php while($imgrow = mysqli_fetch_array($imgresult)){
+                              if($i==1){ ?>
+                              <fieldset id="f<?php echo $i ?>1" class="active">
+                                  <div class="product-pic"> <img class="pic0" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
+                              </fieldset> <?php } else{ ?>
+                              <fieldset id="f<?php echo $i ?>1">
+                                  <div class="product-pic"> <img class="pic0" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
                               </fieldset>
-                              <fieldset id="f21" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                              </fieldset>
-                              <fieldset id="f31" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                              </fieldset>
-                              <fieldset id="f41" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
-                              </fieldset>
+                              <?php } $i=$i+1;} ?>
+               
                           </div>
                       </div>
                   </div>
