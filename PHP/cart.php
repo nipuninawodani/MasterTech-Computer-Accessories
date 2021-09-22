@@ -10,10 +10,14 @@
     	$quantity = (int)$_POST['quantity'];
 		$user_id= (int)$_POST['User_id'];
 		
-	//add cart product details to user cart items for 
-		$query=mysqli_query($link,"select max(id) as Iid from products_images");
+
+	//add cart product details to user cart items for future refarance
+		$query=mysqli_query($link,"select max(id) as Iid from cart_items");
 			$result=mysqli_fetch_array($query);
 			$ID=$result['Iid']+1;
+		
+
+
 	   $add_to_cart_query="insert into cart_items(id,user_id,item_id,quantity_D) values ('$ID','$user_id','$item_id','$quantity')";
 		$add_to_cart_result=mysqli_query($link,$add_to_cart_query) or die(mysqli_error($link));
 		
