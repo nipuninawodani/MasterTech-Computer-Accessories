@@ -47,7 +47,11 @@ function searchproduct($pname){
 
 	$link = dblink();
 
-	$sql = "SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Product_Name) LIKE UPPER('%$pname%')) GROUP BY product.ProductID;";
+	$sql = "SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Product_Name) LIKE UPPER('%$pname%')) GROUP BY product.ProductID
+			UNION
+			SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Catagory) LIKE UPPER('%$pname%')) GROUP BY product.ProductID
+			UNION
+			SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Description) LIKE UPPER('%$pname%')) GROUP BY product.ProductID;";
 
 	$result = mysqli_query($link,$sql);
 
@@ -147,9 +151,15 @@ function viewproduct($ProductID){
 
 	$link = dblink();
 
-	$sql = "SELECT * from product where ProductID= $ProductID";
+	$sql = "SELECT * from product where ProductID= '$ProductID'";
 
 	$result = mysqli_query($link,$sql);
+
+	if(mysqli_num_rows($result)==0){
+		http_response_code(404);
+		include('404.php');
+		die();
+	}
 
 	$row = mysqli_fetch_array($result);
 

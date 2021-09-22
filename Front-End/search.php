@@ -31,14 +31,17 @@
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-2">
       </div>
-      <div class="col-md-9" style="background-color:white;"><br>
+      <div class="col-md-9" style="background-color:white; padding:20px;"><br>
 
-      	<?php $searchresult=searchproduct($_GET['search']); ?>
+      	<?php $searchresult=searchproduct($_GET['search']);
+      	$numofrows = mysqli_num_rows ($searchresult);?>
 
       <?php $i=1;
-      if(mysqli_num_rows($searchresult)!=0){
-        while($row=mysqli_fetch_array($searchresult)){ ?>
-        <?php if($i==1 or $i%5==0){ ?>
+      if($numofrows!=0){
+      	$nmpages=ceil($numofrows/20);
+      	 echo "<h5>".$numofrows." Results found for '".$_GET['search']."'</h5><br>";
+         while($row=mysqli_fetch_array($searchresult)){
+         if($i==1 or $i%5==0){ ?>
         <!--Grid row-->
         <div class="row wow fadeIn">
         <?php } ?>
@@ -50,8 +53,8 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="">
-                <a>
+                <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID']; ?>">
+                <a href="item?ID=<?php echo $row['ProductID']; ?>">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -60,8 +63,8 @@
               <!--Card content-->
               <div class="card-body text-center">
                 <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5><?php echo $row['Product_Name']; ?></h5>
+                <a href="item?ID=<?php echo $row['ProductID']; ?>" class="grey-text">
+                  <h6><?php echo $row['Product_Name']; ?></h6>
                 </a>
                 <h5>
                   <strong>
@@ -72,7 +75,7 @@
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>LKR 4999/= </strong>
+                  <strong>Rs. <?php echo number_format($row['Price']); ?>/= </strong>
                 </h4>
 
               </div>
@@ -112,6 +115,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/itemsCards.js"></script>
 
   </body>
 </html>

@@ -91,9 +91,9 @@
                 <?php include 'star.php';?>
                 <p class="lead">
                   <span class="mr-1">
-                    <del>Rs. <?php echo $row['Price'] + $row['Price']/2; ?></del>
+                    <s>Rs. <?php echo number_format($row['Price'] + $row['Price']/2,2); ?></s>
                   </span>
-                  <span>Rs. <?php echo $row['Price']; ?></span>
+                  <span>Rs. <?php echo number_format($row['Price'],2); ?></span>
                 </p>
 
                 <p class="lead font-weight-bold">Description</p>
@@ -235,6 +235,8 @@
       <div class="col-md-1">
       </div>
     </div>
+
+    
 
   <!-- SCRIPTS -->
   <!-- JQuery -->

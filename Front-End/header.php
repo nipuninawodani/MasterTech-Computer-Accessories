@@ -123,12 +123,12 @@
 </nav>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid " style="margin-bottom: 10px;">
+  <div class="container-fluid " style="margin-bottom: 5px;">
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">
       <img
-        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-        height="15"
+        src="logo.png"
+        height="30"
         alt=""
         loading="lazy"
       />
@@ -142,6 +142,5 @@
 <button class="btn btn-outline-light" type="button">
   Download app<i class="fas fa-download ms-2"></i>
 </button>
-</div>
 </div>
 </nav>
