@@ -27,8 +27,173 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
   </head>
   <body>
     <!-- Start your project here-->
+<<<<<<< HEAD:Front-End/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SHOP NOW</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT US</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+    
+
+
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-reset me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <!-- Notifications -->
+      <a
+        class="text-reset me-3 dropdown-toggle hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        aria-expanded="false"
+       
+      >
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+      </a>
+      
+            <!-- Avatar -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-item dropdown dropdown-toggle  align-items-center"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                  class="rounded-circle"
+                  height="30"
+                  loading="lazy"
+                />
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+            <!-- Avatar -->
+
+      
+
+        
+      
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid " style="margin-bottom: 10px;">
+    <!-- Navbar brand -->
+    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+      <img
+        src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+        height="15"
+        alt=""
+        loading="lazy"
+      />
+    </a>
+<div class="col-md-4">
+  <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0">
+    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" />
+    <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search text-white"></i></span>
+  </form>
+</div>
+<button class="btn btn-outline-light" type="button">
+  Download app<i class="fas fa-download ms-2"></i>
+</button>
+</div>
+</div>
+</nav>
+=======
     
 <?php include "header.php" ?>
+>>>>>>> 7dc4a331005cc035b6d1e4311c55c9d7c7b737a0:Front-End/index.php
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="container">
 
@@ -253,6 +418,10 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 <!-- </div> -->
 <!-- End of .cotainer -->
 <a href="./Login.html">Login</a>
+<a href="./Profile.html">Profile</a>
+<a href="../material-dashboard-master/dashboard.html">Admin Dashboard</a>
+<a href="./Cart.html">Cart</a>
+<a href="../material-dashboard-master/dashboardDelivery.html">Delivery</a>
 
     <!-- End your project here-->
 
