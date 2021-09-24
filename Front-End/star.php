@@ -1,22 +1,3 @@
-<?php
-function getstar($ProductID){
-
-    $link = dblink();
-
-    $sql = "SELECT Avg(Rating),COUNT(Rating) FROM review WHERE ProductID = '$ProductID';";
-
-    $result = mysqli_query($link,$sql);
-
-    $row = mysqli_fetch_array($result);
-
-    $star= round($row['Avg(Rating)']);
-
-    return $row;
-}
-?>
-
-<?php $row2 = getstar($_GET['ID']); 
-$val= round($row2['Avg(Rating)'])?>
 <form method="Post">
     <div class="rating" style="pointer-events:none;">
   

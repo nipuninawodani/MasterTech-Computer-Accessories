@@ -1,3 +1,4 @@
+<div class="containor row">
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
@@ -135,7 +136,7 @@
     </a>
 <div class="col-md-4">
   <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0"  action="search.php" method="GET">
-    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" name="search" />
+    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" name="search" <?php if(isset($_GET['search'])){echo 'Value="'.$_GET['search'].'"';} ?> />
     <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search text-white"></i></span>
   </form>
 </div>
@@ -144,3 +145,4 @@
 </button>
 </div>
 </nav>
+</div>

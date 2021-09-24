@@ -43,15 +43,30 @@ function login($email,$password,$remember) {
 
 }
 
-function searchproduct($pname){
+function searchproduct($pname,$sort,$rating,$type){
 
 	$link = dblink();
 
-	$sql = "SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Product_Name) LIKE UPPER('%$pname%')) GROUP BY product.ProductID
-			UNION
-			SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Catagory) LIKE UPPER('%$pname%')) GROUP BY product.ProductID
-			UNION
-			SELECT * FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID WHERE (UPPER(product.Description) LIKE UPPER('%$pname%')) GROUP BY product.ProductID;";
+	$sql_base="SELECT * FROM (SELECT product.*, products_images.filename, IFNULL(AVG(review.Rating),0) as Rating FROM product INNER JOIN products_images ON product.ProductID=products_images.ProductID LEFT JOIN review ON product.ProductID=review.ProductID WHERE (UPPER(product.Product_Name) LIKE UPPER('%$pname%') OR (UPPER(product.Catagory) LIKE UPPER('%$pname%')) OR (UPPER(product.Brand) LIKE UPPER('%$pname%'))  OR (UPPER(product.Description) LIKE UPPER('%$pname%'))) GROUP BY product.ProductID) AS Base WHERE Catagory REGEXP '$type' HAVING Rating>= $rating ";
+
+
+	if($sort=='Relavance'){
+
+		$sql = $sql_base;
+	}
+	elseif($sort=='Pricedec'){
+
+		$sql = $sql_base."ORDER BY Price DESC;";
+	}
+	elseif($sort=='Priceasc'){
+
+		$sql = $sql_base."ORDER BY Price ASC;";
+	}
+	elseif($sort=='Rating'){
+
+		$sql = $sql_base. "ORDER BY Rating DESC;";
+	}
+
 
 	$result = mysqli_query($link,$sql);
 
@@ -231,4 +246,19 @@ function getimage($ProductID){
 
 
 }
+function getstar($ProductID){
+
+    $link = dblink();
+
+    $sql = "SELECT Avg(Rating),COUNT(Rating) FROM review WHERE ProductID = '$ProductID';";
+
+    $result = mysqli_query($link,$sql);
+
+    $row = mysqli_fetch_array($result);
+
+    $star= round($row['Avg(Rating)']);
+
+    return $row;
+}
+
 ?>
