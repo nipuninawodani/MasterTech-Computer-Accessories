@@ -1,7 +1,7 @@
 <?php
 
 function dblink() {
-  $link = new mysqli('localhost','root','','mastertech');
+  $link = new mysqli('localhost','root','<MF_Gorgon>','mastertech');
 	
 	// Check connection
 	if ($link->connect_error) {
