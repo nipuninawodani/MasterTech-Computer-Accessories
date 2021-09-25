@@ -121,11 +121,17 @@
 
                 <form class="d-flex justify-content-left">
                   <!-- Default input -->
-                  <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-                  <button class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px">Add to cart
+                  	
+					
+				<!-- ?id=<?php //echo $row['ProductID'] ?>& quantity= -->
+		 <form action="cart_add.php" method="post">
+					 <input type="number"	name="quantity" value="1" min="1" max=" <?php $row['NumInStock']; ?>" required aria-label="Search" class="form-control" style="width: 100px">
+           			 <input type="hidden" name="product_id" value="<?=$row['ProductID']?>">
+            		 <button  class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px">Add to cart
                     <i class="fas fa-shopping-cart ml-1"></i>
                   </button>
-
+        </form>
+                 
                 </form>
 
               </div>
