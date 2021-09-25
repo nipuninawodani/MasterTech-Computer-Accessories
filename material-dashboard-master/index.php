@@ -22,57 +22,55 @@
 
       Tip 2: you can also add an image using data-image tag
   -->
-      <div class="logo">
+      <div class="logo" >
+        <a style="margin-left: 45%;"
         
-        <a
-          href="http://www.creative-tim.com" style="margin-left: 45%;"
-              >
-                <img
-                  src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
-                  class="rounded-circle "
-                  height="30"
-                  loading="lazy"
-                />
-              </a>
-           
-        <a href="../Front-End/index.html" class="simple-text logo-normal">
+            >
+              <img
+                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                class="rounded-circle "
+                height="30"
+                loading="lazy"
+              />
+            </a>
+        <a href="../Front-End/index.php" class="simple-text logo-normal">
           MasterTech
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="#0">
+            <a class="nav-link" href="./dashboard.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardOrders.html">
+            <a class="nav-link" href="./dashboardOrders.php">
               <i class="material-icons">dashboard</i>
               <p>Orders</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardSales.html">
+            <a class="nav-link" href="./dashboardSales.php">
               <i class="material-icons">dashboard</i>
               <p>Sales</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardReports.html">
+            <a class="nav-link" href="./dashboardReports.php">
               <i class="material-icons">dashboard</i>
               <p>Reports</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./Components/dashboardUsers/dashboardUsers.html">
+            <a class="nav-link" href="./dashboardUsers.php">
               <i class="material-icons">dashboard</i>
               <p>Users</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardItems.html">
+            <a class="nav-link" href="./dashboardproducts.php">
               <i class="material-icons">dashboard</i>
               <p>Items</p>
             </a>

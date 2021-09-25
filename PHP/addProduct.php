@@ -46,8 +46,10 @@
 			$query=mysqli_query($link,"select ProductID from product ORDER BY ProductID DESC LIMIT 1;");
 			$result=mysqli_fetch_array($query);
 			$productID=(int)$result['ProductID']+1;
+
+        $UPLOAD_DIR = '../Front-End/uploads';
 		
-		if (!is_dir(UPLOAD_DIR)) {
+		if (!is_dir($UPLOAD_DIR)) {
 		 mkdir(UPLOAD_DIR, 0777, true);
 		 }
 		// List of file names to be filled in by the upload script below and to be saved in the db table "products_images" afterwards.
@@ -57,6 +59,8 @@
 			$ID=$result['Iid']+1;
 		
 		$filenamesToSave = [];
+
+        var_dump($UPLOAD_DIR);
 
     	$allowedMimeTypes = explode(',', UPLOAD_ALLOWED_MIME_TYPES);
 		
@@ -72,13 +76,13 @@
                         $uploadedFileType = $_FILES['file']['type'][$uploadedFileKey];
                         $uploadedFileTempName = $_FILES['file']['tmp_name'][$uploadedFileKey];
 
-                        $uploadedFilePath = rtrim(UPLOAD_DIR, '/') . '/' . $uploadedFileName;
+                        $uploadedFilePath = rtrim($UPLOAD_DIR, '/') . '/' . $uploadedFileName;
 
                         if (in_array($uploadedFileType, $allowedMimeTypes)) {
                             if (!move_uploaded_file($uploadedFileTempName, $uploadedFilePath)) {
                                 $errors[] = 'The file "' . $uploadedFileName . '" could not be uploaded.';
                             } else {
-                                $filenamesToSave[] = $uploadedFilePath;
+                                $filenamesToSave[] = $uploadedFileName;
                             }
                         } else {
                             $errors[] = 'The extension of the file "' . $uploadedFileName . '" is not valid. Allowed extensions: JPG, JPEG, PNG, or GIF.';
@@ -91,6 +95,7 @@
         }
     }
 		
+        var_dump($filenamesToSave);
 		
 		
     
@@ -128,23 +133,26 @@
 
             $statement->close();
 		
-		
 		foreach ($filenamesToSave as $filename) {
             $sql = "INSERT INTO products_images (
 						id,
-                        product_id,
+                        ProductID,
                         filename
                     ) VALUES (
 						'$ID',
                         '".sprintf("%'.010d\n", $productID)."',
-						'$uploadedFileName'
-                    )";}
+						'$filename'
+                    )";
 		
 			$statement = $link->prepare($sql);
+
+            var_dump($sql);
 
             $statement->execute();
 
             $statement->close();
+            $ID=$ID+1;
+        }
 		
 	}
 	}
