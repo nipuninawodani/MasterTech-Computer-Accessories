@@ -35,8 +35,12 @@ function login($email,$password,$remember) {
 			setcookie("Email", $email, time()+3600, "/","", 0);
 			setcookie("Password", $password, time()+3600, "/","", 0);
 		}
-		header("Location: ../index.php");
+		if($row['Type']='Admin'){
+			header("Location: ../material-dashboard-master/index.php");
+		}else{
+			header("Location: ../index.php");
 		}
+	}
 	else {
 		echo "Your Login Name or Password is invalid";
 	}
@@ -104,15 +108,14 @@ function signup($fname,$lname,$email,$password,$mobile,$gender){
 
 		if ($link->query($sql) === TRUE){
 			echo"Registration Complete You can login using your username and password";
-			sendmail($email,$fname);
+			sendmail($email,$fname,$sprintf("%'.010d\n", $uid));
 		}      
 	}
 }
 
-function sendmail($to,$name){
+function sendmail($to,$name,$Uid){
 
 	$from = "mastertech.pcaccessories@gmail.com";
-	$to = "mahela100@gmail.com";
 	$subject = "Hello Sendmail";
 	//$message = "This is an test email to test Sendmail. Please do not block my account.";
 	// To send HTML mail, the Content-type header must be set
@@ -125,11 +128,14 @@ function sendmail($to,$name){
     'X-Mailer: PHP/' . phpversion();
 
     $message = '<html><body>';
-	$message .= '<h1 style="color:#f40;">Hi $name!</h1>';
+	$message .= '<h1 style="color:#f40;">Hi '.$name.'!</h1>';
 	$message .= '<p style="color:#080;font-size:18px;">Your Registration is Successfull</p>';
 	$message .= '</body></html>';
 
-	mail( $to, $subject, $message, $headers );
+	echo $message;
+
+
+	//mail( $to, $subject, $message, $headers );
 
 }
 
@@ -259,6 +265,52 @@ function getstar($ProductID){
     $star= round($row['Avg(Rating)']);
 
     return $row;
+}
+
+function adminproducts(){
+
+	$link = dblink();
+
+	$sql = "SELECT * from product ORDER BY ProductID" ;
+
+	$result = mysqli_query($link,$sql);
+
+	return $result;
+}
+
+function adminusers(){
+
+	$link = dblink();
+
+	$sql = "SELECT * from user ORDER BY UserID" ;
+
+	$result = mysqli_query($link,$sql);
+
+	return $result;
+}
+
+function adminoders(){
+
+	$link = dblink();
+
+	$sql= "SELECT mastertech.order.*, user.First_Name,user.Last_Name, address.* FROM mastertech.order INNER JOIN user ON mastertech.order.UserID=user.UserID INNER JOIN address ON mastertech.order.Address=address.ID"; 
+
+	$result = mysqli_query($link,$sql);
+
+	return $result;
+
+}
+
+function adminoderproducts($OrderID){
+
+	$link = dblink();
+
+	$sql= "SELECT order_product.*, product.Product_Name FROM order_product INNER JOIN product ON order_product.ProductID = product.ProductID where OrderID='$OrderID'"; 
+
+	$result = mysqli_query($link,$sql);
+
+	return $result;
+
 }
 
 ?>
