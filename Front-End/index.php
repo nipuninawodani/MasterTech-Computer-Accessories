@@ -27,7 +27,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
   </head>
   <body>
     <!-- Start your project here-->
-<<<<<<< HEAD:Front-End/index.html
+
 
 
 
@@ -102,7 +102,9 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
     <!-- Right elements -->
     <div class="d-flex align-items-center">
       <!-- Icon -->
-      <a class="text-reset me-3" href="#">
+
+      <a class="text-reset me-3" href="TheCart/my.php">
+
         <i class="fas fa-shopping-cart"></i>
       </a>
 
@@ -177,10 +179,10 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 </div>
 </nav>
-=======
+
     
 <?php include "header.php" ?>
->>>>>>> 7dc4a331005cc035b6d1e4311c55c9d7c7b737a0:Front-End/index.php
+
 
 
 
