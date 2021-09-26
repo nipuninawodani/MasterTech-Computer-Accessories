@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link rel="stylesheet" href="./UserUI.css">
-
+          
   </head>
   <body>
     <!-- Start your project here-->
@@ -40,12 +40,17 @@
             <i class="fas fa-tachometer-alt fa-fw me-3"></i
               ><span>My dashboard</span>
           </a>
+          
           <a
              href="#"
              class="list-group-item list-group-item-action py-2 ripple">
              <i class="fas fa-gift fa-fw me-3"></i><span>Track Package</span>
              </a>
-             
+             <a
+          href="#"
+          class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fas fa-user-alt fa-fw me-3"></i><span>My Profile</span></a
+         >
             <a
              href="#"
              class="list-group-item list-group-item-action py-2 ripple"
@@ -80,7 +85,7 @@
              class="list-group-item list-group-item-action py-2 ripple"
              ><i class="fas fa-map-marker-alt fa-fw me-3"></i><span>My Locations</span></a
             >
-          
+            
         </div>
       </div>
     </nav>
@@ -308,12 +313,91 @@
       </section>
       <!-- Section: Main chart -->
   
+       <!--Section: My Profile-->
+       <section class="mb-4">
+        <div class="card">
+          <div class="card-header text-center py-3">
+            <h5 class="mb-0 text-center">
+              <h3 class="mb-0 text-center"><strong>My Profile</strong></h3>
+      
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-nowrap">
+                
+                <tbody>
+                  <tr>
+                    <th scope="row">Name</th>
+                    <th scope="row">:</th>
+                    <td>Nipuni Perera</td>
+                    <td><button type="button" class="btn btn-light btn-floating">
+                      <i class="fas fa-pen"></i>
+                    </button></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Email</th>
+                    <th scope="row">:</th>
+                    <td>nipuniperera@gmail.com</td>
+                    <td><button type="button" class="btn btn-light  btn-floating">
+                      <i class="fas fa-pen"></i>
+                    </button></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Mobile</th>
+                    <th scope="row">:</th>
+                    <td>0713162060</td>
+                    <td><button type="button" class="btn btn-light btn-floating">
+                      <i class="fas fa-pen"></i>
+                    </button></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Gender</th>
+                    <th scope="row">:</th>
+                    <td><div class="dropdown">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                       Choose Your Gender
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Male</a></li>
+                        <li><a class="dropdown-item" href="#">Female</a></li>
+                        <li><a class="dropdown-item" href="#">Prefer Not to say</a></li>
+                      </ul>
+                    </div></td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Password</th>
+                    <th scope="row">:</th>
+                    <td>************</td>
+                    <td><button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Reset</button></td>
+                  </tr>
+
+                </tbody>
+              </table>              
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: My Profile-->
+
       <!--Section: Wishlist-->
       <section class="mb-4">
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>My Wishlist</strong>
+              <h3 class="mb-0 text-center"><strong>My Wishliste</strong></h3>
+
             </h5>
           </div>
           <div class="card-body">
@@ -672,7 +756,8 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>To Ship</strong>
+              <h3 class="mb-0 text-center"><strong>To Ship</strong></h3>
+     
             </h5>
           </div>
           <div class="card-body">
@@ -1031,7 +1116,8 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>To Receive</strong>
+              <h3 class="mb-0 text-center"><strong>To Receive</strong></h3>
+              
             </h5>
           </div>
           <div class="card-body">
@@ -1390,7 +1476,8 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>To Rate</strong>
+              <h3 class="mb-0 text-center"> <strong>To Rate</strong></h3>
+             
             </h5>
           </div>
           <div class="card-body">
@@ -1749,7 +1836,8 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>Payment Options</strong>
+              <h3 class="mb-0 text-center">  <strong>Payment Options</strong></h3>
+             
             </h5>
           </div>
           <div class="card-body">
@@ -1830,7 +1918,8 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong> My Locations</strong>
+              <h3 class="mb-0 text-center">   <strong> My Locations</strong></h3>
+             
             </h5>
           </div>
           <div class="card-body">
