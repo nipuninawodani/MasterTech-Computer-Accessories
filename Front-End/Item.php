@@ -1,12 +1,13 @@
 <?php session_start(); ?>
+<?php include 'header.php' ?>
+<?php include '../PHP/Functions.php';?>
+<?php $row = viewproduct($_GET['ID']);?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Single Product View</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <title><?php echo $row['Product_Name']; ?></title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -28,9 +29,13 @@
   </head>
 
   <body style="background-color:#ebebeb;">
+
   	<?php include 'header.php' ?>
     <?php include '../PHP/Functions.php';	?>
     <?php $row = viewproduct($_GET['ID']);?>
+
+  	
+
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-1">
       </div>
@@ -46,24 +51,23 @@
                   <div class="row justify-content-center">
                       <div class="d-flex">
                           <div class="card">
+                          	<?php $imgresult=getimage($_GET['ID']); $i=1;?>
                               <div class="d-flex flex-column thumbnails">
-                                  <div id="f1" class="tb tb-active"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
-                                  <div id="f2" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                                  <div id="f3" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                                  <div id="f4" class="tb"> <img class="thumbnail-img fit-image" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
+                              	<?php while($imgrow = mysqli_fetch_array($imgresult)){ ?>
+                                  <div id="f<?php echo $i ?>" class="tb"> <img class="thumbnail-img fit-image" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
+                                  <?php $i=$i+1;} ?>
                               </div>
-                              <fieldset id="f11" class="active">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/wL1uRBk.jpg"> </div>
+                              <?php $imgresult=getimage($_GET['ID']); $i=1;?>
+                              <?php while($imgrow = mysqli_fetch_array($imgresult)){
+                              if($i==1){ ?>
+                              <fieldset id="f<?php echo $i ?>1" class="active">
+                                  <div class="product-pic"> <img class="pic0" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
+                              </fieldset> <?php } else{ ?>
+                              <fieldset id="f<?php echo $i ?>1">
+                                  <div class="product-pic"> <img class="pic0" src="uploads/<?php echo $imgrow['filename']; ?>"> </div>
                               </fieldset>
-                              <fieldset id="f21" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/3NusNP2.jpg"> </div>
-                              </fieldset>
-                              <fieldset id="f31" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/pXUPOVR.jpg"> </div>
-                              </fieldset>
-                              <fieldset id="f41" class="">
-                                  <div class="product-pic"> <img class="pic0" src="https://i.imgur.com/xX5Qmsa.jpg"> </div>
-                              </fieldset>
+                              <?php } $i=$i+1;} ?>
+               
                           </div>
                       </div>
                   </div>
@@ -89,12 +93,14 @@
                   </a>
                 </div>
                 <h2><?php echo $row['Product_Name']; ?></h2>
+                <?php $row2 = getstar($_GET['ID']); 
+                $val= round($row2['Avg(Rating)'])?>
                 <?php include 'star.php';?>
                 <p class="lead">
                   <span class="mr-1">
-                    <del>Rs. <?php echo $row['Price'] + $row['Price']/2; ?></del>
+                    <s>Rs. <?php echo number_format($row['Price'] + $row['Price']/2,2); ?></s>
                   </span>
-                  <span>Rs. <?php echo $row['Price']; ?></span>
+                  <span>Rs. <?php echo number_format($row['Price'],2); ?></span>
                 </p>
 
                 <p class="lead font-weight-bold">Description</p>
@@ -159,21 +165,21 @@
       <div class="col-md-1">
       </div>
       <div class="col-md-10" style="background-color:white;">
-        <div class="row container">
-          <div class="col-md-4 border-right justify-content-center"  style="display: inline-block;height: 100%;vertical-align: middle;">
+        <div class="row container d-flex h-100">
+          <div class="col-md-4 border-right justify-content-center" style="padding-top:auto">
               <h3 style="text-align:center;"><b>Rating & Reviews</b></h3>
                 <div class="row">
     
-                <div class="col-md-6">
+                <div class="col-md-6 align-self-center">
                   <h3 align="center"><b><?php include '../PHP/Reviews.php';
-                   echo round($AVGRATE,1);?></b> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i></h3>
+                   echo round($AVGRATE,1);?></b> <span style="font-size:30px;color:#ff9f00;">★</span></h3>
                   <p style="text-align: center;"><?php echo $Total_review; ?> Reviews</p>
                 </div>
                 <div class="col-md-6">
                   <?php
                   while($db_rating= mysqli_fetch_array($rating)){
                   ?>
-                    <h4 align="center"><?=$db_rating['Rating'];?> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i> Total <?=$db_rating['Total'];?></h4>
+                    <h4 align="center"><?=$db_rating['Rating'];?> <span style="font-size:30px;color:#ff9f00;">★</span> Total <?=$db_rating['Total'];?></h4>
                     
                     
                   <?php 
@@ -187,7 +193,7 @@
             <?php
               while($db_review= mysqli_fetch_array($review)){
             ?>
-                <h5><?=$db_review['Rating'];?> <i class="fa fa-star" data-rating="2" style="font-size:20px;color:#ff9f00;"></i> by <span style="font-size:14px;"><?php echo $db_review['First_Name']." ".$db_review['Last_Name'] ;?></span></h5>
+                <h5><?=$db_review['Rating'];?> <span style="font-size:30px;color:#ff9f00;">★</span> by <span style="font-size:14px;"><?php echo $db_review['First_Name']." ".$db_review['Last_Name'] ;?></span></h5>
                 <p><?=$db_review['Review'];?></p>
                 <hr>
             <?php 
@@ -198,7 +204,7 @@
               <h3>My Review</h3>
               <?php $val2=getrating($_SESSION['UserID'],$_GET['ID']); ?>
               <form action="" method="POST">
-                <div class="rating">
+                <div class="ratingbg" style="margin-left:15px">
                     <input id="rating-1" type="radio" name="rating" value="1" <?php echo ($val2==1)?'checked':''?>> 
                     <label for="rating-1">1 star</label>
                     <input id="rating-2" type="radio" name="rating" value="2" <?php echo ($val2==2)?'checked':''?>>
@@ -210,7 +216,7 @@
                     <input id="rating-5" type="radio" name="rating" value="5" <?php echo ($val2==5)?'checked':''?>>
                     <label for="rating-5">5 stars</label>
                     
-                    <div class="stars">
+                    <div class="starsbg">
                         <label for="rating-1" aria-label="1 star" title="1 star"></label>
                         <label for="rating-2" aria-label="2 stars" title="2 stars"></label>
                         <label for="rating-3" aria-label="3 stars" title="3 stars"></label>
@@ -249,6 +255,8 @@
       <div class="col-md-1">
       </div>
     </div>
+
+    
 
   <!-- SCRIPTS -->
   <!-- JQuery -->

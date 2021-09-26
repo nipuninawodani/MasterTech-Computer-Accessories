@@ -11,7 +11,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -27,9 +27,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
   </head>
   <body>
     <!-- Start your project here-->
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD:Front-End/index.html
+
 
 
 
@@ -104,7 +102,9 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
     <!-- Right elements -->
     <div class="d-flex align-items-center">
       <!-- Icon -->
+
       <a class="text-reset me-3" href="TheCart/my.php">
+
         <i class="fas fa-shopping-cart"></i>
       </a>
 
@@ -179,10 +179,23 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 </div>
 </nav>
-=======
->>>>>>> Stashed changes
+
     
 <?php include "header.php" ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="container">
 
@@ -190,8 +203,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
         <div class="text-center">
           <img
             class="mb-4"
-            src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png"
-            style="width: 250px; height: 90px;"
+            src="logo.png"
+            style="width: 250px;"
           />
           <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
           <p class="mb-3">MDB Team</p>
@@ -203,16 +216,6 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
             >Start MDB tutorial</a
           >
         </div>
-                <?php $link = dblink();
-
-    $sql= "SELECT * FROM user";
-
-    $result = mysqli_query($link,$sql); 
-
-    var_dump($link);
-
-    var_dump($result);
-    ?>
         <a href="./Register.php">Register</a>
         <a href="./bootstrap-5-admin-template-main/admin.html">Admin</a>
 
@@ -417,6 +420,10 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 <!-- </div> -->
 <!-- End of .cotainer -->
 <a href="./Login.html">Login</a>
+<a href="./Profile.html">Profile</a>
+<a href="../material-dashboard-master/dashboard.html">Admin Dashboard</a>
+<a href="./Cart.html">Cart</a>
+<a href="../material-dashboard-master/dashboardDelivery.html">Delivery</a>
 
     <!-- End your project here-->
 

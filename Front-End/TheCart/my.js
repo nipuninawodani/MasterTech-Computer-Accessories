@@ -1,3 +1,4 @@
+
 // Remove Items From Cart
 $('a.remove').click(function(){
     event.preventDefault();
@@ -10,4 +11,3 @@ $('a.remove').click(function(){
       $('li.items').show(400);
     })
   
-    
