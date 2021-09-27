@@ -5,7 +5,7 @@ function subtotalF($ProductID,$price){
 
 	$link = dblink();
 	$user_id=$_SESSION['UserID'];
-	$sql = "SELECT	quantity_D  from cart_items where item_id= '$ProductID' AND User_id='$user_id'";
+	$sql = "SELECT	quantity_D  from cart_items where item_id= '$ProductID' AND User_id='$user_id' AND status='added to cart'";
 	$result = mysqli_query($link,$sql);
 	$row = mysqli_fetch_array($result);
 	$qty=$row['quantity_D'];

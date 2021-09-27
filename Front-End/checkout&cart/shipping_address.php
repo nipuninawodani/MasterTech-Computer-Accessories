@@ -195,9 +195,11 @@
               
               <hr class="mb-4">
               <button id="submit" name="submit" class="btn btn-primary btn-lg btn-block" type="submit">Update Address</button>
+				
 
             </form>
-
+					 <button class="btn btn-secondary btn-lg " type="submit" >
+					  <a href="cart&checkout.php" style="color:inherit">  back</a></button>
           </div>
           <!--/.Card-->
 

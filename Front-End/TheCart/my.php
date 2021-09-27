@@ -8,7 +8,7 @@
         header('location: ../login.php');
     }
     $user_id=$_SESSION['UserID'];
-    $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id'";
+    $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
     $user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
     $no_of_user_products= mysqli_num_rows($user_products_result);
 	
@@ -72,8 +72,12 @@
                            
                          ?>
               <ul class="cartWrap">
+				  <?php if($counter%2==1){?>
+						   
                 <li class="items odd">
-                  
+					<?php }else{?>
+						<li class="items even">
+					<?php } ?>
               <div class="infoWrap"> 
                   <div class="cartSection">
 					   <?php  $imgresult=imgsview($row['ProductID']);  ?>
@@ -92,26 +96,32 @@
                      <a href='removecart.php?id=<?php echo $row['ProductID'] ?>' class="remove">x</a>
                   </div>
                 </div>
-                </li><?php } ?>
-               <!-- <li class="items even"> --!>
+                </li><?php $counter++; } ?>
+            
                   
              
-         
-                <!--<li class="items even">Item 2</li>-->
+    
+            
            
               </ul>
             </div>
             
-            <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
-            <a href="#" class="btn"></a></div>
+          
 			
             
             <div class="subtotal cf">
               <ul>
                 <li class="totalRow final"><span class="label">total</span><span class="value">LKR <?php echo $sum; ?>.00</span></li>
-                
-               	 
-                <li class="totalRow"><a href="../checkout&cart/checkout&cart.html" class="btn continue">Checkout</a></li>
+              
+				  
+               <?php	  if($no_of_user_products==0){?>
+                <li class="totalRow"><button  class="btn btn-lg btn-primary" disabled>Checkout</button> <script>
+        window.alert("please add items to  the cart!!");
+        </script> </li>
+				  <?php }else{ $_SESSION['sum']=$sum;?>
+			 <li class="totalRow"><a href="../checkout&cart/cart&checkout.php" class="btn btn-lg btn-primary">Checkout</a></li>
+	
+<?php }?>
               </ul>
             </div>
           </div>
