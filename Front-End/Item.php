@@ -29,7 +29,13 @@
   </head>
 
   <body style="background-color:#ebebeb;">
+
+  	<?php include 'header.php' ?>
+    <?php include '../PHP/Functions.php';	?>
+    <?php $row = viewproduct($_GET['ID']);?>
+
   	
+
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-1">
       </div>
@@ -121,11 +127,24 @@
 
                 <form class="d-flex justify-content-left">
                   <!-- Default input -->
-                  <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-                  <button class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px">Add to cart
+                  	
+					
+				<
+		 <form action="cart_add.php" method="post">
+					 <input type="number"	name="quantity" value="1" min="1" max=" <?php $row['NumInStock']; ?>" required aria-label="Search" class="form-control" style="width: 100px">
+           			 <input type="hidden" name="product_id" value="<?=$row['ProductID']?>">
+					<?php if (check_if_added_to_cart($row['ProductID'])){?>
+							<button  class="btn btn-primary btn-lg btn-block" type="submit" style="margin-left: 20px">Add to cart
+                   			 <i class="fas fa-shopping-cart ml-1"></i>
+                  				</button>
+					
+				<?php	}else{?>
+            		 <button  class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px">Add to cart
                     <i class="fas fa-shopping-cart ml-1"></i>
                   </button>
-
+					<?php	 }	?>
+        </form>
+                 
                 </form>
 
               </div>
