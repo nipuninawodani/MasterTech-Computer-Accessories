@@ -122,23 +122,33 @@
 
                 <span class="badge bg-danger">Only <?php echo $row['NumInStock']; ?> Items in Stock</span> <br><br> <?php } ?>
 
-
+				<?php  
+				  $check = check_if_added_to_cart($row['ProductID']);
+				  	if ($check!=0){
+				 
+				  ?>
                   <!-- Default input -->
-		 <form action="TheCart/addCart.php" method="POST" class="d-flex justify-content-left">
+				  
+				 <form  class="d-flex justify-content-left">
+            		 <button  class="btn btn-primary btn-md my-0 p" type="Disabled" style="margin-left: 20px" name="Disable" disabled>Already Added to the cart
+                    <i class="fas fa-shopping-cart ml-1"></i>
+                  </button>		
+      			  </form>
+						                            
+					
+				<?php	}else{
+				 
+				  ?>
+	 
+
+				 <form action="TheCart/addCart.php" method="POST" class="d-flex justify-content-left">
 					 <input type="number"	name="quantity" value="1" min="1" max=" <?php $row['NumInStock']; ?>" required aria-label="Search" class="form-control" style="width: 100px">
            			 <input type="hidden" name="product_id" value="<?=$row['ProductID']?>">
-					<?php if (check_if_added_to_cart($row['ProductID'])){?>
-							<button  class="btn btn-primary btn-lg btn-block" type="submit" style="margin-left: 20px" name="submit">Add to cart
-                   			 <i class="fas fa-shopping-cart ml-1"></i>
-                  				</button>
-					
-				<?php	}else{?>
             		 <button  class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px" name="submit">Add to cart
                     <i class="fas fa-shopping-cart ml-1"></i>
-                  </button>
-					<?php	 }	?>
+                  </button>		
         </form>
-
+		<?php } ?>
               </div>
               <!--Content-->
 
