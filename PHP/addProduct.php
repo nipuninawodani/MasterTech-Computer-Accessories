@@ -2,12 +2,12 @@
 
 	session_start();
     include('Functions.php') ;
+	include('config.php') ;
 	$link = dblink();
 	$productSaved = FALSE;
 
 	if (isset($_POST['submit'])) {
      // Read posted values.
-	$productID = isset($_POST['ProductID']) ? $_POST['ProductID'] : '';
     $productName = isset($_POST['Product_Name']) ? $_POST['Product_Name'] : '';
 	$productCatagory  = isset($_POST['Catagory']) ? $_POST['Catagory'] : '';
 	$productPrice = isset($_POST['Price']) ? $_POST['Price'] : 0;
@@ -41,7 +41,56 @@
 	if ($productWarranty == 0) {
         $errors[] = 'Please provide a product Warranty in years.';
     }
+		
+			// product ID
+			$query=mysqli_query($link,"select ProductID from product ORDER BY ProductID DESC LIMIT 1;");
+			$result=mysqli_fetch_array($query);
+			$productID=(int)$result['ProductID']+1;
+		
+		if (!is_dir(UPLOAD_DIR)) {
+		 mkdir(UPLOAD_DIR, 0777, true);
+		 }
+		// List of file names to be filled in by the upload script below and to be saved in the db table "products_images" afterwards.
+		//imgID
+			$query=mysqli_query($link,"select max(id) as Iid from products_images");
+			$result=mysqli_fetch_array($query);
+			$ID=$result['Iid']+1;
+		
+		$filenamesToSave = [];
 
+    	$allowedMimeTypes = explode(',', UPLOAD_ALLOWED_MIME_TYPES);
+		
+		 if (!empty($_FILES)) {
+		 if (isset($_FILES['file']['error'])) {
+            foreach ($_FILES['file']['error'] as $uploadedFileKey => $uploadedFileError) {
+                if ($uploadedFileError === UPLOAD_ERR_NO_FILE) {
+                    $errors[] = 'You did not provide any files.';
+                } elseif ($uploadedFileError === UPLOAD_ERR_OK) {
+                    $temp = explode(".", $_FILES["file"]["name"][$uploadedFileKey]);
+                    $uploadedFileName = uniqid() . '.' . end($temp);
+
+                    if ($_FILES['file']['size'][$uploadedFileKey] <= UPLOAD_MAX_FILE_SIZE) {
+                        $uploadedFileType = $_FILES['file']['type'][$uploadedFileKey];
+                        $uploadedFileTempName = $_FILES['file']['tmp_name'][$uploadedFileKey];
+
+                        $uploadedFilePath = rtrim(UPLOAD_DIR, '/') . '/' . $uploadedFileName;
+
+                        if (in_array($uploadedFileType, $allowedMimeTypes)) {
+                            if (!move_uploaded_file($uploadedFileTempName, $uploadedFilePath)) {
+                                $errors[] = 'The file "' . $uploadedFileName . '" could not be uploaded.';
+                            } else {
+                                $filenamesToSave[] = $uploadedFileName;
+                            }
+                        } else {
+                            $errors[] = 'The extension of the file "' . $uploadedFileName . '" is not valid. Allowed extensions: JPG, JPEG, PNG, or GIF.';
+                        }
+                    } else {
+                        $errors[] = 'The size of the file "' . $uploadedFileName . '" must be of max. ' . (UPLOAD_MAX_FILE_SIZE / 1024) . ' KB';
+                    }
+                }
+            }
+        }
+    }
     
     // Save product
      
@@ -50,32 +99,55 @@
 
 
         $sql = "INSERT INTO product(
-          Product_Name,
+					Product_Name,
 					Catagory,
 					Price,
 					NumInStock,
-          description,
+          			description,
 					Brand,
-					Warranty
+					Warranty,
+					ProductID
+					
                 ) VALUES (
 
-          '$productName', 
+          			'$productName', 
 					'$productCatagory',
 					'$productPrice',
 					'$productQuantity',
 					'$productDescription',
 					'$productBrand',
-					'$productWarranty'
+					'$productWarranty',
+					'".sprintf("%'.010d\n", $productID)."'
                 )";
+		
+		  $statement = $link->prepare($sql);
 
-    	if ($link->query($sql) === TRUE) {
-			$productSaved = TRUE;
-			$productName = $productQuantity = $productDescription = $productCatagory = $productBrand = $productPrice = $productWarranty = NULL;
-			$_SESSION['msg']="Product Inserted Successfully !!";  
-		} else {
-		  	echo "<label align='Center'>Error: " . $sql . "<br>" . $link->error."</label>";
-		}
+          $statement->execute();
+
+          $statement->close();
+		
+		foreach ($filenamesToSave as $filename) {
+            $sql = "INSERT INTO products_images (
+						id,
+                        ProductID,
+                        filename
+                    ) VALUES (
+						'$ID',
+                        '".sprintf("%'.010d\n", $productID)."',
+						'$filename'
+                    )";
+		
+		  $statement = $link->prepare($sql);
+
+          $statement->execute();
+
+          $statement->close();
+          $ID=$ID+1;
+        }
+
+
+		
 	}
 	}
-
+    header('Location:http://mastertech/material-dashboard-master/dashboardproducts.php');
 ?>
