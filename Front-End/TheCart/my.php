@@ -57,12 +57,8 @@
               <a href="../index.php" class="continue">Continue Shopping</a>
             </div>
             <div class="cart">
-          <!--    <ul class="tableHead">
-                <li class="prodHeader">Product</li>
-                <li>Quantity</li>
-                <li>Total</li>
-                 <li>Remove</li>
-              </ul>-->
+          
+       
 				  <?php 
 						
                         $user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
@@ -81,8 +77,8 @@
               <div class="infoWrap"> 
                   <div class="cartSection">
 					   <?php  $imgresult=imgsview($row['ProductID']);  ?>
-                   		<img src="../../PHP/uploads/<?php echo $imgresult; ?>" alt="" class="itemImg" />
-                    <p class="itemNumber">#000000<?php echo $row['ProductID']; ?></p>
+                   		<img src="../uploads/<?php echo $imgresult; ?>" alt="" class="itemImg" />
+                    <p class="itemNumber">#<?php echo $row['ProductID']; ?></p>
                     <h3><?php echo $row['Product_Name']; ?></h3>
                     <p class="stockStatus"><?php echo $row['Price']; ?> &nbsp  X &nbsp  <?php echo(qunaty($row['ProductID'])) ?> </p>
                   </div>  

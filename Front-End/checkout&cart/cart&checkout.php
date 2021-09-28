@@ -2,7 +2,12 @@
 	session_start();
     require '../../PHP/Functions.php';
 	include 'paypal_System/confiq.php';
+	require '../TheCart/functioncart.php';
 	$link = dblink();
+	if(isset($_SESSION['ADD'])){
+		$ADD=$_SESSION['ADD'];
+		
+	} else {$ADD=0;}
     if(!isset($_SESSION['LogedIn'])){
         header('location: ../login.php');
     }
@@ -113,7 +118,9 @@
 				  
 				  
 				</div>
-				<?php } ?>
+				<?php } 
+				
+				?>
 				<hr>
 					
 				 <button class="btn btn-secondary btn-lg" type="submit" >
@@ -160,7 +167,7 @@
                 <small class="text-muted">For More than 50k </small>
               </div>
 				<?php if($sumP>50000){?> 
-					<span class="text-success">-LKR <?php echo $sumP*0.1; ?> </span>
+					<span class="text-success">-LKR <?php echo $sumP*0.1; $DISCOUT=$sumP*0.1; ?> </span>
 				<?php } else { ?>
 					<span class="text-danger">-LKR 0.00</span>
 				<?php }?>
@@ -171,15 +178,15 @@
                 <h6 class="my-0">Promo code</h6>
                 <small>EXAMPLECODE</small>
               </div>
-				<?php if(isset($_SESSION['red'])){?> 
-					<span class="text-success">-LKR <?php echo $sumP*$_SESSION['red']; ?> </span>
+				<?php	$PROMO=0; if(isset($_SESSION['red'])){?> 
+					<span class="text-success">-LKR <?php $PROMO=$sumP*$_SESSION['red']; echo $PROMO; ?> </span>
 				<?php } else { ?>
 					<span class="text-danger">-LKR 0.00</span>
 				<?php }?>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <span>Total </span>
-              <strong>LKR <?php   $total=(($sumP)-2000-($sumP*0.1)); echo $total;?>.00</strong>
+              <strong>LKR <?php   $total=(($sumP)+2000-($sumP*0.1)); echo $total;?>.00</strong>
             </li>
           </ul>
           <!-- Cart -->
@@ -203,17 +210,49 @@
 
              
              
-		
+				<?php if($ADD!=0){?>
 					
 				  <!-- PayPal payment form for displaying the buy button -->
                 <form action="<?php echo PAYPAL_URL; ?>" method="post">
                     <!-- Identify your business so that you can collect the payments. -->
                     <input type="hidden" name="business" value="<?php echo PAYPAL_ID; ?>">	
-					
+					<input type="hidden" name="notify_url" value="<?php echo PAYPAL_NOTIFY_URL; ?>">
 					<input type="hidden" name="cmd" value="_xclick">
 					
+					
+					<?php $user_shpCAD_query="SELECT	*  from shippingaddress where User_ID= '$user_id'AND id='$ADD' ";
+					 $user_shpAD_result=mysqli_query($link,$user_shpCAD_query) or die(mysqli_error($link));
+					$row=mysqli_fetch_array($user_shpAD_result);
+					/*
+						 $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
+						 $user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
+                        $no_of_user_products= mysqli_num_rows($user_products_result);
+						 $counter=1;
+						 while($ct=mysqli_fetch_array($user_products_result)){
+					?>
+					
                     <!-- Specify details about the item that buyers will purchase. -->
-                    <input type="hidden" name="amount" value="<?php echo $total; ?>">
+					<input type="hidden" name="add" value="<?php echo $counter; ?>">
+					<input type="hidden" name="amount_<?php echo $counter; ?>" value="<?php echo $ct['Price']; ?> ">
+					<input type="hidden" name="item_name_<?php echo $counter; ?>" value="<?php echo $ct['Product_Name']; ?> ">
+					<input type="hidden" name="quantity_<?php echo $counter; ?>" value=" <?php echo(qunaty($ct['ProductID'])); ?> ">
+					<?php $counter++; */ 
+					
+					$OID=getLastOrderId();?>
+					<input type="hidden" name="amount" value="<?php echo $total; ?>">
+					<input type="hidden" name="discount_amount" value="<?php echo $DISCOUT+$PROMO; ?>">
+					<input type="hidden" name="item_name" value="All cart Items">
+					<input type="hidden" name="item_number" value="<?php echo sprintf("%'.010d\n", $OID); ?>">
+					
+					<input type="hidden" name="shipping" value="2000">
+					<input type="hidden" name="address_override" value="1">
+					<input type="hidden" name="address1" value="<?php echo $row['shp_Address'];?>">
+					<input type="hidden" name="city" value="<?php echo $row['shp_City'];?>">
+					<input type="hidden" name="first_name" value="<?php echo $row['First_Name'];?> ">
+					<input type="hidden" name="last_name" value="<?php echo $row['lastName']; ?>">
+					<input type="hidden" name="address2" value="<?php echo $row['shp_Province'];?>">
+					<input type="hidden" name="country" value="LK">
+					<input type="hidden" name="zip" value="<?php echo $row['shp_Pincode'];?>">
                     <input type="hidden" name="currency_code" value="<?php echo PAYPAL_CURRENCY; ?>">
 					
                     <!-- Specify URLs -->
@@ -225,6 +264,7 @@
 			<button type="submit" name="paypal"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" border="0" alt="PayPal Logo"></button>
 		</div>
 	</form>
+			<?php } ?>
    
         </div>
         <!--Grid column-->

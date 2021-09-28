@@ -26,9 +26,22 @@ function qunaty($ProductID){
 }
 function imgsview($ProductID){
 	$link = dblink();
-	$sql = "SELECT	filename  from products_images where product_id= '$ProductID'";
+	$sql = "SELECT	filename  from products_images where ProductID= '$ProductID'";
 	$result = mysqli_query($link,$sql) or die( mysqli_error($link));
 	$row = mysqli_fetch_array($result);
 	return $row['filename'];
 }
+
+
+
+function getLastOrderId(){
+	$link = dblink();
+	$query=mysqli_query($link,"select OrderID from orderTB ORDER  BY OrderID DESC LIMIT 1;");
+	$result=mysqli_fetch_array($query);
+	$OID=(int)$result['OrderID']+1;
+	
+	return $OID;
+}
 ?>
+
+

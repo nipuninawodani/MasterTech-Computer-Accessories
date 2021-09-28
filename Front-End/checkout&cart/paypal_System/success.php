@@ -1,15 +1,63 @@
+<?php
+
+	include 'confiq.php'; 
+	require '../../TheCart/functioncart.php';
+	require '../../../PHP/Functions.PHP';
+	$link = dblink();
+
+	if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
+    // Get transaction information from URL
+	
+    $Order_number = $_GET['item_number'];  
+    $txn_id = $_GET['tx']; 
+    $payment_gross = $_GET['amt']; 
+    $currency_code = $_GET['cc']; 
+    $payment_status = $_GET['st']; 
+		
+		//Check if transaction data exists with the same TXN ID. 
+			$query=mysqli_query($link,"SELECT * FROM payments WHERE txn_id = '".$txn_id."'");
+			$result=mysqli_fetch_array($query);
+			$no_of_row= mysqli_num_rows($result);
+
+		 if($no_of_row > 0){ 
+        $paymentRow = mysqli_fetch_array($result);
+        $payment_id = $paymentRow['payment_id']; 
+        $payment_gross = $paymentRow['payment_gross']; 
+        $payment_status = $paymentRow['payment_status']; }
+		else{ 
+			
+        // Insert tansaction data into the database 	
+			
+			$sql = "INSERT INTO product(
+					OrderID,
+					txn_id,
+					payment_gross,
+					currency_code,
+          			payment_status
+					
+					
+                ) VALUES (
+
+          			'$Order_number', 
+					'$txn_id',
+					'$payment_gross',
+					'$currency_code',
+					'$payment_status'
+					
+                )";
+		
+		  $statement = $link->prepare($sql);
+
+          $statement->execute();
+
+          $statement->close();
+		
+    } 
+} 
 
 
 
-
-
-
-
-
-
-
-
-
+?>
 
 
 <!DOCTYPE html>
@@ -18,7 +66,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Order Conformation</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -96,7 +144,7 @@
     </head>
 
 <body style="margin: 0 !important; padding: 0 !important; background-color: #eeeeee;" bgcolor="#eeeeee">
-   
+      <?php if(!empty($payment_id)){ ?>
     <table border="0" cellpadding="0" cellspacing="0" width="100%">
         <tr>
             <td align="center" style="background-color: #eeeeee;" bgcolor="#eeeeee">
@@ -107,12 +155,12 @@
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                 <tr>
                                     <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
-                                        <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> Thank You For Your Order! </h2>
+                                        <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"><br> Thank You For Your Order! </h2>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 10px;">
-                                        <p style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium iste ipsa numquam odio dolores, nam. </p>
+                                        <p style="font-size: 16px;text-align:center; font-weight: 400; line-height: 24px; color: #00FF00;"> Your Payment has been Successful......!  </p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -120,19 +168,31 @@
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td width="75%" align="left" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> Order Confirmation # </td>
-                                                <td width="25%" align="right" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> 2345678 </td>
+                                                <td width="25%" align="right" bgcolor="#eeeeee" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;"> #<?php echo $Order_number; ?> </td>
                                             </tr>
                                             <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> Purchased Item (1) </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">10900.00/= </td>
+												<?php 
+													 $user_id=$_SESSION['UserID'];
+    $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
+													$user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
+													$no_of_user_products= mysqli_num_rows($user_products_result);
+													$counter=0;
+                       								while($row=mysqli_fetch_array($user_products_result)){
+                           
+                         ?>
+												
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo $row['Product_Name']; ?> </td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo  $row['Price']; ?> &nbsp X&nbsp   <?php echo (qunaty($row['ProductID'])) ?>&nbsp =  &nbsp<?php  $subtotel=subtotalF( $row['ProductID'],$row['Price']);
+				  								$sum=$sum+$subtotel; ?>LKR  <?php echo $subtotel; ?></td>
+                                            </tr><?php echo $counter; $counter++; } ?>
+                                            <tr>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Shipping  </td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">+LKR 2000 </td>
                                             </tr>
                                             <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Shipping + Handling </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">495.00/= </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Sales Tax </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">20.00/= </td>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> total discount</td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   $discount= $sum+2000-$payment_gross*200;
+													echo $discount;?> </td>
                                             </tr>
                                         </table>
                                     </td>
@@ -142,7 +202,7 @@
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;"> TOTAL </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;"> 21 150.00/=</td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">LKR <?php echo( $payment_gross*200); ?> <br> $<?php echo $payment_gross; ?></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -150,6 +210,9 @@
                             </table>
                         </td>
                     </tr>
+						<?php  $user_id=$_SESSION['UserID']; $ADD=$_SESSION['ADD'];  $user_shpCAD_query="SELECT	*  from shippingaddress where User_ID= '$user_id'AND id='$ADD' ";
+					 		$user_shpAD_result=mysqli_query($link,$user_shpCAD_query) or die(mysqli_error($link));
+							$row=mysqli_fetch_array($user_shpAD_result);?>
                     <tr>
                         <td align="center" height="100%" valign="top" width="100%" style="padding: 0 35px 35px 35px; background-color: #ffffff;" bgcolor="#ffffff">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px;">
@@ -160,7 +223,9 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
                                                         <p style="font-weight: 800;">Delivery Address</p>
-                                                        <p>14/25,Colombo Road,<br> Waththala.<br>11213<br></p>
+                                                        <p><?php echo $row['First_Name'];?> <?php echo $row['lastName']; ?>,<br>
+				  				<?php echo $row['shp_Address'];?>,<br><?php echo $row['shp_City'];?> <?php echo $row['shp_Pincode'];?> ,<br>
+								<?php echo $row['shp_Province'];?>,<br>Srilanka</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -170,7 +235,7 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
                                                         <p style="font-weight: 800;">Estimated Delivery Date</p>
-                                                        <p>October 3rd, 2021</p>
+                                                        <p>two Weeks</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -186,6 +251,19 @@
             </td>
         </tr>
     </table>
+  <?php }else{ ?>
+             <h2 style="font-size: 30px;text-align:center; font-weight: 800; line-height: 36px; color: #ff0000; margin: 0;"><br> Thank You For Your Order! </h2>
+        <?php } ?>
+	
+	
+	<!--- back to product-->
+
+     <div class="input-group-append">
+              		  <button class="btn btn-secondary btn-md waves-effect m-0" type="button" id="Address">
+						  <a href='../../index.php' style="color:inherit" > Back to Products </a></button>
+					  
+              </div>
+				  
 
 
     <script type="text/javascript" src="js/mdb.min.js"></script>
