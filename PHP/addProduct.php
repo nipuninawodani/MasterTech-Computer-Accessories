@@ -46,10 +46,8 @@
 			$query=mysqli_query($link,"select ProductID from product ORDER BY ProductID DESC LIMIT 1;");
 			$result=mysqli_fetch_array($query);
 			$productID=(int)$result['ProductID']+1;
-
-        $UPLOAD_DIR = '../Front-End/uploads';
 		
-		if (!is_dir($UPLOAD_DIR)) {
+		if (!is_dir(UPLOAD_DIR)) {
 		 mkdir(UPLOAD_DIR, 0777, true);
 		 }
 		// List of file names to be filled in by the upload script below and to be saved in the db table "products_images" afterwards.
@@ -60,8 +58,6 @@
 		
 		$filenamesToSave = [];
 
-        var_dump($UPLOAD_DIR);
-
     	$allowedMimeTypes = explode(',', UPLOAD_ALLOWED_MIME_TYPES);
 		
 		 if (!empty($_FILES)) {
@@ -70,13 +66,14 @@
                 if ($uploadedFileError === UPLOAD_ERR_NO_FILE) {
                     $errors[] = 'You did not provide any files.';
                 } elseif ($uploadedFileError === UPLOAD_ERR_OK) {
-                    $uploadedFileName = basename($_FILES['file']['name'][$uploadedFileKey]);
+                    $temp = explode(".", $_FILES["file"]["name"][$uploadedFileKey]);
+                    $uploadedFileName = uniqid() . '.' . end($temp);
 
                     if ($_FILES['file']['size'][$uploadedFileKey] <= UPLOAD_MAX_FILE_SIZE) {
                         $uploadedFileType = $_FILES['file']['type'][$uploadedFileKey];
                         $uploadedFileTempName = $_FILES['file']['tmp_name'][$uploadedFileKey];
 
-                        $uploadedFilePath = rtrim($UPLOAD_DIR, '/') . '/' . $uploadedFileName;
+                        $uploadedFilePath = rtrim(UPLOAD_DIR, '/') . '/' . $uploadedFileName;
 
                         if (in_array($uploadedFileType, $allowedMimeTypes)) {
                             if (!move_uploaded_file($uploadedFileTempName, $uploadedFilePath)) {
@@ -94,10 +91,6 @@
             }
         }
     }
-		
-        var_dump($filenamesToSave);
-		
-		
     
     // Save product
      
@@ -127,11 +120,11 @@
 					'".sprintf("%'.010d\n", $productID)."'
                 )";
 		
-			$statement = $link->prepare($sql);
+		  $statement = $link->prepare($sql);
 
-            $statement->execute();
+          $statement->execute();
 
-            $statement->close();
+          $statement->close();
 		
 		foreach ($filenamesToSave as $filename) {
             $sql = "INSERT INTO products_images (
@@ -144,17 +137,17 @@
 						'$filename'
                     )";
 		
-			$statement = $link->prepare($sql);
+		  $statement = $link->prepare($sql);
 
-            var_dump($sql);
+          $statement->execute();
 
-            $statement->execute();
-
-            $statement->close();
-            $ID=$ID+1;
+          $statement->close();
+          $ID=$ID+1;
         }
+
+
 		
 	}
 	}
-		
+    header('Location:http://mastertech/material-dashboard-master/dashboardproducts.php');
 ?>

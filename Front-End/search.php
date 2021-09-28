@@ -164,7 +164,8 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID']; ?>">
+                <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID'];?>" 
+                style="width: 250px; height: 250px; object-fit: fill;">
                 <a href="item?ID=<?php echo $row['ProductID']; ?>">
                   <div class="mask rgba-white-slight"></div>
                 </a>
@@ -211,8 +212,7 @@
           <i class="fas fa-search fa-10x"></i><br><br>
         </div>
 
-      <?php } ?><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+      <?php } ?>
       </div>
       <div class="col-md-1">
       </div>

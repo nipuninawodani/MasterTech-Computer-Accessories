@@ -1,6 +1,7 @@
 <?php
 
 include '../PHP/Functions.php'; 
+
 session_start();
 
 $email="mahela100@gmail.com";

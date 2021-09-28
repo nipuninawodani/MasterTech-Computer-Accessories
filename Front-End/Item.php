@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-<?php include 'header.php' ?>
 <?php include '../PHP/Functions.php';?>
 <?php $row = viewproduct($_GET['ID']);?>
 <!DOCTYPE html>
@@ -31,8 +30,6 @@
   <body style="background-color:#ebebeb;">
 
   	<?php include 'header.php' ?>
-    <?php include '../PHP/Functions.php';	?>
-    <?php $row = viewproduct($_GET['ID']);?>
 
   	
 
@@ -125,27 +122,22 @@
 
                 <span class="badge bg-danger">Only <?php echo $row['NumInStock']; ?> Items in Stock</span> <br><br> <?php } ?>
 
-                <form class="d-flex justify-content-left">
+
                   <!-- Default input -->
-                  	
-					
-				<
-		 <form action="cart_add.php" method="post">
+		 <form action="TheCart/addCart.php" method="POST" class="d-flex justify-content-left">
 					 <input type="number"	name="quantity" value="1" min="1" max=" <?php $row['NumInStock']; ?>" required aria-label="Search" class="form-control" style="width: 100px">
            			 <input type="hidden" name="product_id" value="<?=$row['ProductID']?>">
 					<?php if (check_if_added_to_cart($row['ProductID'])){?>
-							<button  class="btn btn-primary btn-lg btn-block" type="submit" style="margin-left: 20px">Add to cart
+							<button  class="btn btn-primary btn-lg btn-block" type="submit" style="margin-left: 20px" name="submit">Add to cart
                    			 <i class="fas fa-shopping-cart ml-1"></i>
                   				</button>
 					
 				<?php	}else{?>
-            		 <button  class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px">Add to cart
+            		 <button  class="btn btn-primary btn-md my-0 p" type="submit" style="margin-left: 20px" name="submit">Add to cart
                     <i class="fas fa-shopping-cart ml-1"></i>
                   </button>
 					<?php	 }	?>
         </form>
-                 
-                </form>
 
               </div>
               <!--Content-->

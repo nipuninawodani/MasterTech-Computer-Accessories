@@ -90,3 +90,941 @@
 21/09/21 00.00.32 ** Disconnected.
 21/09/21 00.00.32 ** Disconnected.
 21/09/21 00.00.32 ** Disconnected.
+21/09/25 17.48.56 ** --- MESSAGE BEGIN ---
+21/09/25 17.48.56 ** To: mahela100@gmail.com
+21/09/25 17.48.56 ** Subject: Hello Sendmail
+21/09/25 17.48.56 ** MIME-Version: 1.0
+21/09/25 17.48.56 ** Content-type: text/html; charset=iso-8859-1
+21/09/25 17.48.56 ** From: mastertech.pcaccessories@gmail.com
+21/09/25 17.48.56 ** Reply-To: mastertech.pcaccessories@gmail.com
+21/09/25 17.48.56 ** X-Mailer: PHP/7.3.21
+21/09/25 17.48.56 ** 
+21/09/25 17.48.56 **  <!DOCTYPE html>
+21/09/25 17.48.56 **  <html>
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **  <head>
+21/09/25 17.48.56 **      <title></title>
+21/09/25 17.48.56 **      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+21/09/25 17.48.56 **      <meta name="viewport" content="width=device-width, initial-scale=1">
+21/09/25 17.48.56 **      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+21/09/25 17.48.56 **      <style type="text/css">
+21/09/25 17.48.56 **          @media screen {
+21/09/25 17.48.56 **              @font-face {
+21/09/25 17.48.56 **                  font-family: "Lato";
+21/09/25 17.48.56 **                  font-style: normal;
+21/09/25 17.48.56 **                  font-weight: 400;
+21/09/25 17.48.56 **                  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
+21/09/25 17.48.56 **              }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **              @font-face {
+21/09/25 17.48.56 **                  font-family: "Lato";
+21/09/25 17.48.56 **                  font-style: normal;
+21/09/25 17.48.56 **                  font-weight: 700;
+21/09/25 17.48.56 **                  src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format("woff");
+21/09/25 17.48.56 **              }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **              @font-face {
+21/09/25 17.48.56 **                  font-family: "Lato";
+21/09/25 17.48.56 **                  font-style: italic;
+21/09/25 17.48.56 **                  font-weight: 400;
+21/09/25 17.48.56 **                  src: local("Lato Italic"), local("Lato-Italic"), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");
+21/09/25 17.48.56 **              }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **              @font-face {
+21/09/25 17.48.56 **                  font-family: "Lato";
+21/09/25 17.48.56 **                  font-style: italic;
+21/09/25 17.48.56 **                  font-weight: 700;
+21/09/25 17.48.56 **                  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+21/09/25 17.48.56 **              }
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          /* CLIENT-SPECIFIC STYLES */
+21/09/25 17.48.56 **          body,
+21/09/25 17.48.56 **          table,
+21/09/25 17.48.56 **          td,
+21/09/25 17.48.56 **          a {
+21/09/25 17.48.56 **              -webkit-text-size-adjust: 100%;
+21/09/25 17.48.56 **              -ms-text-size-adjust: 100%;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          table,
+21/09/25 17.48.56 **          td {
+21/09/25 17.48.56 **              mso-table-lspace: 0pt;
+21/09/25 17.48.56 **              mso-table-rspace: 0pt;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          img {
+21/09/25 17.48.56 **              -ms-interpolation-mode: bicubic;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          /* RESET STYLES */
+21/09/25 17.48.56 **          img {
+21/09/25 17.48.56 **              border: 0;
+21/09/25 17.48.56 **              height: auto;
+21/09/25 17.48.56 **              line-height: 100%;
+21/09/25 17.48.56 **              outline: none;
+21/09/25 17.48.56 **              text-decoration: none;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          table {
+21/09/25 17.48.56 **              border-collapse: collapse !important;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          body {
+21/09/25 17.48.56 **              height: 100% !important;
+21/09/25 17.48.56 **              margin: 0 !important;
+21/09/25 17.48.56 **              padding: 0 !important;
+21/09/25 17.48.56 **              width: 100% !important;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          /* iOS BLUE LINKS */
+21/09/25 17.48.56 **          a[x-apple-data-detectors] {
+21/09/25 17.48.56 **              color: inherit !important;
+21/09/25 17.48.56 **              text-decoration: none !important;
+21/09/25 17.48.56 **              font-size: inherit !important;
+21/09/25 17.48.56 **              font-family: inherit !important;
+21/09/25 17.48.56 **              font-weight: inherit !important;
+21/09/25 17.48.56 **              line-height: inherit !important;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          /* MOBILE STYLES */
+21/09/25 17.48.56 **          @media screen and (max-width:600px) {
+21/09/25 17.48.56 **              h1 {
+21/09/25 17.48.56 **                  font-size: 32px !important;
+21/09/25 17.48.56 **                  line-height: 32px !important;
+21/09/25 17.48.56 **              }
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **          /* ANDROID CENTER FIX */
+21/09/25 17.48.56 **          div[style*="margin: 16px 0;"] {
+21/09/25 17.48.56 **              margin: 0 !important;
+21/09/25 17.48.56 **          }
+21/09/25 17.48.56 **      </style>
+21/09/25 17.48.56 **  </head>
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **  <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+21/09/25 17.48.56 **      <!-- HIDDEN PREHEADER TEXT -->
+21/09/25 17.48.56 **      <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: "Lato", Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We"re thrilled to have you here! Get ready to dive into your new account. </div>
+21/09/25 17.48.56 **      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+21/09/25 17.48.56 **          <!-- LOGO -->
+21/09/25 17.48.56 **          <tr>
+21/09/25 17.48.56 **              <td bgcolor="#FFA73B" align="center">
+21/09/25 17.48.56 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                  </table>
+21/09/25 17.48.56 **              </td>
+21/09/25 17.48.56 **          </tr>
+21/09/25 17.48.56 **          <tr>
+21/09/25 17.48.56 **              <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 17.48.56 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+21/09/25 17.48.56 **                              <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome Mahela!</h1> <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" style="display: block; border: 0px;" />
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                  </table>
+21/09/25 17.48.56 **              </td>
+21/09/25 17.48.56 **          </tr>
+21/09/25 17.48.56 **          <tr>
+21/09/25 17.48.56 **              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 17.48.56 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <p style="margin: 0;">We"re excited to have you get started. First, you need to confirm your account. Just press the button below.</p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left">
+21/09/25 17.48.56 **                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+21/09/25 17.48.56 **                                  <tr>
+21/09/25 17.48.56 **                                      <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+21/09/25 17.48.56 **                                          <table border="0" cellspacing="0" cellpadding="0">
+21/09/25 17.48.56 **                                              <tr>
+21/09/25 17.48.56 **                                                  <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a href="./verifyCode.html" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td>
+21/09/25 17.48.56 **                                              </tr>
+21/09/25 17.48.56 **                                          </table>
+21/09/25 17.48.56 **                                      </td>
+21/09/25 17.48.56 **                                  </tr>
+21/09/25 17.48.56 **                              </table>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr> <!-- COPY -->
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <p style="margin: 0;">If that doesn"t work, copy and paste the following link in your browser:</p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr> <!-- COPY -->
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">https://bit.li.utlddssdstueincx</a></p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <p style="margin: 0;">If you have any questions, just reply to this email—we"re always happy to help out.</p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <p style="margin: 0;">Cheers,<br>BBB Team</p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                  </table>
+21/09/25 17.48.56 **              </td>
+21/09/25 17.48.56 **          </tr>
+21/09/25 17.48.56 **          <tr>
+21/09/25 17.48.56 **              <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
+21/09/25 17.48.56 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 17.48.56 **                              <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2>
+21/09/25 17.48.56 **                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">We&rsquo;re here to help you out</a></p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                  </table>
+21/09/25 17.48.56 **              </td>
+21/09/25 17.48.56 **          </tr>
+21/09/25 17.48.56 **          <tr>
+21/09/25 17.48.56 **              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 17.48.56 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 17.48.56 **                      <tr>
+21/09/25 17.48.56 **                          <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br>
+21/09/25 17.48.56 **                              <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p>
+21/09/25 17.48.56 **                          </td>
+21/09/25 17.48.56 **                      </tr>
+21/09/25 17.48.56 **                  </table>
+21/09/25 17.48.56 **              </td>
+21/09/25 17.48.56 **          </tr>
+21/09/25 17.48.56 **      </table>
+21/09/25 17.48.56 **  </body>
+21/09/25 17.48.56 **  
+21/09/25 17.48.56 **  </html>
+21/09/25 17.48.56 ** --- MESSAGE END ---
+21/09/25 17.48.56 ** Connecting to smtp.gmail.com:465
+21/09/25 17.48.59 ** Connected.
+21/09/25 17.48.59 << 220 smtp.gmail.com ESMTP p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.48.59 >> EHLO Mahela-Laptop<EOL>
+21/09/25 17.48.59 << 250-smtp.gmail.com at your service, [103.247.48.69]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/09/25 17.48.59 ** Authenticating as mastertech.pcaccessories@gmail.com
+21/09/25 17.48.59 >> AUTH LOGIN<EOL>
+21/09/25 17.48.59 << 334 VXNlcm5hbWU6<EOL>
+21/09/25 17.48.59 >> bWFzdGVydGVjaC5wY2FjY2Vzc29yaWVzQGdtYWlsLmNvbQ==<EOL>
+21/09/25 17.49.00 << 334 UGFzc3dvcmQ6<EOL>
+21/09/25 17.49.00 >> MW1odCFrM00=<EOL>
+21/09/25 17.49.00 << 235 2.7.0 Accepted<EOL>
+21/09/25 17.49.00 >> MAIL FROM: <mastertech.pcaccessories@gmail.com><EOL>
+21/09/25 17.49.00 << 250 2.1.0 OK p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.49.00 >> RCPT TO: <mahela100@gmail.com><EOL>
+21/09/25 17.49.01 << 250 2.1.5 OK p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.49.01 >> DATA<EOL>
+21/09/25 17.49.01 << 354  Go ahead p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.49.01 >> Date: Sat, 25 Sep 2021 17:49:01 +0530<EOL>
+21/09/25 17.49.01 >> To: mahela100@gmail.com<EOL>
+21/09/25 17.49.01 >> Subject: Hello Sendmail<EOL>
+21/09/25 17.49.01 >> MIME-Version: 1.0<EOL>
+21/09/25 17.49.01 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21/09/25 17.49.01 >> From: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 17.49.01 >> Reply-To: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 17.49.01 >> X-Mailer: PHP/7.3.21<EOL>
+21/09/25 17.49.01 >> <EOL>
+21/09/25 17.49.01 >>  <!DOCTYPE html><EOL>
+21/09/25 17.49.01 >>  <html><EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>  <head><EOL>
+21/09/25 17.49.01 >>      <title></title><EOL>
+21/09/25 17.49.01 >>      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><EOL>
+21/09/25 17.49.01 >>      <meta name="viewport" content="width=device-width, initial-scale=1"><EOL>
+21/09/25 17.49.01 >>      <meta http-equiv="X-UA-Compatible" content="IE=edge" /><EOL>
+21/09/25 17.49.01 >>      <style type="text/css"><EOL>
+21/09/25 17.49.01 >>          @media screen {<EOL>
+21/09/25 17.49.01 >>              @font-face {<EOL>
+21/09/25 17.49.01 >>                  font-family: "Lato";<EOL>
+21/09/25 17.49.01 >>                  font-style: normal;<EOL>
+21/09/25 17.49.01 >>                  font-weight: 400;<EOL>
+21/09/25 17.49.01 >>                  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff");<EOL>
+21/09/25 17.49.01 >>              }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>              @font-face {<EOL>
+21/09/25 17.49.01 >>                  font-family: "Lato";<EOL>
+21/09/25 17.49.01 >>                  font-style: normal;<EOL>
+21/09/25 17.49.01 >>                  font-weight: 700;<EOL>
+21/09/25 17.49.01 >>                  src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format("woff");<EOL>
+21/09/25 17.49.01 >>              }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>              @font-face {<EOL>
+21/09/25 17.49.01 >>                  font-family: "Lato";<EOL>
+21/09/25 17.49.01 >>                  font-style: italic;<EOL>
+21/09/25 17.49.01 >>                  font-weight: 400;<EOL>
+21/09/25 17.49.01 >>                  src: local("Lato Italic"), local("Lato-Italic"), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");<EOL>
+21/09/25 17.49.01 >>              }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>              @font-face {<EOL>
+21/09/25 17.49.01 >>                  font-family: "Lato";<EOL>
+21/09/25 17.49.01 >>                  font-style: italic;<EOL>
+21/09/25 17.49.01 >>                  font-weight: 700;<EOL>
+21/09/25 17.49.01 >>                  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");<EOL>
+21/09/25 17.49.01 >>              }<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          /* CLIENT-SPECIFIC STYLES */<EOL>
+21/09/25 17.49.01 >>          body,<EOL>
+21/09/25 17.49.01 >>          table,<EOL>
+21/09/25 17.49.01 >>          td,<EOL>
+21/09/25 17.49.01 >>          a {<EOL>
+21/09/25 17.49.01 >>              -webkit-text-size-adjust: 100%;<EOL>
+21/09/25 17.49.01 >>              -ms-text-size-adjust: 100%;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          table,<EOL>
+21/09/25 17.49.01 >>          td {<EOL>
+21/09/25 17.49.01 >>              mso-table-lspace: 0pt;<EOL>
+21/09/25 17.49.01 >>              mso-table-rspace: 0pt;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          img {<EOL>
+21/09/25 17.49.01 >>              -ms-interpolation-mode: bicubic;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          /* RESET STYLES */<EOL>
+21/09/25 17.49.01 >>          img {<EOL>
+21/09/25 17.49.01 >>              border: 0;<EOL>
+21/09/25 17.49.01 >>              height: auto;<EOL>
+21/09/25 17.49.01 >>              line-height: 100%;<EOL>
+21/09/25 17.49.01 >>              outline: none;<EOL>
+21/09/25 17.49.01 >>              text-decoration: none;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          table {<EOL>
+21/09/25 17.49.01 >>              border-collapse: collapse !important;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          body {<EOL>
+21/09/25 17.49.01 >>              height: 100% !important;<EOL>
+21/09/25 17.49.01 >>              margin: 0 !important;<EOL>
+21/09/25 17.49.01 >>              padding: 0 !important;<EOL>
+21/09/25 17.49.01 >>              width: 100% !important;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          /* iOS BLUE LINKS */<EOL>
+21/09/25 17.49.01 >>          a[x-apple-data-detectors] {<EOL>
+21/09/25 17.49.01 >>              color: inherit !important;<EOL>
+21/09/25 17.49.01 >>              text-decoration: none !important;<EOL>
+21/09/25 17.49.01 >>              font-size: inherit !important;<EOL>
+21/09/25 17.49.01 >>              font-family: inherit !important;<EOL>
+21/09/25 17.49.01 >>              font-weight: inherit !important;<EOL>
+21/09/25 17.49.01 >>              line-height: inherit !important;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          /* MOBILE STYLES */<EOL>
+21/09/25 17.49.01 >>          @media screen and (max-width:600px) {<EOL>
+21/09/25 17.49.01 >>              h1 {<EOL>
+21/09/25 17.49.01 >>                  font-size: 32px !important;<EOL>
+21/09/25 17.49.01 >>                  line-height: 32px !important;<EOL>
+21/09/25 17.49.01 >>              }<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>          /* ANDROID CENTER FIX */<EOL>
+21/09/25 17.49.01 >>          div[style*="margin: 16px 0;"] {<EOL>
+21/09/25 17.49.01 >>              margin: 0 !important;<EOL>
+21/09/25 17.49.01 >>          }<EOL>
+21/09/25 17.49.01 >>      </style><EOL>
+21/09/25 17.49.01 >>  </head><EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>  <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;"><EOL>
+21/09/25 17.49.01 >>      <!-- HIDDEN PREHEADER TEXT --><EOL>
+21/09/25 17.49.01 >>      <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: "Lato", Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We"re thrilled to have you here! Get ready to dive into your new account. </div><EOL>
+21/09/25 17.49.01 >>      <table border="0" cellpadding="0" cellspacing="0" width="100%"><EOL>
+21/09/25 17.49.01 >>          <!-- LOGO --><EOL>
+21/09/25 17.49.01 >>          <tr><EOL>
+21/09/25 17.49.01 >>              <td bgcolor="#FFA73B" align="center"><EOL>
+21/09/25 17.49.01 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                  </table><EOL>
+21/09/25 17.49.01 >>              </td><EOL>
+21/09/25 17.49.01 >>          </tr><EOL>
+21/09/25 17.49.01 >>          <tr><EOL>
+21/09/25 17.49.01 >>              <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 17.49.01 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"><EOL>
+21/09/25 17.49.01 >>                              <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome Mahela!</h1> <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" style="display: block; border: 0px;" /><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                  </table><EOL>
+21/09/25 17.49.01 >>              </td><EOL>
+21/09/25 17.49.01 >>          </tr><EOL>
+21/09/25 17.49.01 >>          <tr><EOL>
+21/09/25 17.49.01 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 17.49.01 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;">We"re excited to have you get started. First, you need to confirm your account. Just press the button below.</p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left"><EOL>
+21/09/25 17.49.01 >>                              <table width="100%" border="0" cellspacing="0" cellpadding="0"><EOL>
+21/09/25 17.49.01 >>                                  <tr><EOL>
+21/09/25 17.49.01 >>                                      <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;"><EOL>
+21/09/25 17.49.01 >>                                          <table border="0" cellspacing="0" cellpadding="0"><EOL>
+21/09/25 17.49.01 >>                                              <tr><EOL>
+21/09/25 17.49.01 >>                                                  <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a href="./verifyCode.html" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td><EOL>
+21/09/25 17.49.01 >>                                              </tr><EOL>
+21/09/25 17.49.01 >>                                          </table><EOL>
+21/09/25 17.49.01 >>                                      </td><EOL>
+21/09/25 17.49.01 >>                                  </tr><EOL>
+21/09/25 17.49.01 >>                              </table><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr> <!-- COPY --><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;">If that doesn"t work, copy and paste the following link in your browser:</p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr> <!-- COPY --><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">https://bit.li.utlddssdstueincx</a></p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;">If you have any questions, just reply to this email—we"re always happy to help out.</p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;">Cheers,<br>BBB Team</p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                  </table><EOL>
+21/09/25 17.49.01 >>              </td><EOL>
+21/09/25 17.49.01 >>          </tr><EOL>
+21/09/25 17.49.01 >>          <tr><EOL>
+21/09/25 17.49.01 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;"><EOL>
+21/09/25 17.49.01 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 17.49.01 >>                              <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">We&rsquo;re here to help you out</a></p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                  </table><EOL>
+21/09/25 17.49.01 >>              </td><EOL>
+21/09/25 17.49.01 >>          </tr><EOL>
+21/09/25 17.49.01 >>          <tr><EOL>
+21/09/25 17.49.01 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 17.49.01 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 17.49.01 >>                      <tr><EOL>
+21/09/25 17.49.01 >>                          <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br><EOL>
+21/09/25 17.49.01 >>                              <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p><EOL>
+21/09/25 17.49.01 >>                          </td><EOL>
+21/09/25 17.49.01 >>                      </tr><EOL>
+21/09/25 17.49.01 >>                  </table><EOL>
+21/09/25 17.49.01 >>              </td><EOL>
+21/09/25 17.49.01 >>          </tr><EOL>
+21/09/25 17.49.01 >>      </table><EOL>
+21/09/25 17.49.01 >>  </body><EOL>
+21/09/25 17.49.01 >>  <EOL>
+21/09/25 17.49.01 >>  </html><EOL>
+21/09/25 17.49.01 >> .<EOL>
+21/09/25 17.49.02 << 250 2.0.0 OK  1632572343 p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.49.02 >> QUIT<EOL>
+21/09/25 17.49.03 << 221 2.0.0 closing connection p9sm13209954pgn.36 - gsmtp<EOL>
+21/09/25 17.49.03 ** Disconnecting from smtp.gmail.com:465
+21/09/25 17.49.03 ** Disconnected.
+21/09/25 17.49.03 ** Disconnected.
+21/09/25 18.47.50 ** --- MESSAGE BEGIN ---
+21/09/25 18.47.50 ** To: mahela100@gmail.com
+21/09/25 18.47.50 ** Subject: Hello Sendmail
+21/09/25 18.47.50 ** MIME-Version: 1.0
+21/09/25 18.47.50 ** Content-type: text/html; charset=iso-8859-1
+21/09/25 18.47.50 ** From: mastertech.pcaccessories@gmail.com
+21/09/25 18.47.50 ** Reply-To: mastertech.pcaccessories@gmail.com
+21/09/25 18.47.50 ** X-Mailer: PHP/7.3.21
+21/09/25 18.47.50 ** 
+21/09/25 18.47.50 **  <!DOCTYPE html>
+21/09/25 18.47.50 **  <html>
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **  <head>
+21/09/25 18.47.50 **      <title></title>
+21/09/25 18.47.50 **      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+21/09/25 18.47.50 **      <meta name="viewport" content="width=device-width, initial-scale=1">
+21/09/25 18.47.50 **      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+21/09/25 18.47.50 **      <style type="text/css">
+21/09/25 18.47.50 **          @media screen {
+21/09/25 18.47.50 **              @font-face {
+21/09/25 18.47.50 **                  font-family: "Lato";
+21/09/25 18.47.50 **                  font-style: normal;
+21/09/25 18.47.50 **                  font-weight: 400;
+21/09/25 18.47.50 **                  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff");
+21/09/25 18.47.50 **              }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **              @font-face {
+21/09/25 18.47.50 **                  font-family: "Lato";
+21/09/25 18.47.50 **                  font-style: normal;
+21/09/25 18.47.50 **                  font-weight: 700;
+21/09/25 18.47.50 **                  src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format("woff");
+21/09/25 18.47.50 **              }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **              @font-face {
+21/09/25 18.47.50 **                  font-family: "Lato";
+21/09/25 18.47.50 **                  font-style: italic;
+21/09/25 18.47.50 **                  font-weight: 400;
+21/09/25 18.47.50 **                  src: local("Lato Italic"), local("Lato-Italic"), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");
+21/09/25 18.47.50 **              }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **              @font-face {
+21/09/25 18.47.50 **                  font-family: "Lato";
+21/09/25 18.47.50 **                  font-style: italic;
+21/09/25 18.47.50 **                  font-weight: 700;
+21/09/25 18.47.50 **                  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
+21/09/25 18.47.50 **              }
+21/09/25 18.47.50 **          }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **          /* CLIENT-SPECIFIC STYLES */
+21/09/25 18.47.50 **          body,
+21/09/25 18.47.50 **          table,
+21/09/25 18.47.50 **          td,
+21/09/25 18.47.50 **          a {
+21/09/25 18.47.50 **              -webkit-text-size-adjust: 100%;
+21/09/25 18.47.50 **              -ms-text-size-adjust: 100%;
+21/09/25 18.47.50 **          }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **          table,
+21/09/25 18.47.50 **          td {
+21/09/25 18.47.50 **              mso-table-lspace: 0pt;
+21/09/25 18.47.50 **              mso-table-rspace: 0pt;
+21/09/25 18.47.50 **          }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **          img {
+21/09/25 18.47.50 **              -ms-interpolation-mode: bicubic;
+21/09/25 18.47.50 **          }
+21/09/25 18.47.50 **  
+21/09/25 18.47.50 **          /* RESET STYLES */
+21/09/25 18.47.50 **          img {
+21/09/25 18.47.50 **              border: 0;
+21/09/25 18.47.51 **              height: auto;
+21/09/25 18.47.51 **              line-height: 100%;
+21/09/25 18.47.51 **              outline: none;
+21/09/25 18.47.51 **              text-decoration: none;
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **          table {
+21/09/25 18.47.51 **              border-collapse: collapse !important;
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **          body {
+21/09/25 18.47.51 **              height: 100% !important;
+21/09/25 18.47.51 **              margin: 0 !important;
+21/09/25 18.47.51 **              padding: 0 !important;
+21/09/25 18.47.51 **              width: 100% !important;
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **          /* iOS BLUE LINKS */
+21/09/25 18.47.51 **          a[x-apple-data-detectors] {
+21/09/25 18.47.51 **              color: inherit !important;
+21/09/25 18.47.51 **              text-decoration: none !important;
+21/09/25 18.47.51 **              font-size: inherit !important;
+21/09/25 18.47.51 **              font-family: inherit !important;
+21/09/25 18.47.51 **              font-weight: inherit !important;
+21/09/25 18.47.51 **              line-height: inherit !important;
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **          /* MOBILE STYLES */
+21/09/25 18.47.51 **          @media screen and (max-width:600px) {
+21/09/25 18.47.51 **              h1 {
+21/09/25 18.47.51 **                  font-size: 32px !important;
+21/09/25 18.47.51 **                  line-height: 32px !important;
+21/09/25 18.47.51 **              }
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **          /* ANDROID CENTER FIX */
+21/09/25 18.47.51 **          div[style*="margin: 16px 0;"] {
+21/09/25 18.47.51 **              margin: 0 !important;
+21/09/25 18.47.51 **          }
+21/09/25 18.47.51 **      </style>
+21/09/25 18.47.51 **  </head>
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **  <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+21/09/25 18.47.51 **      <!-- HIDDEN PREHEADER TEXT -->
+21/09/25 18.47.51 **      <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: "Lato", Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We"re thrilled to have you here! Get ready to dive into your new account. </div>
+21/09/25 18.47.51 **      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+21/09/25 18.47.51 **          <!-- LOGO -->
+21/09/25 18.47.51 **          <tr>
+21/09/25 18.47.51 **              <td bgcolor="#FFA73B" align="center">
+21/09/25 18.47.51 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                  </table>
+21/09/25 18.47.51 **              </td>
+21/09/25 18.47.51 **          </tr>
+21/09/25 18.47.51 **          <tr>
+21/09/25 18.47.51 **              <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 18.47.51 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+21/09/25 18.47.51 **                              <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome Mahela!</h1> <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" style="display: block; border: 0px;" />
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                  </table>
+21/09/25 18.47.51 **              </td>
+21/09/25 18.47.51 **          </tr>
+21/09/25 18.47.51 **          <tr>
+21/09/25 18.47.51 **              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 18.47.51 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <p style="margin: 0;">We"re excited to have you get started. First, you need to confirm your account. Just press the button below.</p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left">
+21/09/25 18.47.51 **                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+21/09/25 18.47.51 **                                  <tr>
+21/09/25 18.47.51 **                                      <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+21/09/25 18.47.51 **                                          <table border="0" cellspacing="0" cellpadding="0">
+21/09/25 18.47.51 **                                              <tr>
+21/09/25 18.47.51 **                                                  <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a href="./verifyCode.html" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td>
+21/09/25 18.47.51 **                                              </tr>
+21/09/25 18.47.51 **                                          </table>
+21/09/25 18.47.51 **                                      </td>
+21/09/25 18.47.51 **                                  </tr>
+21/09/25 18.47.51 **                              </table>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr> <!-- COPY -->
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <p style="margin: 0;">If that doesn"t work, copy and paste the following link in your browser:</p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr> <!-- COPY -->
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">https://bit.li.utlddssdstueincx</a></p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <p style="margin: 0;">If you have any questions, just reply to this email—we"re always happy to help out.</p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <p style="margin: 0;">Cheers,<br>BBB Team</p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                  </table>
+21/09/25 18.47.51 **              </td>
+21/09/25 18.47.51 **          </tr>
+21/09/25 18.47.51 **          <tr>
+21/09/25 18.47.51 **              <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
+21/09/25 18.47.51 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;">
+21/09/25 18.47.51 **                              <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2>
+21/09/25 18.47.51 **                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">We&rsquo;re here to help you out</a></p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                  </table>
+21/09/25 18.47.51 **              </td>
+21/09/25 18.47.51 **          </tr>
+21/09/25 18.47.51 **          <tr>
+21/09/25 18.47.51 **              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+21/09/25 18.47.51 **                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+21/09/25 18.47.51 **                      <tr>
+21/09/25 18.47.51 **                          <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br>
+21/09/25 18.47.51 **                              <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p>
+21/09/25 18.47.51 **                          </td>
+21/09/25 18.47.51 **                      </tr>
+21/09/25 18.47.51 **                  </table>
+21/09/25 18.47.51 **              </td>
+21/09/25 18.47.51 **          </tr>
+21/09/25 18.47.51 **      </table>
+21/09/25 18.47.51 **  </body>
+21/09/25 18.47.51 **  
+21/09/25 18.47.51 **  </html>
+21/09/25 18.47.51 ** --- MESSAGE END ---
+21/09/25 18.47.51 ** Connecting to smtp.gmail.com:465
+21/09/25 18.47.51 ** Connected.
+21/09/25 18.47.52 << 220 smtp.gmail.com ESMTP o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.52 >> EHLO Mahela-Laptop<EOL>
+21/09/25 18.47.52 << 250-smtp.gmail.com at your service, [112.134.63.14]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/09/25 18.47.52 ** Authenticating as mastertech.pcaccessories@gmail.com
+21/09/25 18.47.52 >> AUTH LOGIN<EOL>
+21/09/25 18.47.52 << 334 VXNlcm5hbWU6<EOL>
+21/09/25 18.47.52 >> bWFzdGVydGVjaC5wY2FjY2Vzc29yaWVzQGdtYWlsLmNvbQ==<EOL>
+21/09/25 18.47.52 << 334 UGFzc3dvcmQ6<EOL>
+21/09/25 18.47.52 >> MW1odCFrM00=<EOL>
+21/09/25 18.47.53 << 235 2.7.0 Accepted<EOL>
+21/09/25 18.47.53 >> MAIL FROM: <mastertech.pcaccessories@gmail.com><EOL>
+21/09/25 18.47.53 << 250 2.1.0 OK o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.53 >> RCPT TO: <mahela100@gmail.com><EOL>
+21/09/25 18.47.53 << 250 2.1.5 OK o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.53 >> DATA<EOL>
+21/09/25 18.47.54 << 354  Go ahead o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.54 >> Date: Sat, 25 Sep 2021 18:47:54 +0530<EOL>
+21/09/25 18.47.54 >> To: mahela100@gmail.com<EOL>
+21/09/25 18.47.54 >> Subject: Hello Sendmail<EOL>
+21/09/25 18.47.54 >> MIME-Version: 1.0<EOL>
+21/09/25 18.47.54 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21/09/25 18.47.54 >> From: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 18.47.54 >> Reply-To: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 18.47.54 >> X-Mailer: PHP/7.3.21<EOL>
+21/09/25 18.47.54 >> <EOL>
+21/09/25 18.47.54 >>  <!DOCTYPE html><EOL>
+21/09/25 18.47.54 >>  <html><EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>  <head><EOL>
+21/09/25 18.47.54 >>      <title></title><EOL>
+21/09/25 18.47.54 >>      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><EOL>
+21/09/25 18.47.54 >>      <meta name="viewport" content="width=device-width, initial-scale=1"><EOL>
+21/09/25 18.47.54 >>      <meta http-equiv="X-UA-Compatible" content="IE=edge" /><EOL>
+21/09/25 18.47.54 >>      <style type="text/css"><EOL>
+21/09/25 18.47.54 >>          @media screen {<EOL>
+21/09/25 18.47.54 >>              @font-face {<EOL>
+21/09/25 18.47.54 >>                  font-family: "Lato";<EOL>
+21/09/25 18.47.54 >>                  font-style: normal;<EOL>
+21/09/25 18.47.54 >>                  font-weight: 400;<EOL>
+21/09/25 18.47.54 >>                  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format("woff");<EOL>
+21/09/25 18.47.54 >>              }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>              @font-face {<EOL>
+21/09/25 18.47.54 >>                  font-family: "Lato";<EOL>
+21/09/25 18.47.54 >>                  font-style: normal;<EOL>
+21/09/25 18.47.54 >>                  font-weight: 700;<EOL>
+21/09/25 18.47.54 >>                  src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format("woff");<EOL>
+21/09/25 18.47.54 >>              }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>              @font-face {<EOL>
+21/09/25 18.47.54 >>                  font-family: "Lato";<EOL>
+21/09/25 18.47.54 >>                  font-style: italic;<EOL>
+21/09/25 18.47.54 >>                  font-weight: 400;<EOL>
+21/09/25 18.47.54 >>                  src: local("Lato Italic"), local("Lato-Italic"), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");<EOL>
+21/09/25 18.47.54 >>              }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>              @font-face {<EOL>
+21/09/25 18.47.54 >>                  font-family: "Lato";<EOL>
+21/09/25 18.47.54 >>                  font-style: italic;<EOL>
+21/09/25 18.47.54 >>                  font-weight: 700;<EOL>
+21/09/25 18.47.54 >>                  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");<EOL>
+21/09/25 18.47.54 >>              }<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          /* CLIENT-SPECIFIC STYLES */<EOL>
+21/09/25 18.47.54 >>          body,<EOL>
+21/09/25 18.47.54 >>          table,<EOL>
+21/09/25 18.47.54 >>          td,<EOL>
+21/09/25 18.47.54 >>          a {<EOL>
+21/09/25 18.47.54 >>              -webkit-text-size-adjust: 100%;<EOL>
+21/09/25 18.47.54 >>              -ms-text-size-adjust: 100%;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          table,<EOL>
+21/09/25 18.47.54 >>          td {<EOL>
+21/09/25 18.47.54 >>              mso-table-lspace: 0pt;<EOL>
+21/09/25 18.47.54 >>              mso-table-rspace: 0pt;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          img {<EOL>
+21/09/25 18.47.54 >>              -ms-interpolation-mode: bicubic;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          /* RESET STYLES */<EOL>
+21/09/25 18.47.54 >>          img {<EOL>
+21/09/25 18.47.54 >>              border: 0;<EOL>
+21/09/25 18.47.54 >>              height: auto;<EOL>
+21/09/25 18.47.54 >>              line-height: 100%;<EOL>
+21/09/25 18.47.54 >>              outline: none;<EOL>
+21/09/25 18.47.54 >>              text-decoration: none;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          table {<EOL>
+21/09/25 18.47.54 >>              border-collapse: collapse !important;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          body {<EOL>
+21/09/25 18.47.54 >>              height: 100% !important;<EOL>
+21/09/25 18.47.54 >>              margin: 0 !important;<EOL>
+21/09/25 18.47.54 >>              padding: 0 !important;<EOL>
+21/09/25 18.47.54 >>              width: 100% !important;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          /* iOS BLUE LINKS */<EOL>
+21/09/25 18.47.54 >>          a[x-apple-data-detectors] {<EOL>
+21/09/25 18.47.54 >>              color: inherit !important;<EOL>
+21/09/25 18.47.54 >>              text-decoration: none !important;<EOL>
+21/09/25 18.47.54 >>              font-size: inherit !important;<EOL>
+21/09/25 18.47.54 >>              font-family: inherit !important;<EOL>
+21/09/25 18.47.54 >>              font-weight: inherit !important;<EOL>
+21/09/25 18.47.54 >>              line-height: inherit !important;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          /* MOBILE STYLES */<EOL>
+21/09/25 18.47.54 >>          @media screen and (max-width:600px) {<EOL>
+21/09/25 18.47.54 >>              h1 {<EOL>
+21/09/25 18.47.54 >>                  font-size: 32px !important;<EOL>
+21/09/25 18.47.54 >>                  line-height: 32px !important;<EOL>
+21/09/25 18.47.54 >>              }<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>          /* ANDROID CENTER FIX */<EOL>
+21/09/25 18.47.54 >>          div[style*="margin: 16px 0;"] {<EOL>
+21/09/25 18.47.54 >>              margin: 0 !important;<EOL>
+21/09/25 18.47.54 >>          }<EOL>
+21/09/25 18.47.54 >>      </style><EOL>
+21/09/25 18.47.54 >>  </head><EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>  <body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;"><EOL>
+21/09/25 18.47.54 >>      <!-- HIDDEN PREHEADER TEXT --><EOL>
+21/09/25 18.47.54 >>      <div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: "Lato", Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;"> We"re thrilled to have you here! Get ready to dive into your new account. </div><EOL>
+21/09/25 18.47.54 >>      <table border="0" cellpadding="0" cellspacing="0" width="100%"><EOL>
+21/09/25 18.47.54 >>          <!-- LOGO --><EOL>
+21/09/25 18.47.54 >>          <tr><EOL>
+21/09/25 18.47.54 >>              <td bgcolor="#FFA73B" align="center"><EOL>
+21/09/25 18.47.54 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                  </table><EOL>
+21/09/25 18.47.54 >>              </td><EOL>
+21/09/25 18.47.54 >>          </tr><EOL>
+21/09/25 18.47.54 >>          <tr><EOL>
+21/09/25 18.47.54 >>              <td bgcolor="#FFA73B" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 18.47.54 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;"><EOL>
+21/09/25 18.47.54 >>                              <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Welcome Mahela!</h1> <img src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="120" style="display: block; border: 0px;" /><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                  </table><EOL>
+21/09/25 18.47.54 >>              </td><EOL>
+21/09/25 18.47.54 >>          </tr><EOL>
+21/09/25 18.47.54 >>          <tr><EOL>
+21/09/25 18.47.54 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 18.47.54 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;">We"re excited to have you get started. First, you need to confirm your account. Just press the button below.</p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left"><EOL>
+21/09/25 18.47.54 >>                              <table width="100%" border="0" cellspacing="0" cellpadding="0"><EOL>
+21/09/25 18.47.54 >>                                  <tr><EOL>
+21/09/25 18.47.54 >>                                      <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;"><EOL>
+21/09/25 18.47.54 >>                                          <table border="0" cellspacing="0" cellpadding="0"><EOL>
+21/09/25 18.47.54 >>                                              <tr><EOL>
+21/09/25 18.47.54 >>                                                  <td align="center" style="border-radius: 3px;" bgcolor="#FFA73B"><a href="./verifyCode.html" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #FFA73B; display: inline-block;">Confirm Account</a></td><EOL>
+21/09/25 18.47.54 >>                                              </tr><EOL>
+21/09/25 18.47.54 >>                                          </table><EOL>
+21/09/25 18.47.54 >>                                      </td><EOL>
+21/09/25 18.47.54 >>                                  </tr><EOL>
+21/09/25 18.47.54 >>                              </table><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr> <!-- COPY --><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 0px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;">If that doesn"t work, copy and paste the following link in your browser:</p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr> <!-- COPY --><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">https://bit.li.utlddssdstueincx</a></p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;">If you have any questions, just reply to this email—we"re always happy to help out.</p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;">Cheers,<br>BBB Team</p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                  </table><EOL>
+21/09/25 18.47.54 >>              </td><EOL>
+21/09/25 18.47.54 >>          </tr><EOL>
+21/09/25 18.47.54 >>          <tr><EOL>
+21/09/25 18.47.54 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;"><EOL>
+21/09/25 18.47.54 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#FFECD1" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"><EOL>
+21/09/25 18.47.54 >>                              <h2 style="font-size: 20px; font-weight: 400; color: #111111; margin: 0;">Need more help?</h2><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;"><a href="#" target="_blank" style="color: #FFA73B;">We&rsquo;re here to help you out</a></p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                  </table><EOL>
+21/09/25 18.47.54 >>              </td><EOL>
+21/09/25 18.47.54 >>          </tr><EOL>
+21/09/25 18.47.54 >>          <tr><EOL>
+21/09/25 18.47.54 >>              <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;"><EOL>
+21/09/25 18.47.54 >>                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;"><EOL>
+21/09/25 18.47.54 >>                      <tr><EOL>
+21/09/25 18.47.54 >>                          <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: "Lato", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;"> <br><EOL>
+21/09/25 18.47.54 >>                              <p style="margin: 0;">If these emails get annoying, please feel free to <a href="#" target="_blank" style="color: #111111; font-weight: 700;">unsubscribe</a>.</p><EOL>
+21/09/25 18.47.54 >>                          </td><EOL>
+21/09/25 18.47.54 >>                      </tr><EOL>
+21/09/25 18.47.54 >>                  </table><EOL>
+21/09/25 18.47.54 >>              </td><EOL>
+21/09/25 18.47.54 >>          </tr><EOL>
+21/09/25 18.47.54 >>      </table><EOL>
+21/09/25 18.47.54 >>  </body><EOL>
+21/09/25 18.47.54 >>  <EOL>
+21/09/25 18.47.54 >>  </html><EOL>
+21/09/25 18.47.54 >> .<EOL>
+21/09/25 18.47.55 << 250 2.0.0 OK  1632575876 o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.55 >> QUIT<EOL>
+21/09/25 18.47.55 << 221 2.0.0 closing connection o14sm12180343pfh.145 - gsmtp<EOL>
+21/09/25 18.47.55 ** Disconnected.
+21/09/25 18.47.55 ** Disconnected.
+21/09/25 18.47.55 ** Disconnected.
+21/09/25 19.06.48 ** --- MESSAGE BEGIN ---
+21/09/25 19.06.48 ** To: mahela100@gmail.com
+21/09/25 19.06.48 ** Subject: Hello Sendmail
+21/09/25 19.06.48 ** MIME-Version: 1.0
+21/09/25 19.06.48 ** Content-type: text/html; charset=iso-8859-1
+21/09/25 19.06.48 ** From: mastertech.pcaccessories@gmail.com
+21/09/25 19.06.48 ** Reply-To: mastertech.pcaccessories@gmail.com
+21/09/25 19.06.48 ** X-Mailer: PHP/7.3.21
+21/09/25 19.06.48 ** 
+21/09/25 19.06.48 ** <html><body><h1 style="color:#f40;">Hi $name!</h1><h1 style="color:#f40;">Hi Mahela!</h1><p style="color:#080;font-size:18px;">Your Registration is Successfull</p></body></html>
+21/09/25 19.06.48 ** --- MESSAGE END ---
+21/09/25 19.06.48 ** Connecting to smtp.gmail.com:465
+21/09/25 19.06.49 ** Connected.
+21/09/25 19.06.49 << 220 smtp.gmail.com ESMTP c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.49 >> EHLO Mahela-Laptop<EOL>
+21/09/25 19.06.49 << 250-smtp.gmail.com at your service, [112.134.63.14]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21/09/25 19.06.49 ** Authenticating as mastertech.pcaccessories@gmail.com
+21/09/25 19.06.49 >> AUTH LOGIN<EOL>
+21/09/25 19.06.50 << 334 VXNlcm5hbWU6<EOL>
+21/09/25 19.06.50 >> bWFzdGVydGVjaC5wY2FjY2Vzc29yaWVzQGdtYWlsLmNvbQ==<EOL>
+21/09/25 19.06.50 << 334 UGFzc3dvcmQ6<EOL>
+21/09/25 19.06.50 >> MW1odCFrM00=<EOL>
+21/09/25 19.06.50 << 235 2.7.0 Accepted<EOL>
+21/09/25 19.06.50 >> MAIL FROM: <mastertech.pcaccessories@gmail.com><EOL>
+21/09/25 19.06.51 << 250 2.1.0 OK c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.51 >> RCPT TO: <mahela100@gmail.com><EOL>
+21/09/25 19.06.51 << 250 2.1.5 OK c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.51 >> DATA<EOL>
+21/09/25 19.06.51 << 354  Go ahead c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.51 >> Date: Sat, 25 Sep 2021 19:06:51 +0530<EOL>
+21/09/25 19.06.51 >> To: mahela100@gmail.com<EOL>
+21/09/25 19.06.51 >> Subject: Hello Sendmail<EOL>
+21/09/25 19.06.51 >> MIME-Version: 1.0<EOL>
+21/09/25 19.06.51 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21/09/25 19.06.51 >> From: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 19.06.51 >> Reply-To: mastertech.pcaccessories@gmail.com<EOL>
+21/09/25 19.06.51 >> X-Mailer: PHP/7.3.21<EOL>
+21/09/25 19.06.51 >> <EOL>
+21/09/25 19.06.51 >> <html><body><h1 style="color:#f40;">Hi $name!</h1><h1 style="color:#f40;">Hi Mahela!</h1><p style="color:#080;font-size:18px;">Your Registration is Successfull</p></body></html><EOL>
+21/09/25 19.06.51 >> .<EOL>
+21/09/25 19.06.52 << 250 2.0.0 OK  1632577013 c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.52 >> QUIT<EOL>
+21/09/25 19.06.52 << 221 2.0.0 closing connection c11sm12418875pfm.55 - gsmtp<EOL>
+21/09/25 19.06.52 ** Disconnected.
+21/09/25 19.06.52 ** Disconnected.
+21/09/25 19.06.52 ** Disconnected.

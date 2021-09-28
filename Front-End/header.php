@@ -1,6 +1,6 @@
 <div class="containor row">
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -123,7 +123,7 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container-fluid " style="margin-bottom: 5px;">
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">

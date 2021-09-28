@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+<?php include '../PHP/Functions.php';
+
+if($_SESSION['UType']!='Admin'){
+header("HTTP/1.1 401 Unauthorized"); 
+header("Location: ../index.php");
+}?>
 <!doctype html>
 <html lang="en">
 
