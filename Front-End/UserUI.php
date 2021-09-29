@@ -135,7 +135,7 @@
               </table> 
               <br>
               <div class="col-md-12 d-flex flex-row-reverse align-items-center" style="padding-bottom:10px;padding-right:50px;">
-              <button type="button" class="btn btn-light  btn-floating flex-shrink-0"><i class="fas fa-pen"></i></button>
+              <button type="button" class="btn btn-light  btn-floating flex-shrink-0" data-mdb-ripple-color="dark"  data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#Modalprofile"><i class="fas fa-pen"></i></button>
               </div>
             </div>
           </div>
@@ -1380,7 +1380,7 @@
               <button
                 type="button"
                 class="btn btn-outline-success btn-rounded"
-                data-mdb-ripple-color="dark"  data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#Modaladdress"><h6> Add a new location <i class="fas fa-plus-circle"></i></h6>
+                data-mdb-ripple-color="dark"  data-mdb-ripple-color="dark" data-mdb-toggle="modal" data-mdb-target="#Modaladdress"><h6> Add a new location <i class="fas fa-plus-circle"></i></h6></button>
             </div>
             
           </div>
@@ -1426,11 +1426,67 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="submit" id="addresssubmit" name="addresssubmit" class="btn btn-primary">Save changes</button></form>
+        <button type="submit" id="addresssubmit" name="addresssubmit" class="btn btn-primary">Save changes</button>
         <?php if (isset($_POST["addresssubmit"])){
           adduseraddress($_SESSION['UserID'], $_POST['Description'], $_POST['Address1'], $_POST['Address2'], $_POST['City'], $_POST['PostCode']);
         }?>
       </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal Address -->
+<div class="modal fade" id="Modalprofile" tabindex="-1" aria-labelledby="ModalprofileLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalprofileLabel">Edit Profile</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post" enctype="multipart/form-data">
+                <label for="First_Name" class="form-label">Name</label>
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" id="First_Name" name="First_Name" required placeholder="First Name" value="<?php echo $user['First_Name'] ?>">
+                <input type="text" class="form-control" id="Last_Name" name="Last_Name" required placeholder="Last Name" value="<?php echo $user['Last_Name'] ?>">
+                </div><br>
+        
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required placeholder="Email" value="<?php echo $user['Email'] ?>"><br>
+                
+                <label for="Mobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="Address2" name="Mobile" required placeholder="Mobile" value="<?php echo $user['Mobile'] ?>"><br>
+                
+                <label for="Password" class="form-label">Change Password</label>
+                <input type="password" class="form-control" id="Password" name="CurrentPassword" placeholder="Type Current Password">
+                <input type="password" class="form-control" id="NewPassword" name="NewPassword" placeholder="Type New Password">
+                <input type="password" class="form-control" id="ConfPassword" name="ConfPassword" placeholder="Confirm New Password">
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+        <button type="submit" id="profilesubmit" name="profilesubmit" class="btn btn-primary">Save changes</button>
+      </div>
+        <?php if (isset($_POST["profilesubmit"])){
+            if($_POST["CurrentPassword"]!=''){
+                if(validatepw($_SESSION['UserID'],$_POST["CurrentPassword"])){
+                  if($_POST["NewPassword"]==$_POST["ConfPassword"]){
+
+                    updateuser($_SESSION['UserID'],$_POST["NewPassword"],$_POST["Email"],$_POST["Mobile"],$_POST["First_Name"],$_POST["Last_Name"]);
+
+                  }
+                  else{
+                    echo "<p align='Center'>Password and Password Confirmation does not match</p>";
+                  }
+
+                }
+                else{
+                    echo "<p align='Center'>Current Password is invalid</p>";
+                }
+            }
+            updateuser($_SESSION['UserID'],'',$_POST["Email"],$_POST["Mobile"],$_POST["First_Name"],$_POST["Last_Name"]);
+        }?>
     </form>
     </div>
   </div>

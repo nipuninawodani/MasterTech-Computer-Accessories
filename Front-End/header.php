@@ -1,6 +1,6 @@
 <div class="containor row">
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -110,8 +110,12 @@
       } else{
       ?>
 
-      <a type="button" class="tn btn-outline-info btn-rounded"
-  data-mdb-ripple-color="dark" href="login.php"><span class="material-icons">login</span> Login</a>
+              <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
 
 
       <?php 
@@ -123,7 +127,7 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid " style="margin-bottom: 5px;">
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">

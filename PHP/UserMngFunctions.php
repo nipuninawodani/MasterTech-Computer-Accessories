@@ -69,4 +69,43 @@ function getuserdetails($UserID){
 		return $row;
 }
 
+function validatepw($UserID,$Password){
+
+		$link = dblink();
+
+		$sql= "SELECT Password FROM user Where USERID = '$UserID'";
+
+		$result = mysqli_query($link,$sql);
+
+		$row = mysqli_fetch_array($result);
+
+		if($row['Password']==md5($Password)){
+			return True;
+		}
+		else{
+			return False;
+		}
+
+}
+
+function updateuser($UserID,$Password,$Email,$Mobile,$First_Name,$Last_Name){
+
+		$link = dblink();
+
+		if($Password!=''){
+
+			$sql="UPDATE user SET First_Name='$First_Name',Last_Name='$Last_Name',Email='$Email',Password='".md5($Password)."',Mobile='$Mobile' WHERE UserID='$UserID';";
+
+		}
+		else{
+
+			$sql="UPDATE user SET First_Name='$First_Name',Last_Name='$Last_Name',Email='$Email',Mobile='$Mobile' WHERE UserID='$UserID';";
+
+		}
+
+
+		$result = mysqli_query($link,$sql);
+
+}
+
 ?>
