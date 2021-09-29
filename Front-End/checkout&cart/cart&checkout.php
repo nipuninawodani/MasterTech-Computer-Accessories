@@ -239,12 +239,13 @@
 					<?php $counter++; */ 
 					
 					$OID=getLastOrderId();?>
-					<input type="hidden" name="amount" value="<?php echo $total; ?>">
-					<input type="hidden" name="discount_amount" value="<?php echo $DISCOUT+$PROMO; ?>">
+					<input type="hidden" name="amount" value="<?php echo $total/200; ?>">
+					<input type="hidden" name="discount_amount" value="<?php echo ($DISCOUT+$PROMO)/200; ?>">
 					<input type="hidden" name="item_name" value="All cart Items">
 					<input type="hidden" name="item_number" value="<?php echo sprintf("%'.010d\n", $OID); ?>">
+					<input type="hidden" name="custom" value="<?php echo $user_id; ?>">
 					
-					<input type="hidden" name="shipping" value="2000">
+					<input type="hidden" name="shipping" value="200">
 					<input type="hidden" name="address_override" value="1">
 					<input type="hidden" name="address1" value="<?php echo $row['shp_Address'];?>">
 					<input type="hidden" name="city" value="<?php echo $row['shp_City'];?>">

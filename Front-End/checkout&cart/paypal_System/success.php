@@ -1,23 +1,33 @@
 <?php
-
+	
 	include 'confiq.php'; 
 	require '../../TheCart/functioncart.php';
-	require '../../../PHP/Functions.PHP';
-	$link = dblink();
-
+	require '../../../PHP/Functions.php';
+	require'../Confrim_Order.php';
+	$link=$link = dblink();
+    $user_id=$_GET['custom'];
 	if(!empty($_GET['item_number']) && !empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cc']) && !empty($_GET['st'])){ 
     // Get transaction information from URL
 	
     $Order_number = $_GET['item_number'];  
+		$AADDRESSNA=$_GET['address_name'];
+		$AADDRESSST=$_GET['address_street'];
+		$AADDRESSCT=$_GET['address_city'];
+		$AADDRESSZP=$_GET['address_zip'];
+		$address=$AADDRESSNA.",\n".$AADDRESSST.",\n ".$AADDRESSCT.",\n ".$AADDRESSZP;
+		$PaymentDate=$_GET['payment_date'];
+		$PayDate = substr($PaymentDate, 0, 10);
+		$PaytIME = substr($PaymentDate, 11, 17);
     $txn_id = $_GET['tx']; 
     $payment_gross = $_GET['amt']; 
     $currency_code = $_GET['cc']; 
     $payment_status = $_GET['st']; 
 		
 		//Check if transaction data exists with the same TXN ID. 
-			$query=mysqli_query($link,"SELECT * FROM payments WHERE txn_id = '".$txn_id."'");
-			$result=mysqli_fetch_array($query);
-			$no_of_row= mysqli_num_rows($result);
+			
+		 $query="SELECT * FROM payments WHERE txn_id = '$txn_id'";
+		$result=mysqli_query($link,$query) or die(mysqli_error($link));
+		$no_of_row = mysqli_num_rows($result);
 
 		 if($no_of_row > 0){ 
         $paymentRow = mysqli_fetch_array($result);
@@ -28,7 +38,7 @@
 			
         // Insert tansaction data into the database 	
 			
-			$sql = "INSERT INTO product(
+			$sql = "INSERT INTO payments(
 					OrderID,
 					txn_id,
 					payment_gross,
@@ -46,13 +56,18 @@
 					
                 )";
 		
-		  $statement = $link->prepare($sql);
-
-          $statement->execute();
-
-          $statement->close();
+		 	if($link->query($sql)=== TRUE){
+				echo "<script>alert('added to database');</script>";
+				
+			}else{
+				echo "Error:". $sql ."<br>";
+					$link->error;
+			}
+			 $payment_id = $link->insert_id;
+			
 		
     } 
+		updateOrderAndEmtycart($Order_number,$user_id,$address,$payment_gross,$PayDate);
 } 
 
 
@@ -172,19 +187,27 @@
                                             </tr>
                                             <tr>
 												<?php 
-													 $user_id=$_SESSION['UserID'];
+													
     $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
+									
 													$user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
-													$no_of_user_products= mysqli_num_rows($user_products_result);
+													
+													$sum=0;
 													$counter=0;
                        								while($row=mysqli_fetch_array($user_products_result)){
                            
                          ?>
 												
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo $row['Product_Name']; ?> </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo  $row['Price']; ?> &nbsp X&nbsp   <?php echo (qunaty($row['ProductID'])) ?>&nbsp =  &nbsp<?php  $subtotel=subtotalF( $row['ProductID'],$row['Price']);
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo  $row['Price']; ?> &nbsp X&nbsp   <?php echo (qunaty($row['ProductID'],$user_id)) ?>&nbsp =  &nbsp<?php  $subtotel=subtotalF( $row['ProductID'],$row['Price'],$user_id);
 				  								$sum=$sum+$subtotel; ?>LKR  <?php echo $subtotel; ?></td>
-                                            </tr><?php echo $counter; $counter++; } ?>
+                                            </tr><?php  } ?>
+											<tr>
+                                                <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Subtotal</td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   
+													echo $sum;?> </td>
+                                            </tr>
+											<hr>
                                             <tr>
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Shipping  </td>
                                                 <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;">+LKR 2000 </td>
@@ -194,6 +217,7 @@
                                                 <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   $discount= $sum+2000-$payment_gross*200;
 													echo $discount;?> </td>
                                             </tr>
+											 
                                         </table>
                                     </td>
                                 </tr>
@@ -202,7 +226,7 @@
                                         <table cellspacing="0" cellpadding="0" border="0" width="100%">
                                             <tr>
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;"> TOTAL </td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">LKR <?php echo( $payment_gross*200); ?> <br> $<?php echo $payment_gross; ?></td>
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;">LKR <?php echo( $payment_gross*200); ?> <br> $ <?php echo $payment_gross; ?></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -210,9 +234,7 @@
                             </table>
                         </td>
                     </tr>
-						<?php  $user_id=$_SESSION['UserID']; $ADD=$_SESSION['ADD'];  $user_shpCAD_query="SELECT	*  from shippingaddress where User_ID= '$user_id'AND id='$ADD' ";
-					 		$user_shpAD_result=mysqli_query($link,$user_shpCAD_query) or die(mysqli_error($link));
-							$row=mysqli_fetch_array($user_shpAD_result);?>
+						
                     <tr>
                         <td align="center" height="100%" valign="top" width="100%" style="padding: 0 35px 35px 35px; background-color: #ffffff;" bgcolor="#ffffff">
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:660px;">
@@ -223,9 +245,8 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
                                                         <p style="font-weight: 800;">Delivery Address</p>
-                                                        <p><?php echo $row['First_Name'];?> <?php echo $row['lastName']; ?>,<br>
-				  				<?php echo $row['shp_Address'];?>,<br><?php echo $row['shp_City'];?> <?php echo $row['shp_Pincode'];?> ,<br>
-								<?php echo $row['shp_Province'];?>,<br>Srilanka</p>
+                                                        <p>
+														<?php echo $AADDRESSNA;?><br><?php echo $AADDRESSST;?><br><?php echo $AADDRESSCT;?><?php echo $AADDRESSZP;?><br> Sri Lanka</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -235,7 +256,7 @@
                                                 <tr>
                                                     <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
                                                         <p style="font-weight: 800;">Estimated Delivery Date</p>
-                                                        <p>two Weeks</p>
+                                                        <p>5 working days from <?php echo $PayDate;?></p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -252,7 +273,7 @@
         </tr>
     </table>
   <?php }else{ ?>
-             <h2 style="font-size: 30px;text-align:center; font-weight: 800; line-height: 36px; color: #ff0000; margin: 0;"><br> Thank You For Your Order! </h2>
+             <h2 style="font-size: 30px;text-align:center; font-weight: 800; line-height: 36px; color: #ff0000; margin: 0;"><br> Your Payment has Failed............. :( </h2>
         <?php } ?>
 	
 	

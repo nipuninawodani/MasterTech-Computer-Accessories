@@ -1,10 +1,9 @@
 <?php 
 
-function subtotalF($ProductID,$price){
+function subtotalF($ProductID,$price,$user_id){
 
 
 	$link = dblink();
-	$user_id=$_SESSION['UserID'];
 	$sql = "SELECT	quantity_D  from cart_items where item_id= '$ProductID' AND User_id='$user_id' AND status='added to cart'";
 	$result = mysqli_query($link,$sql);
 	$row = mysqli_fetch_array($result);
@@ -13,11 +12,11 @@ function subtotalF($ProductID,$price){
 
 }
 
-function qunaty($ProductID){
+function qunaty($ProductID,$user_id){
 	
 
 	$link = dblink();
-	$user_id=$_SESSION['UserID'];
+	
 	$sql = "SELECT	quantity_D  from cart_items where item_id= '$ProductID' AND User_id='$user_id'";
 	$result = mysqli_query($link,$sql);
 	$row = mysqli_fetch_array($result);

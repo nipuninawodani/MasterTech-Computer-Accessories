@@ -80,10 +80,10 @@
                    		<img src="../uploads/<?php echo $imgresult; ?>" alt="" class="itemImg" />
                     <p class="itemNumber">#<?php echo $row['ProductID']; ?></p>
                     <h3><?php echo $row['Product_Name']; ?></h3>
-                    <p class="stockStatus"><?php echo $row['Price']; ?> &nbsp  X &nbsp  <?php echo(qunaty($row['ProductID'])) ?> </p>
+                    <p class="stockStatus"><?php echo $row['Price']; ?> &nbsp  X &nbsp  <?php echo(qunaty($row['ProductID'],$user_id)) ?> </p>
                   </div>  
               
-                 <?php  $subtotel=subtotalF( $row['ProductID'], $row['Price']);
+                 <?php  $subtotel=subtotalF( $row['ProductID'], $row['Price'],$user_id);
 				  		$sum=$sum+$subtotel; ?>
                   <div class="prodTotal cartSection"> 
                    	 <p class="prodTotal cartSection">LKR &nbsp <?php echo $subtotel; ?>.00</p>

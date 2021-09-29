@@ -104,12 +104,14 @@ $query=mysqli_query($link,"SELECT * FROM payments WHERE txn_id = '".$txn_id."'")
 					
                 )";
 		
-		  $statement = $link->prepare($sql);
-
-          $statement->execute();
-
-          $statement->close();
-		
+		if($link->query($sql)=== TRUE){
+				echo "<script>alert('added to database');</script>";
+				
+			}else{
+				echo "Error:". $sql ."<br>";
+					$link->error;
+			}
+			$link->close();
     } 
 } 
 
