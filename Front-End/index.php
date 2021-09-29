@@ -221,27 +221,28 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 
 
 <<<<<<< HEAD:Front-End/index.html
-====== 
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>Pet sitting</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="fa fa-bars"></span> Menu
-    </button>
-    <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
-        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+=======
+      <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="text-center">
+          <img
+            class="mb-4"
+            src="logo.png"
+            style="width: 250px;"
+          />
+          <h5 class="mb-3">Thank you for using our product. We're glad you're with us.</h5>
+          <p class="mb-3">MDB Team</p>
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://mdbootstrap.com/docs/standard/getting-started/"
+            target="_blank"
+            role="button"
+            >Start MDB tutorial</a
+          >
+        </div>
+        <a href="./Register.php">Register</a>
+        <a href="./bootstrap-5-admin-template-main/admin.html">Admin</a>
+>>>>>>> 8946a524f5a54cfa3833bb44a859282b970cfec7:Front-End/index.php
+
 
 
 
@@ -593,6 +594,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
         </div>
       </div>
     </div>
+<<<<<<< HEAD:Front-End/index.html
   </div>
 </section>
 
@@ -749,8 +751,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
+=======
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
-
+<!-- </div> -->
+<!-- End of .cotainer -->
+<a href="./Login.html">Login</a>
+<a href="./Profile.html">Profile</a>
+<a href="../material-dashboard-master/dashboard.html">Admin Dashboard</a>
+<a href="./Cart.html">Cart</a>
+<a href="../material-dashboard-master/dashboardDelivery.html">Delivery</a>
 >>>>>>> 8946a524f5a54cfa3833bb44a859282b970cfec7:Front-End/index.php
 
     <!-- End your project here-->
