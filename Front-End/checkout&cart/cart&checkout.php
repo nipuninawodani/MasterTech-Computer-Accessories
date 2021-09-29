@@ -173,17 +173,7 @@
 				<?php }?>
               
             </li>
-            <li class="list-group-item d-flex justify-content-between bg-light"><!--text-danger-->
-              <div class="text-success">
-                <h6 class="my-0">Promo code</h6>
-                <small>EXAMPLECODE</small>
-              </div>
-				<?php	$PROMO=0; if(isset($_SESSION['red'])){?> 
-					<span class="text-success">-LKR <?php $PROMO=$sumP*$_SESSION['red']; echo $PROMO; ?> </span>
-				<?php } else { ?>
-					<span class="text-danger">-LKR 0.00</span>
-				<?php }?>
-            </li>
+            
             <li class="list-group-item d-flex justify-content-between">
               <span>Total </span>
               <strong>LKR <?php   $total=(($sumP)+2000-($sumP*0.1)); echo $total;?>.00</strong>
@@ -191,19 +181,7 @@
           </ul>
           <!-- Cart -->
 
-          <!-- Promo code -->
-          <form class="card p-2" action="" method="POST">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Promo code"  id="promo" name="promo">
-              <div class="input-group-append">
-                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">
-					 Redeem 
-					</button>
-				  
-              </div>
-            </div>
-          </form>
-          <!-- Promo code -->
+        
 			
 				
 			 <hr>
@@ -223,24 +201,11 @@
 					<?php $user_shpCAD_query="SELECT	*  from shippingaddress where User_ID= '$user_id'AND id='$ADD' ";
 					 $user_shpAD_result=mysqli_query($link,$user_shpCAD_query) or die(mysqli_error($link));
 					$row=mysqli_fetch_array($user_shpAD_result);
-					/*
-						 $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
-						 $user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
-                        $no_of_user_products= mysqli_num_rows($user_products_result);
-						 $counter=1;
-						 while($ct=mysqli_fetch_array($user_products_result)){
-					?>
-					
-                    <!-- Specify details about the item that buyers will purchase. -->
-					<input type="hidden" name="add" value="<?php echo $counter; ?>">
-					<input type="hidden" name="amount_<?php echo $counter; ?>" value="<?php echo $ct['Price']; ?> ">
-					<input type="hidden" name="item_name_<?php echo $counter; ?>" value="<?php echo $ct['Product_Name']; ?> ">
-					<input type="hidden" name="quantity_<?php echo $counter; ?>" value=" <?php echo(qunaty($ct['ProductID'])); ?> ">
-					<?php $counter++; */ 
+					//paypal information center
 					
 					$OID=getLastOrderId();?>
 					<input type="hidden" name="amount" value="<?php echo $total/200; ?>">
-					<input type="hidden" name="discount_amount" value="<?php echo ($DISCOUT+$PROMO)/200; ?>">
+					<input type="hidden" name="discount_amount" value="<?php echo $DISCOUT/200; ?>">
 					<input type="hidden" name="item_name" value="All cart Items">
 					<input type="hidden" name="item_number" value="<?php echo sprintf("%'.010d\n", $OID); ?>">
 					<input type="hidden" name="custom" value="<?php echo $user_id; ?>">

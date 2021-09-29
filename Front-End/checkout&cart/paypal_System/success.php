@@ -1,5 +1,5 @@
 <?php
-	
+	session_start();
 	include 'confiq.php'; 
 	require '../../TheCart/functioncart.php';
 	require '../../../PHP/Functions.php';
