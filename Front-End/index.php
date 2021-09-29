@@ -107,6 +107,12 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
         <li class="nav-item">
           <a class="nav-link" href="#">CONTACT US</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
       </ul>
       <!-- Left links -->
     </div>
