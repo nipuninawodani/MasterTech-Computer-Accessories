@@ -25,6 +25,9 @@
     require '../../PHP/Functions.php';
     session_start();
 	$link = dblink();
+	 if(!isset($_SESSION['LogedIn'])){
+        header('location: ../login.php');
+    }
 	if (isset($_POST['submit'])) {
     $item_id=$_POST['product_id'];
 	$qty=$_POST['quantity'];
