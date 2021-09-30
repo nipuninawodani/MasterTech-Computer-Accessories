@@ -67,22 +67,14 @@
                             </div>
                         </li>
                         <li class="mainmenu">
-                            <a class="robotor collapsible-header waves-effect arrow-r">
+                            <a class="robotor  arrow-r">
                                 <i class="fab fa-buffer"></i> Ratings <i class="fas fa-angle-down rotate-icon"></i>
                             </a>
                             <div class="collapsible-body">
                                 <ul> <div class="d-grid gap-2 text-center">
                                     <li>
-                                        <input type="radio" class="btn-check" name="rating" id="4.5" value="4.5" autocomplete="off" />
-                                        <label class="btn btn-info" for="4.5" style="width: 150px">4.5 & Up</label><br>
-                                    </li>
-                                    <li>
                                         <input type="radio" class="btn-check" name="rating" id="4" value="4" autocomplete="off" />
                                         <label class="btn btn-info" for="4" style="width: 150px">4.0 & Up</label><br>
-                                    </li>
-                                    <li>
-                                        <input type="radio" class="btn-check" name="rating" id="3.5" value="3.5" autocomplete="off" />
-                                        <label class="btn btn-info" for="3.5" style="width: 150px">3.5 & Up</label><br>
                                     </li>
                                     <li>
                                         <input type="radio" class="btn-check" name="rating" id="3" value="3" autocomplete="off" />
@@ -91,25 +83,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="mainmenu">
-                            <a class="robotor collapsible-header waves-effect arrow-r">
-                                <i class="fab fa-buffer"></i> Categories <i class="fas fa-angle-down rotate-icon"></i>
-                            </a>
-                            <div class="collapsible-body">
-                                <ul> <div class="d-grid gap-2 text-center">
-                                    <li>
-                                        <input type="checkbox" class="btn-check" id="Components" value="Components" name="Categories[]" autocomplete="off" />
-                                        <label class="btn btn-primary" for="Components" style="width: 150px">PC Components</label><br>
-                                    </li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </li>
                       <li class="mainmenu text-center">
                         <div class="btn-group text-center">
                           <input type="reset" onclick="document.getElementById('filter').reset();document.getElementById('filter').submit();" class="btn btn-outline-dark" name="filter" Value="Clear" style="width: 90px">
                           <input type="submit" class="btn btn-outline-success" name="filters" Value="Filter" style="width: 90px">
                         </div>
+                        <br><br><br><br><br><br><br><br>
                       </li>
                         
                     </ul>
@@ -155,7 +134,7 @@
               <div class="view overlay">
                 <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID'];?>" 
                 style="width: 250px; height: 250px; object-fit: fill;">
-                <a href="item?ID=<?php echo $row['ProductID']; ?>">
+                <a href="item.php?ID=<?php echo $row['ProductID']; ?>">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -164,7 +143,7 @@
               <!--Card content-->
               <div class="card-body text-center">
                 <!--Category & Title-->
-                <a href="item?ID=<?php echo $row['ProductID']; ?>" class="grey-text">
+                <a href="item.php?ID=<?php echo $row['ProductID']; ?>" class="grey-text">
                   <h6 style="line-height: 2.5ex; height: 5.0ex; overflow: hidden;"><?php echo $row['Product_Name']; ?></h6>
                 </a>
                 <h5>

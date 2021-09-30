@@ -39,7 +39,7 @@ function login($email,$password,$remember) {
 				setcookie("Password", $password, time()+3600, "/","", 0);
 			}
 			if($row['Type']=='Admin'){
-				echo '<script type="text/javascript"> window.location = "../material-dashboard-master/index.php" </script>';
+				echo '<script type="text/javascript"> window.location = "../admin/index.php" </script>';
 			}else{
 				echo '<script type="text/javascript"> window.location = "../index.php" </script>';
 			}
@@ -354,6 +354,19 @@ function adminoderproducts($OrderID){
 	$result = mysqli_query($link,$sql);
 
 	return $result;
+}
+
+function editproducts($ProductID,$Price,$NumInStock){
+
+	$link = dblink();
+
+	$sql= "UPDATE product SET Price='$Price',NumInStock='$NumInStock' WHERE ProductID='$ProductID'"; 
+
+	$result = mysqli_query($link,$sql);
+
+	if($result){
+		echo "<meta http-equiv='refresh' content='0'>";
+	}
 }
 
 ?>
