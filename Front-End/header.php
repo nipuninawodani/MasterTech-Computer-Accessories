@@ -114,8 +114,8 @@
       ?>
 
         <li class="nav-item" style="list-style-type: none">
-          <a class="btn btn-light" href="../Front-End/login.php">Login</a>
-        </li>
+          <a class="btn btn-light" href="../Front-End/login.php">Login</a>&nbsp
+        </li>&nbsp &nbsp &nbsp
         <li class="nav-item" style="list-style-type: none">
           <a class="btn btn-light" href="../Front-End/register.php">Register</a>
         </li>

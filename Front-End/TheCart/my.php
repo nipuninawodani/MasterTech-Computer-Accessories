@@ -5,7 +5,7 @@
 	require 'functioncart.php';
 	$link = dblink();
     if(!isset($_SESSION['LogedIn'])){
-        header('location: ../login.php');
+        echo '<script type="text/javascript"> window.location = "../login.php"</script>';
     }
     $user_id=$_SESSION['UserID'];
     $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
