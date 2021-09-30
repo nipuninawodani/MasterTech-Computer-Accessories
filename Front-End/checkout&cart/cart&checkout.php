@@ -92,22 +92,22 @@
 			
               <hr>
 
-              <div class="custom-control custom-checkbox">
+              <div class="custom-control custom-checkbox" style="text-align:center;" >
               <!--  <input type="checkbox" class="custom-control-input" id="ship-address"> -->
-                <label class="custom-control-label" for="same-address"><?php echo $row['First_Name'];?> <?php echo $row['lastName']; ?><br>
+                <label class="custom-control-label" for="same-address"><?php echo $row['First_Name'];?> <?php echo 			$row['lastName']; ?><br>
 				  				<?php echo $row['shp_Address'];?><br><?php echo $row['shp_City'];?> <?php echo $row['shp_Pincode'];?> <br>
 								<?php echo $row['shp_Province'];?>
 				  
 				  
 				  </label>
 				   <form action="" method="POST" >
-				   <div class="input-group-append">
+				 		  <div class="input-group-append">
               		  <button  class="btn btn-secondary btn-md waves-effect m-0" type="button" id="submit" name="submit">	  <a href='addressFuntion.php?id=<?php echo $row['id']; ?>' style="color:inherit" > select </a></button>
 					
               </div>
-					  
+					  <br>
 					    
-				  </form>
+				
 				  
 				
 				  <div class="input-group-append">
@@ -116,7 +116,7 @@
 					  
               </div>
 				  
-				  
+				    </form>
 				</div>
 				<?php } 
 				

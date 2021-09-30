@@ -191,7 +191,6 @@
     $user_products_query="select it.ProductID,it.Product_Name,it.Price ,it.NumInStock from cart_items ut inner join product it on it.ProductID=ut.item_id where ut.user_id='$user_id' AND status='added to cart' ";
 									
 													$user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
-													
 													$sum=0;
 													$counter=0;
                        								while($row=mysqli_fetch_array($user_products_result)){
@@ -201,7 +200,15 @@
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo $row['Product_Name']; ?> </td>
                                                 <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo  $row['Price']; ?> &nbsp X&nbsp   <?php echo (qunaty($row['ProductID'],$user_id)) ?>&nbsp =  &nbsp<?php  $subtotel=subtotalF( $row['ProductID'],$row['Price'],$user_id);
 				  								$sum=$sum+$subtotel; ?>LKR  <?php echo $subtotel; ?></td>
-                                            </tr><?php  } ?>
+                                            </tr><?php  } 
+											
+											//updating cart items
+        								$confirm_query="update cart_items set status='Confirmed' where user_id=$user_id";
+										$confirm_query_result=mysqli_query($link,$confirm_query) or die(mysqli_error($link));
+											
+											
+											?>
+											<hr>
 											<tr>
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> Subtotal</td>
                                                 <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   

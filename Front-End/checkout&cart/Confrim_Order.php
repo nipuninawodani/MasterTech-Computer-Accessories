@@ -51,6 +51,7 @@
             while($row=mysqli_fetch_array($user_products_result)){
 			$qty=qunaty($row['ProductID'],$user_id);
 			$pid=$row['ProductID'];
+			$price=$row['Price'];
 			
 				$query=mysqli_query($link,"select max(id) as oid from order_product");
 				$result=mysqli_fetch_array($query);
@@ -61,14 +62,16 @@
 					OrderID,
 					ProductID,
 					Qty,
-					id
+					id,
+					OrderedPrice
 					
                 ) VALUES (
 
           			'$Order_number', 
 					'$pid',
 					'$qty',
-					'$OID'
+					'$OID',
+					'$price'
 					
                 )";
 			 
@@ -84,9 +87,7 @@
 		 }}
 		
 		
-		//updating cart items
-        $confirm_query="update cart_items set status='Confirmed' where user_id=$user_id";
-        $confirm_query_result=mysqli_query($link,$confirm_query) or die(mysqli_error($link));
+		
 		
 	}
 	
