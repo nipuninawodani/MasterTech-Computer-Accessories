@@ -32,15 +32,14 @@
     <?php include '../PHP/Functions.php';?>
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-2">
-      	<div class="side-nav nosd bg-white fixed-top">
+        <div class="fixed-top" style="margin-top:105px;z-index:1">
+      	<div class="side-nav nosd bg-white">
             <ul class="custom-scrollbar">
                 <!-- Side navigation links -->
                 <form method="GET" id="filter">
                 <input type="hidden" name="search" value="<?php echo ($_GET['search']) ?>">
                 <li>
                     <ul class="collapsible collapsible-accordion">
-                        <li class="mainmenu actives"><a class="robotor actives" href="#" class="waves-effect"><i
-                                    class="fab fa-dashcube"></i> Filters </a>
                         <li class="mainmenu">
                             <a class="robotor collapsible-header waves-effect arrow-r">
                                 <i class="fab fa-buffer"></i> Sort By <i class="fas fa-angle-down rotate-icon"></i>
@@ -49,7 +48,7 @@
                                 <ul> <div class="d-grid gap-2 text-center">
                                     <li> 
                                         <input type="radio" class="btn-check" name="sort" id="Relavance" value="Relavance" autocomplete="off" checked/>
-                                        <label class="btn btn-info" for="Relavance" style="width: 150px">Checked</label><br>
+                                        <label class="btn btn-info" for="Relavance" style="width: 150px">Relevence</label><br>
                                     </li>
                                     <li>
                                         <input type="radio" class="btn-check" name="sort" id="Rating" value="Rating" autocomplete="off" />
@@ -102,18 +101,7 @@
                                         <input type="checkbox" class="btn-check" id="Components" value="Components" name="Categories[]" autocomplete="off" />
                                         <label class="btn btn-primary" for="Components" style="width: 150px">PC Components</label><br>
                                     </li>
-                                    <li>
-                                        <input type="checkbox" class="btn-check" id="Peripherals" value="Laptop" name="Categories[]" autocomplete="off" />
-                                        <label class="btn btn-primary" for="Peripherals" style="width: 150px">Peripherals</label><br>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="btn-check" id="Softwares" value="desktop" name="Categories[]" autocomplete="off" />
-                                        <label class="btn btn-primary" for="Softwares" style="width: 150px"> Softwares</label><br>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="btn-check" id="Refurbished" value="Refurbished" name="Categories[]" autocomplete="off" />
-                                        <label class="btn btn-primary" for="Refurbished" style="width: 150px"> Refurbished</label><br>
-                                    </li></div>
+                                    </div>
                                 </ul>
                             </div>
                         </li>
@@ -130,10 +118,11 @@
                 <!--/. Side navigation links -->
             </ul>
             <div class="sidenav-bg rgba-blue-strong1"></div>
+          </div>
         </div>
         <!--/. Sidebar navigation -->
       </div>
-      <div class="col-md-9" style="background-color:white; padding:20px;"><br>
+      <div class="col-md-10" style="background-color:white; padding:20px;margin-top:100px"><br>
 
         <?php
         if(!(isset($_GET['sort']))){$_GET['sort']='Relavance';}
@@ -152,7 +141,7 @@
       	$nmpages=ceil($numofrows/20);
       	 echo "<h5>".$numofrows." Results found for '".$_GET['search']."'</h5><br>";
          while($row=mysqli_fetch_array($searchresult)){
-         if($i==1 or $i%5==0){ ?>
+         if($i==1 or ($i-1)%4==0){ ?>
         <!--Grid row-->
         <div class="row wow fadeIn">
         <?php } ?>
@@ -200,7 +189,7 @@
 
           </div>
           <!--Grid column-->
-          <?php if(($i+1)%5==0){ ?>
+          <?php if(($i)%4==0){ ?>
         </div>
         <?php } ?>
 
@@ -213,8 +202,6 @@
         </div>
 
       <?php } ?>
-      </div>
-      <div class="col-md-1">
       </div>
     </div>
 

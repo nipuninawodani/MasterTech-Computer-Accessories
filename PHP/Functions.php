@@ -1,13 +1,13 @@
 <?php
 
 function dblink() {
-  $link = new mysqli('localhost','root','<MF_Gorgon>','mastertech');
+      $conn = mysqli_init();
+	mysqli_ssl_set($conn,NULL,NULL, "../BaltimoreCyberTrustRoot.crt.pem", NULL, NULL);
+	mysqli_real_connect($conn, 'mastertechserver.mysql.database.azure.com', 'mahela@mastertechserver', 'M4h3l4100Di554', 'mastertech', 3306, MYSQLI_CLIENT_SSL);
+	if (mysqli_connect_errno($conn)) {
+	die('Failed to connect to MySQL: '.mysqli_connect_error());}
 	
-	// Check connection
-	if ($link->connect_error) {
-  		die("Database Connection failed: " . $link->connect_error);
-	}
-	return $link;
+	return $conn;
 } 
 
 function login($email,$password,$remember) {
@@ -35,10 +35,10 @@ function login($email,$password,$remember) {
 			setcookie("Email", $email, time()+3600, "/","", 0);
 			setcookie("Password", $password, time()+3600, "/","", 0);
 		}
-		if($row['Type']='Admin'){
-			header("Location: ../material-dashboard-master/index.php");
+		if($row['Type']=='Admin'){
+			echo '<script type="text/javascript"> window.location = "../material-dashboard-master/index.php" </script>';
 		}else{
-			header("Location: ../index.php");
+			echo '<script type="text/javascript"> window.location = "../index.php" </script>';
 		}
 	}
 	else {
@@ -104,11 +104,11 @@ function signup($fname,$lname,$email,$password,$mobile,$gender){
 		$uid=(int)$row['UserID']+1;
 
 		$sql = "INSERT INTO user (UserID, First_Name, Last_Name, Email, Password, Mobile, Gender, Type, Status)
-				VALUES ('".sprintf("%'.010d\n", $uid)."','$fname','$lname','$email','".md5($password)."','$mobile','$gender','User','Unverified')";
+				VALUES ('".sprintf("%'.010d", $uid)."','$fname','$lname','$email','".md5($password)."','$mobile','$gender','User','Unverified')";
 
 		if ($link->query($sql) === TRUE){
 			echo"Registration Complete You can login using your username and password";
-			sendmail($email,$fname,$sprintf("%'.010d\n", $uid));
+			sendmail($email,$fname,$sprintf("%'.010d", $uid));
 		}      
 	}
 }
@@ -129,13 +129,14 @@ function sendmail($to,$name,$Uid){
 
     $message = '<html><body>';
 	$message .= '<h1 style="color:#f40;">Hi '.$name.'!</h1>';
-	$message .= '<p style="color:#080;font-size:18px;">Your Registration is Successfull</p>';
+	$message .= '<p style="color:#080;font-size:18px;">';
+	$message .= 'Your Registration is Successfull';
+	$message .= '<a href="http://mastertechweb.azurewebsites.net/PHP/'.md5($Uid).'"> Click Here to verify Your Account</a>';
 	$message .= '</body></html>';
 
-	echo $message;
+	$message = wordwrap($message,70);
 
-
-	//mail( $to, $subject, $message, $headers );
+	$mail=mail( $to, $subject, $message, $headers );
 
 }
 
@@ -245,11 +246,11 @@ function updatereview($UserID,$ProductID,$rating,$review){
 function check_if_added_to_cart($Product_id){
 		$link = dblink();
         $user_id=$_SESSION['UserID'];
-        $product_check_query="select * from cart_items where item_id='$Product_id' and user_id='$user_id' and status='added to cart'";
+        $product_check_query="select * from cart_items where item_id='$Product_id' and user_id='$user_id' and status='Added to cart'";
         $product_check_result=mysqli_query($link,$product_check_query) or die(mysqli_error($link));
         $num_rows=mysqli_num_rows($product_check_result);
-       	if($num_rows>=1){return 1;}else{ return 0;}
-        ;
+        if($num_rows>=1)return 1;
+        return 0;
 }
 
 function getimage($ProductID){
@@ -262,8 +263,35 @@ function getimage($ProductID){
 
 	return $result;
 
+}
+
+function addtowishlist($ProductID,$UserID){
+
+	$link = dblink();
+
+	$sql = "INSERT INTO wishlist(UserID, ProductID) VALUES ('$UserID','$ProductID')";
+
+	$result = mysqli_query($link,$sql);
 
 }
+
+function checkwishlist($ProductID,$UserID){
+
+	$link = dblink();
+
+	$sql = "SELECT * FROM wishlist WHERE ProductID = '$ProductID' AND UserID='$UserID';";
+
+	$result = mysqli_query($link,$sql);
+
+	if ($result) {
+		return 1;
+	}
+	else{
+		return 0;
+	}
+
+}
+
 function getstar($ProductID){
 
     $link = dblink();

@@ -1,6 +1,6 @@
 <div class="containor row">
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style = "z-index:4;">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -96,10 +96,7 @@
             aria-labelledby="navbarDropdownMenuLink"
           >
             <li>
-              <a class="dropdown-item" href="#">My profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Settings</a>
+              <a class="dropdown-item" href="../Front-End/UserUI.php">My profile</a>
             </li>
             <li>
               <a class="dropdown-item" href="../PHP/logout.php">Logout</a>
@@ -110,9 +107,12 @@
       } else{
       ?>
 
-      <a type="button" class="tn btn-outline-info btn-rounded"
-  data-mdb-ripple-color="dark" href="login.php"><span class="material-icons">login</span> Login</a>
-
+        <li class="nav-item" style="list-style-type: none">
+          <a class="btn btn-light" href="../Front-End/login.php">Login</a>
+        </li>
+        <li class="nav-item" style="list-style-type: none">
+          <a class="btn btn-light" href="../Front-End/register.php">Register</a>
+        </li>
 
       <?php 
       } 
@@ -123,8 +123,8 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid " style="margin-bottom: 5px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style = "margin-top:53px;z-index:3;">
+  <div class="container-fluid d-flex align-items-center" style="padding-top:4px">
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">
       <img
@@ -136,7 +136,7 @@
     </a>
 <div class="col-md-4">
   <form class="d-flex input-group w-auto my-auto mb-3 mb-md-0"  action="search.php" method="GET">
-    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" name="search" <?php if(isset($_GET['search'])){echo 'Value="'.$_GET['search'].'"';} ?> />
+    <input autocomplete="off" type="search" class="form-control rounded" placeholder="Search" name="search" <?php if(isset($_GET['search'])){echo 'Value="'.$_GET['search'].'"';} ?>>
     <span class="input-group-text border-0 d-none d-lg-flex"><i class="fas fa-search text-white"></i></span>
   </form>
 </div>

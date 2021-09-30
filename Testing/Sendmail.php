@@ -6,12 +6,8 @@ session_start();
 
 $email="mahela100@gmail.com";
 $fname="Mahela";
-$uid=1;
+$uid=108;
 
-sendmail($email,$fname,sprintf("%'.010d\n", $uid));
-
-
-
-
+sendmail($email,$fname,sprintf("%'.010d", $uid));
 
 ?>

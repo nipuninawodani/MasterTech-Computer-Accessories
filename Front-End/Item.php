@@ -31,7 +31,7 @@
 
   	<?php include 'header.php' ?>
 
-  	
+  <div class="container" style="margin-top:100px;">
 
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-1">
@@ -89,7 +89,13 @@
                     <span class="badge rounded-pill bg-info">Bestseller</span>
                   </a>
                 </div>
-                <h2><?php echo $row['Product_Name']; ?></h2>
+                <h2><?php echo $row['Product_Name']; if($_SESSION['LogedIn'] && !checkwishlist($_GET['ID'],$_SESSION['UserID'])){?> <form  class="d-flex justify-content-left">
+                 <button  class="btn btn-primary btn-md my-0 p" type="Submit" Name="wishlist"><i class="far fa-bookmark"></i></button>   
+              </form>
+              <?php
+              if(isset($_POST['wishlist'])){
+                addtowishlist($_GET['ID'],$_SESSION['UserID']);
+              } }?></h2>
                 <?php $row2 = getstar($_GET['ID']); 
                 $val= round($row2['Avg(Rating)'])?>
                 <?php include 'star.php';?>
@@ -257,7 +263,7 @@
       <div class="col-md-1">
       </div>
     </div>
-
+</div>
     
 
   <!-- SCRIPTS -->

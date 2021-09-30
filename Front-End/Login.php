@@ -1,5 +1,6 @@
-<?php include '../PHP/Functions.php'; 
-session_start();?>
+<?php session_start();
+include '../PHP/Functions.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -74,7 +75,6 @@ session_start();?>
 
                          <hr> <a class="link float-end" href="#!">Forgot password? Click here.</a>
                         </form>
-    
                       </div>
                     </div>
                   </div>
