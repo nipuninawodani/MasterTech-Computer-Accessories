@@ -6,5 +6,6 @@
     $user_id=$_SESSION['UserID'];
     $delete_query="delete from shippingaddress where User_ID='$user_id' and id='$id'";
     $delete_query_result=mysqli_query($link,$delete_query) or die(mysqli_error($link));
-    header('location: cart&checkout.php');
+    header('');
+	echo '<script type="text/javascript"> window.location = "location: cart&checkout.php" </script>';
 ?>

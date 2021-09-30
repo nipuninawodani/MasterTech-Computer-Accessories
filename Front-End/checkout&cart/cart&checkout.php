@@ -13,6 +13,8 @@
     }
     $user_id=$_SESSION['UserID'];
 	$sumP=$_SESSION['sum'];
+
+	
     $user_shpAD_query="SELECT	*  from shippingaddress where User_ID= '$user_id'";
     $user_shpAD_result=mysqli_query($link,$user_shpAD_query) or die(mysqli_error($link));
     $no_of_user_add= mysqli_num_rows($user_shpAD_result);
