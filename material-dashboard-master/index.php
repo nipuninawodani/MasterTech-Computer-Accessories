@@ -47,7 +47,7 @@ header("Location: ../index.php");
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.php">
+            <a class="nav-link" href="./index.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -56,18 +56,6 @@ header("Location: ../index.php");
             <a class="nav-link" href="./dashboardOrders.php">
               <i class="material-icons">dashboard</i>
               <p>Orders</p>
-            </a>
-          </li>
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardSales.php">
-              <i class="material-icons">dashboard</i>
-              <p>Sales</p>
-            </a>
-          </li>
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardReports.php">
-              <i class="material-icons">dashboard</i>
-              <p>Reports</p>
             </a>
           </li>
           <li class="nav-item active  ">
@@ -80,6 +68,12 @@ header("Location: ../index.php");
             <a class="nav-link" href="./dashboardproducts.php">
               <i class="material-icons">dashboard</i>
               <p>Items</p>
+            </a>
+          </li>
+          <li class="nav-item active  ">
+            <a class="nav-link" href="../PHP/logout.php">
+              <i class="material-icons">dashboard</i>
+              <p>Logout</p>
             </a>
           </li>
           <!-- your sidebar here -->

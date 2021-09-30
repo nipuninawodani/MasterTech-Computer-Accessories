@@ -337,7 +337,7 @@ function adminoders(){
 
 	$link = dblink();
 
-	$sql= "SELECT mastertech.order.*, user.First_Name,user.Last_Name, address.* FROM mastertech.order INNER JOIN user ON mastertech.order.UserID=user.UserID INNER JOIN address ON mastertech.order.Address=address.ID"; 
+	$sql= "SELECT * FROM mastertech.ordertb INNER JOIN user ON mastertech.ordertb.UserID=user.UserID;"; 
 
 	$result = mysqli_query($link,$sql);
 

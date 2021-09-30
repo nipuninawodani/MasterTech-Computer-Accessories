@@ -49,9 +49,9 @@ header("Location: ../index.php");
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav">
+       <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.php">
+            <a class="nav-link" href="./index.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -63,27 +63,21 @@ header("Location: ../index.php");
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardSales.php">
-              <i class="material-icons">dashboard</i>
-              <p>Sales</p>
-            </a>
-          </li>
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardReports.php">
-              <i class="material-icons">dashboard</i>
-              <p>Reports</p>
-            </a>
-          </li>
-          <li class="nav-item active  ">
             <a class="nav-link" href="./dashboardUsers.php">
               <i class="material-icons">dashboard</i>
               <p>Users</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboardItems.php">
+            <a class="nav-link" href="./dashboardproducts.php">
               <i class="material-icons">dashboard</i>
               <p>Items</p>
+            </a>
+          </li>
+          <li class="nav-item active  ">
+            <a class="nav-link" href="../PHP/logout.php">
+              <i class="material-icons">dashboard</i>
+              <p>Logout</p>
             </a>
           </li>
           <!-- your sidebar here -->
@@ -123,10 +117,6 @@ header("Location: ../index.php");
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
             	<div class="row justify-content-between d-flex align-items-center" style="padding-left:10px;padding-top:10px">
                 <div class="col-md-3 justify-content-center d-flex align-items-center">
-                    <form style="border-radius: 25px;border: 2px solid #9C27B0;padding-left:30px;">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                      <label class="form-check-label" for="flexCheckChecked">Checked checkbox</label>
-                    </form>
                 </div>
                 <div class="col-md-2">
   	            	<!-- Button trigger modal -->
