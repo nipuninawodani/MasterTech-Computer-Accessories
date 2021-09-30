@@ -26,7 +26,7 @@
                 )";
 		
 		 	if($link->query($sql)=== TRUE){
-				echo "<script>alert('Ordertb added to database');</script>";
+				
 				
 			}else{
 				echo "Error:". $sql ."<br>";
@@ -76,7 +76,7 @@
                 )";
 			 
 			 if($link->query($sql)=== TRUE){
-				echo "<script>alert('Order_product Updated');</script>";
+			
 				
 			}else{
 				echo "Error:". $sql ."<br>";

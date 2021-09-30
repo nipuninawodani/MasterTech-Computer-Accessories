@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	unset($_SESSION['ADD']) ;
 	include 'confiq.php'; 
 	require '../../TheCart/functioncart.php';
 	require '../../../PHP/Functions.php';
