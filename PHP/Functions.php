@@ -25,20 +25,24 @@ function login($email,$password,$remember) {
 	}
 	
 	if ($count == 1) {
-
-		$_SESSION['User_Name'] = $row['First_Name'].' '.$row['Last_Name'];
-		$_SESSION['UserID'] = $row['UserID'];
-		$_SESSION['UType'] = $row['Type'];
-		$_SESSION['UStatus'] = $row['Status'];
-		$_SESSION['LogedIn'] = TRUE;
-		if($remember=='True'){
-			setcookie("Email", $email, time()+3600, "/","", 0);
-			setcookie("Password", $password, time()+3600, "/","", 0);
+		if($row['Status']=='Unverified'){
+			echo "Please Verify Your Account Before Login"
 		}
-		if($row['Type']=='Admin'){
-			echo '<script type="text/javascript"> window.location = "../material-dashboard-master/index.php" </script>';
-		}else{
-			echo '<script type="text/javascript"> window.location = "../index.php" </script>';
+		else{
+			$_SESSION['User_Name'] = $row['First_Name'].' '.$row['Last_Name'];
+			$_SESSION['UserID'] = $row['UserID'];
+			$_SESSION['UType'] = $row['Type'];
+			$_SESSION['UStatus'] = $row['Status'];
+			$_SESSION['LogedIn'] = TRUE;
+			if($remember=='True'){
+				setcookie("Email", $email, time()+3600, "/","", 0);
+				setcookie("Password", $password, time()+3600, "/","", 0);
+			}
+			if($row['Type']=='Admin'){
+				echo '<script type="text/javascript"> window.location = "../material-dashboard-master/index.php" </script>';
+			}else{
+				echo '<script type="text/javascript"> window.location = "../index.php" </script>';
+			}
 		}
 	}
 	else {
