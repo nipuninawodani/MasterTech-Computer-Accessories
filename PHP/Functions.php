@@ -26,7 +26,7 @@ function login($email,$password,$remember) {
 	
 	if ($count == 1) {
 		if($row['Status']=='Unverified'){
-			echo "Please Verify Your Account Before Login"
+			echo "Please Verify Your Account Before Login";
 		}
 		else{
 			$_SESSION['User_Name'] = $row['First_Name'].' '.$row['Last_Name'];

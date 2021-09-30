@@ -32,7 +32,7 @@
     <?php include '../PHP/Functions.php';?>
     <div class="row" style="margin-top:10px;"  >
       <div class="col-md-2">
-        <div class="fixed-top" style="margin-top:105px;z-index:1">
+        <div class="fixed-top" style="margin-top:105px;z-index:1;width:150px">
       	<div class="side-nav nosd bg-white">
             <ul class="custom-scrollbar">
                 <!-- Side navigation links -->

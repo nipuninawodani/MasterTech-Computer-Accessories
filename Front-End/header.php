@@ -1,6 +1,6 @@
 <div class="containor row">
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style = "z-index:4;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style = "z-index:4;height: 50px">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -123,7 +123,7 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style = "margin-top:53px;z-index:3;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style = "margin-top:53px;z-index:3;height:50px">
   <div class="container-fluid d-flex align-items-center" style="padding-top:4px">
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">
