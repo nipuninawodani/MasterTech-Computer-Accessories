@@ -36,7 +36,7 @@ function useraddress($UserID){
 	return $result;
 }
 
-function adduseraddress($UserID,$Description, $Address1, $Address2, $City, $PostCode){
+function adduseraddress($UserID,$Description, $Address1, $Address2, $City,$Province, $PostCode){
 
 		$link = dblink();
 
@@ -46,10 +46,30 @@ function adduseraddress($UserID,$Description, $Address1, $Address2, $City, $Post
 
 		$row = mysqli_fetch_array($result);
 
-		$id=(int)$row['ID']+1;
+		$id1=(int)$row['ID']+1;
 
-		$sql = "INSERT INTO `address`(`ID`, `Description`, `Address1`, `Address2`, `City`, `PostCode`, `userID`) 
-				VALUES ('".sprintf("%'.012d\n", $id)."','$Description','$Address1','$Address2','$City','$PostCode','$UserID')";
+		$sql= "SELECT id FROM shippingaddress Where User_ID = '$UserID' ORDER BY id DESC LIMIT 1;";
+
+		$result = mysqli_query($link,$sql);
+
+		$row = mysqli_fetch_array($result);
+
+		$ids=(int)$row['ID']+1;
+
+		$sql= "SELECT First_Name , Last_Name FROM user Where User_ID = '$UserID';";
+
+		$result = mysqli_query($link,$sql);
+
+		$row = mysqli_fetch_array($result);
+
+		$FirstName = $row['First_Name'];
+		$LastName = $row['Last_Name'];
+
+		$saddress=$Address1.$Address2;
+
+		$sql = "INSERT INTO `address`(`ID`, `Description`, `Address1`, `Address2`, `City`, `PostCode`, `userID`, `Province`) 
+				VALUES ('".sprintf("%'.012d", $id)."','$Description','$Address1','$Address2','$City','$PostCode','$UserID');
+				INSERT INTO shippingaddress(id, shp_Address, shp_City, shp_Province, shp_Pincode, User_ID, First_Name, lastName ) VALUES ('$ids','$saddress''$City''$Province''$PostCode''$UserID''$FirstName''$LastName');";
 
 		if ($link->query($sql) === TRUE){
 			echo "<meta http-equiv='refresh' content='0'>";

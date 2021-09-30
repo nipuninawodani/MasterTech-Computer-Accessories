@@ -260,6 +260,7 @@
                     <th scope="col">Address Line 01</th>
                     <th scope="col">Address Line 02</th>
                     <th scope="col">City</th>
+                    <th scope="col">Province</th>
                     <th scope="col">Postal Code</th>
                     <th scope="col">Edit</th>
                     
@@ -274,9 +275,10 @@
                     <td><?php echo $row['Address1']; ?></td>
                     <td><?php echo $row['Address2']; ?></td>
                     <td><?php echo $row['City']; ?></td>
+                    <td><?php echo $row['Province']; ?></td>
                     <th scope="col"><?php echo $row['PostCode']; ?></th>
                     <td><button type="button" class="btn btn-outline-danger">
-                      Remove  <i class="fas fa-trash-alt fa-fw me-3"> </i>
+                      Remove <i class="fas fa-trash-alt fa-fw me-3"> </i>
                     </button></td>
                   </tr>
                 <?php $i=$i+1;} ?>
@@ -326,6 +328,9 @@
 
                 <label for="City" class="form-label">City</label>
                 <input type="text" class="form-control" id="City" name="City">
+
+                <label for="Province" class="form-label">Province</label>
+                <input type="text" class="form-control" id="Province" name="Province">
                 
                 <label for="PostCode" class="form-label">Post Code</label>
                 <input type="text" class="form-control" id="PostCode" name="PostCode">
@@ -335,7 +340,7 @@
         <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
         <button type="submit" id="addresssubmit" name="addresssubmit" class="btn btn-primary">Save changes</button></form>
         <?php if (isset($_POST["addresssubmit"])){
-          adduseraddress($_SESSION['UserID'], $_POST['Description'], $_POST['Address1'], $_POST['Address2'], $_POST['City'], $_POST['PostCode']);
+          adduseraddress($_SESSION['UserID'], $_POST['Description'], $_POST['Address1'], $_POST['Address2'], $_POST['City'],$_POST['Province'], $_POST['PostCode']);
         }?>
       </div>
     </form>
