@@ -41,7 +41,7 @@
     <!-- Right elements -->
     <div class="d-flex align-items-center">
       <!-- Icon -->
-      <a class="text-reset me-3" href="#">
+      <a class="text-reset me-3" href="../Front-End/TheCart/my.php">
         <i class="fas fa-shopping-cart"></i>
       </a>
       <?php
@@ -98,9 +98,15 @@
             <li>
               <a class="dropdown-item" href="../Front-End/UserUI.php">My profile</a>
             </li>
+            <?php if($_SESSION['UType']=='Admin'){ ?>
+            	<li>
+              	<a class="dropdown-item" href="../admin/index.php">Admin</a>
+            	</li>
+			<?php }?>
             <li>
               <a class="dropdown-item" href="../PHP/logout.php">Logout</a>
             </li>
+
           </ul>
         </div>
       <?php
