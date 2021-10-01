@@ -144,34 +144,6 @@ function sendmail($to,$name,$Uid){
 
 }
 
-function cardsearch($UserID){
-
-	$link = dblink();
-
-	$sql= "SELECT * FROM payment_options Where UserID = '$UserID' ORDER BY Cardnumber;";
-
-	$result = mysqli_query($link,$sql);
-
-	$row = mysqli_fetch_array($result);
-
-	return $row;
-
-}
-
-function addresssearch($UserID){
-
-	$link = dblink();
-
-	$sql= "SELECT * FROM address Where userID = '$UserID' ORDER BY Address1;";
-
-	$result = mysqli_query($link,$sql);
-
-	$row = mysqli_fetch_array($result);
-
-	return $row;
-
-}
-
 
 function viewproduct($ProductID){
 
@@ -333,15 +305,21 @@ function adminusers(){
 	return $result;
 }
 
-function adminoders(){
+function adminoders($Status,$OrderID,$UserID){
+
+	if($Status==''){$Status='%';}
+	if($OrderID==''){$OrderID='%';}
+	if($UserID==''){$UserID='%';}
 
 	$link = dblink();
 
-	$sql= "SELECT * FROM mastertech.ordertb INNER JOIN user ON mastertech.ordertb.UserID=user.UserID;"; 
+	$sql= "SELECT mastertech.ordertb.*, user.First_Name, user.Last_Name FROM mastertech.ordertb INNER JOIN user ON mastertech.ordertb.UserID=user.UserID Where ordertb.OrderID LIKE '$OrderID' AND ordertb.UserID LIKE '$UserID' AND ordertb.Status LIKE '$Status'"; 
 
 	$result = mysqli_query($link,$sql);
 
-	return $result;
+	if($result){
+		return $result;
+	} 
 
 }
 
@@ -368,6 +346,20 @@ function editproducts($ProductID,$Price,$NumInStock){
 		echo "<meta http-equiv='refresh' content='0'>";
 	}
 }
+
+function updateorders($OrderID,$Status){
+
+	$link = dblink();
+
+	$sql= "UPDATE ordertb SET Status='".$Status."' WHERE OrderID='$OrderID'"; 
+
+	$result = mysqli_query($link,$sql);
+
+	if($result){
+		echo "<meta http-equiv='refresh' content='0'>";
+	}
+}
+
 
 ?>
 

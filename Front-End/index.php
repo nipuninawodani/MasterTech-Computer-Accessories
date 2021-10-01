@@ -221,8 +221,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       </a>
   <div class="desc w-100 px-4">
     <div class="text w-100 mb-3">
-      <span>Cat</span>
-      <h2><a href="Index/work-single.html">Persian Cat</a></h2>
+      <span>VGA</span>
+      <h2><a href="Index/work-single.html">GeforceRTX 1660</a></h2>
     </div>
   </div>
 </div>
@@ -234,8 +234,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       </a>
   <div class="desc w-100 px-4">
     <div class="text w-100 mb-3">
-      <span>Dog</span>
-      <h2><a href="work-single.html">Pomeranian</a></h2>
+      <span>Monitor</span>
+      <h2><a href="work-single.html">Asus Tuf Gaming</a></h2>
     </div>
   </div>
 </div>
@@ -261,8 +261,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       </a>
   <div class="desc w-100 px-4">
     <div class="text w-100 mb-3">
-      <span>Cat</span>
-      <h2><a href="work-single.html">British Shorthair</a></h2>
+      <span>Mouse</span>
+      <h2><a href="work-single.html">GameBat 7D</a></h2>
     </div>
   </div>
 </div>
@@ -274,8 +274,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       </a>
   <div class="desc w-100 px-4">
     <div class="text w-100 mb-3">
-      <span>Dog</span>
-      <h2><a href="work-single.html">Beagle</a></h2>
+      <span>HeadPhones</span>
+      <h2><a href="work-single.html">Noise Cancelling Headphones</a></h2>
     </div>
   </div>
 </div>
@@ -287,8 +287,8 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       </a>
   <div class="desc w-100 px-4">
     <div class="text w-100 mb-3">
-      <span>Dog</span>
-      <h2><a href="work-single.html">Pug</a></h2>
+      <span>SSD</span>
+      <h2><a href="work-single.html">Sagate SSD 512GB</a></h2>
     </div>
   </div>
 </div>
