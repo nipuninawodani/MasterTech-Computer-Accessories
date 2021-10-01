@@ -58,7 +58,7 @@
                 )";
 		
 		 	if($link->query($sql)=== TRUE){
-				echo "<script>alert('added to database');</script>";
+				
 				
 			}else{
 				echo "Error:". $sql ."<br>";
