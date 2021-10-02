@@ -170,7 +170,7 @@
               </div>
 				<?php if($sumP>50000){?> 
 					<span class="text-success">-LKR <?php echo $sumP*0.1; $DISCOUT=$sumP*0.1; ?> </span>
-				<?php } else { ?>
+				<?php } else {$DISCOUT=0; ?>
 					<span class="text-danger">-LKR 0.00</span>
 				<?php }?>
               
@@ -178,7 +178,7 @@
             
             <li class="list-group-item d-flex justify-content-between">
               <span>Total </span>
-              <strong>LKR <?php   $total=(($sumP)+2000-($sumP*0.1)); echo $total;?>.00</strong>
+              <strong>LKR <?php   $total=(($sumP)+2000-($DISCOUT)); echo $total;?>.00</strong>
             </li>
           </ul>
           <!-- Cart -->
