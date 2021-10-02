@@ -193,6 +193,7 @@
 									
 													$user_products_result=mysqli_query($link,$user_products_query) or die(mysqli_error($link));
 													$sum=0;
+													$pid=$row['ProductID'];
 													$counter=0;
                        								while($row=mysqli_fetch_array($user_products_result)){
                            
@@ -201,7 +202,17 @@
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo $row['Product_Name']; ?> </td>
                                                 <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;"> <?php echo  $row['Price']; ?> &nbsp X&nbsp   <?php echo (qunaty($row['ProductID'],$user_id)) ?>&nbsp =  &nbsp<?php  $subtotel=subtotalF( $row['ProductID'],$row['Price'],$user_id);
 				  								$sum=$sum+$subtotel; ?>LKR  <?php echo $subtotel; ?></td>
-                                            </tr><?php  } 
+                                            </tr><?php
+													$qty=qunaty($row['ProductID'],$user_id);
+													$newStk= $row['NumInStock']-$qty; 
+													$update_query="update product set NumInStock='$newStk' where ProductID='$pid'";
+													$update_query_result=mysqli_query($link,$update_query) or die(mysqli_error($link));
+														
+													
+													
+													
+													
+													} 
 											
 											//updating cart items
         								$confirm_query="update cart_items set status='Confirmed' where user_id=$user_id";
