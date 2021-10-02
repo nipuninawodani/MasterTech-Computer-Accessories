@@ -25,13 +25,13 @@
           <a class="nav-link" href="../Front-End/index.php">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SHOP NOW</a>
+          <a class="nav-link" href="../Front-End/browse.php">SHOP NOW</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT US</a>
+          <a class="nav-link" href="../Front-End/about_us&contact_us.php">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CONTACT US</a>
+          <a class="nav-link" href="../Front-End/about_us&contact_us.php#contact">CONTACT US</a>
         </li>
       </ul>
       <!-- Left links -->

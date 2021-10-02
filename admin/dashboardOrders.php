@@ -6,7 +6,13 @@ header("HTTP/1.1 401 Unauthorized");
 echo '<script type="text/javascript"> window.location = "../index.php" </script>';
 die();
 }?>
-<?php $result = adminoders();?>
+<?php
+    if(!(isset($_GET['Status']))){$_GET['Status']='';}
+    if(!(isset($_GET['OrderID']))){$_GET['OrderID']='';}
+    if(!(isset($_GET['UserID']))){$_GET['UserID']='';}
+
+?>
+<?php $result = adminoders($_GET['Status'],$_GET['OrderID'],$_GET['UserID']);?>
 <!doctype html>
 <html lang="en">
 
@@ -113,6 +119,27 @@ die();
         <div class="container-fluid">
           <!-- your content here -->
           <section class="intro">
+          		<div class="col-md-12">
+          			<form class="form-inline" method="GET">
+			          	    	<label for="Status" class="form-label">Status</label> 	&nbsp; 	&nbsp;
+			          	    	<div class="form-group">
+			            		<select class="form-control" id="Status" name="Status">
+			            			<option value="">All</option>
+			            			<option value="Confirmed">Confirmed</option>
+			            			<option value="OnTheWay">OnTheWay</option>
+				            		<option value="Delivered">Delivered</option>
+				                    <option value="Completed">Completed</option>
+				                    <option value="Cancled">Cancled</option>
+			                	</select>
+			                	</div> 	&nbsp; 	&nbsp;
+			                	<label for="OrderID" class="form-label">OrderID</label> 	&nbsp;
+			                	<input type="text" class="form-control" id="OrderID" name="OrderID"> 	&nbsp; 	&nbsp;
+			                	<label for="UserID" class="form-label">UserID</label> 	&nbsp;
+			                	<input type="text" class="form-control" id="UserID" name="UserID"> 	&nbsp; 	&nbsp;
+			                	<button class="btn btn-info" type="submit" name="filter"><span class="material-icons">search</span></button>
+
+                	</form>
+            	</div>
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
               <div class="mask d-flex align-items-center h-100">
                 <div class="container">
@@ -123,7 +150,7 @@ die();
 					      <div class="card-body">
 					        <h5 class="card-title">Order #<?php echo $row['OrderID']; ?></h5>
 					        <p class="card-text">Customer:- <?php echo $row['First_Name']." ".$row['Last_Name']; ?> <br>
-					        Address:- <?php echo $row['Address']?></p>
+					        Address:- <?php echo $row['Address']?><br>Status:- <?php echo $row['Status']?></p>
 					        <table class="table table-borderless">
 					        <thead>
 					          <tr>
@@ -136,14 +163,32 @@ die();
 						        <?php $presult=adminoderproducts($row['OrderID']);?>
 						        <?php while($prow=mysqli_fetch_array($presult)){ ?>
 						        <tr>
-						        <td><?php echo $prow['Product_Name']; ?></td>
-						        <td><?php echo $prow['Qty']; ?></td>
-						        <td><?php echo $prow['OrderedPrice']; ?></td></tr>
+							        <td><?php echo $prow['Product_Name']; ?></td>
+							        <td><?php echo $prow['Qty']; ?></td>
+							        <td><?php echo $prow['OrderedPrice']; ?></td>
+							    </tr>
 						        <?php $total=$total+$prow['OrderedPrice'];} ?>
 						        <tr>
-						        <td>Total</td>
-						        <td></td>
-						        <td><?php echo $total; ?></td>
+							        <td>Total</td>
+							        <td></td>
+							        <td><?php echo $total; ?></td>
+						    	</tr>
+						    	<tr>
+						    	<form action="" method="POST">
+						    		<td style="text-align: right;"><button type="submit" class="btn btn-sm btn-primary" name="change<?php echo $row['OrderID']; ?>" value="OnTheWay"<?php if($row['Status']=="Delivered" or $row['Status']=="Completed" or $row['Status']=="Canceled"){echo "disabled";}?> >On the Way</button></td>
+						    		<td style="text-align: right;"><button type="submit" class="btn btn-sm btn-primary" name="change<?php echo $row['OrderID']; ?>" value="Delivered"<?php if($row['Status']=="Completed" or $row['Status']=="Canceled"){echo "disabled";}?>>Delivered</button></td>
+						    		<?php if($row['Status']=="Confirmed"){ ?>
+						    		<td style="text-align: right;"><button type="submit" class="btn btn-sm btn-primary" name="change<?php echo $row['OrderID']; ?>" value="Canceled">Cancle</button></td>
+						    		<?php } else { ?>
+						    		<td style="text-align: right;"><button type="submit" class="btn btn-sm btn-primary" name="change<?php echo $row['OrderID']; ?>" value="Completed" <?php if($row['Status']=="Canceled"){echo "disabled";}?>>Completed</button></td>
+						    		<?php } ?>
+						    		<?php
+							    		$otw="change".$row['OrderID'];
+					                    if (isset($_POST[$otw])){
+					                        updateorders($row['OrderID'],$_POST[$otw]);
+					                    }
+					                ?>
+					            </form>
 						    	</tr>
 					        </tbody>
 					    	</table>
