@@ -255,6 +255,7 @@
               height="25"
               alt=""
               loading="lazy"
+              style="height:25px;"
             />
           </a>
           <ul
@@ -305,6 +306,7 @@
         height="30"
         alt=""
         loading="lazy"
+        style="height:30px;"
       />
     </a>
 <div class="col-md-4">

@@ -229,7 +229,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 <div class="col-md-4 ftco-animate">
 <div class="work mb-4 img d-flex align-items-end" style="background-image: url(Index/images/monitor.jpg);">
-  <a href="Index/images/gallery-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+  <a href="Index/images/monitor.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
         <span class="fa fa-expand"></span>
       </a>
   <div class="desc w-100 px-4">
@@ -242,7 +242,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 <div class="col-md-4 ftco-animate">
 <div class="work mb-4 img d-flex align-items-end" style="background-image: url(Index/images/gamechair.jpg);">
-  <a href="Index/images/gallery-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+  <a href="Index/images/gamechair.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
         <span class="fa fa-expand"></span>
       </a>
   <div class="desc w-100 px-4">
@@ -256,7 +256,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 
 <div class="col-md-4 ftco-animate">
 <div class="work mb-4 img d-flex align-items-end" style="background-image: url(Index/images/mouse.jpg);">
-  <a href="Index/images/gallery-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+  <a href="Index/images/mouse.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
         <span class="fa fa-expand"></span>
       </a>
   <div class="desc w-100 px-4">
@@ -269,7 +269,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 <div class="col-md-4 ftco-animate">
 <div class="work mb-4 img d-flex align-items-end" style="background-image: url(Index/images/headset.jpg);">
-  <a href="Index/images/gallery-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+  <a href="Index/images/headset.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
         <span class="fa fa-expand"></span>
       </a>
   <div class="desc w-100 px-4">
@@ -282,7 +282,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
 </div>
 <div class="col-md-4 ftco-animate">
 <div class="work mb-4 img d-flex align-items-end" style="background-image: url(Index/images/ssd.jpg);">
-  <a href="images/gallery-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+  <a href="Index/images/ssd.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
         <span class="fa fa-expand"></span>
       </a>
   <div class="desc w-100 px-4">
