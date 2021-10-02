@@ -81,10 +81,13 @@
 			}else{
 				echo "Error:". $sql ."<br>";
 					$link->error;
+				 
+				 
 			}
 		
 		 
 		 }}
+		
 		
 		
 		

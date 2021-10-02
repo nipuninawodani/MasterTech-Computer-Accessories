@@ -212,7 +212,7 @@
 					<input type="hidden" name="item_number" value="<?php echo sprintf("%'.010d", $OID); ?>">
 					<input type="hidden" name="custom" value="<?php echo $user_id; ?>">
 					
-					<input type="hidden" name="shipping" value="200">
+					<input type="hidden" name="shipping" value="10">
 					<input type="hidden" name="address_override" value="1">
 					<input type="hidden" name="address1" value="<?php echo $row['shp_Address'];?>">
 					<input type="hidden" name="city" value="<?php echo $row['shp_City'];?>">
