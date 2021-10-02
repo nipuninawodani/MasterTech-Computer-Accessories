@@ -52,7 +52,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
       <div class="col-md-11 ftco-animate text-center">
         <h1 class="mb-4">Highest Quality computer Solutions</h1>
-        <p><a href="#" class="btn btn-primary mr-md-4 py-3 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
+        <p><a href="./browse.php" class="btn btn-primary mr-md-4 py-3 px-4">Shop Now<span class="ion-ios-arrow-forward"></span></a></p>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
         <div class="d-block services active text-center">
           <div class="icon d-flex align-items-center justify-content-center">
             <span class="flaticon-blin"></span>
-            <img src="Index/images/loc.png" alt="" class="lap" style="height: 50px;">
+            <img src="Index/images/lapicon.jpg" alt="" class="lap" style="height: 50px;">
           </div>
           <div class="media-body">
             <h3 class="heading">Shop</h3>
@@ -493,12 +493,10 @@ if(isset($_COOKIE['Email']) && !(isset($_SESSION['LogedIn']))){
       <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
         <h2 class="footer-heading">Quick Links</h2>
         <ul class="list-unstyled">
-          <li><a href="#" class="py-2 d-block">Home</a></li>
-          <li><a href="#" class="py-2 d-block">About</a></li>
-          <li><a href="#" class="py-2 d-block">Services</a></li>
-          <li><a href="#" class="py-2 d-block">Shop</a></li>
-          <li><a href="#" class="py-2 d-block">Blog</a></li>
-          <li><a href="#" class="py-2 d-block">Contact</a></li>
+          <li><a href="./index.php" class="py-2 d-block">Home</a></li>
+          <li><a href="./about_us&contact_us.php" class="py-2 d-block">About</a></li>
+          <li><a href="./browse.php" class="py-2 d-block">Shop</a></li>
+          <li><a href="./about_us&contact_us.php#contact" class="py-2 d-block">Contact</a></li>
         </ul>
       </div>
       <div class="col-md-6 col-lg-3 mb-4 mb-md-0">

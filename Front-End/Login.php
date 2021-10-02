@@ -23,7 +23,8 @@ include '../PHP/Functions.php';
   </head>
   <body>
     <!-- Start your project here-->
-    <section class="intro">
+    <?php include'header.php' ?>
+    <section class="intro" style="margin-top:95px;height:87%">
       <div class="bg-image h-100">
         <div class="mask d-flex align-items-center h-100" style="background-color: #f3f2f2;">
           <div class="container">
@@ -33,9 +34,9 @@ include '../PHP/Functions.php';
                   <div class="row g-0">
                     <div class="col-md-4 d-none d-md-block">
                       <img
-                        src="https://mdbootstrap.com/img/Photos/Others/sidenav2.jpg"
+                        src="./Index/images/bg.jpg"
                         alt="login form"
-                        class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;"
+                        class="img-fluid" style="border-top-left-radius: 1rem; border-bottom-left-radius: 1rem;object-fit: cover; height:450px"
                       />
                     </div>
                     <div class="col-md-8 d-flex align-items-center">

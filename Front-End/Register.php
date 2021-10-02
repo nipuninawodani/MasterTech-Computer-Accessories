@@ -21,9 +21,10 @@
   </head>
   <body>
     <!-- Start your project here-->
+    <?php include'header.php' ?>
     <section class="intro">
-        <div class="mask d-flex align-items-center h-100 gradient-custom">
-          <div class="container">
+        <div class="mask d-flex align-items-center" style="background-color: #f3f2f2;">
+          <div class="container" style="margin-top:150px;height:90%">
             <div class="row justify-content-center">
               <div class="col-12 col-lg-9 col-xl-7">
                 <div class="card">
@@ -36,7 +37,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="text" id="firstName" name="firstName" class="form-control" />
+                            <input type="text" id="firstName" name="firstName" class="form-control" required />
                             <label class="form-label" for="firstName">First Name</label>
                           </div>
       
@@ -44,7 +45,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="text" id="lastName" name="lastName" class="form-control" />
+                            <input type="text" id="lastName" name="lastName" class="form-control" required />
                             <label class="form-label" for="lastName">Last Name</label>
                           </div>
       
@@ -62,8 +63,9 @@
                               class="form-check-input"
                               type="radio"
                               name="gender"
-                              id="femaleGender"
+                              id="Gender"
                               value="Female"
+                              required
                             />
                             <label class="form-check-label" for="femaleGender">Female</label>
                           </div>
@@ -73,7 +75,7 @@
                               class="form-check-input"
                               type="radio"
                               name="gender"
-                              id="maleGender"
+                              id="Gender"
                               value="Male"
                             />
                             <label class="form-check-label" for="maleGender">Male</label>
@@ -84,7 +86,7 @@
                               class="form-check-input"
                               type="radio"
                               name="gender"
-                              id="otherGender"
+                              id="Gender"
                               value="Other"
                             />
                             <label class="form-check-label" for="otherGender">Other</label>
@@ -97,7 +99,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="email" id="emailAddress" name="emailAddress" class="form-control" />
+                            <input type="email" id="emailAddress" name="emailAddress" class="form-control" required/>
                             <label class="form-label" for="emailAddress">Email</label>
                           </div>
       
@@ -105,7 +107,7 @@
                         <div class="col-md-6 mb-4">
       
                           <div class="form-outline">
-                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" />
+                            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" required/>
                             <label class="form-label" for="phoneNumber">Phone Number</label>
                           </div>
                          
@@ -115,7 +117,7 @@
       
                          
                           <div class="form-outline">
-                            <input type="password" id="password" name="password" class="form-control" />
+                            <input type="password" id="password" name="password" class="form-control" required/>
                             <label class="form-label" for="password">Password input</label>
                           </div>
                           
@@ -125,7 +127,7 @@
       
                          
                           <div class="form-outline">
-                            <input type="password" id="cpassword" name="cpassword" class="form-control" />
+                            <input type="password" id="cpassword" name="cpassword" class="form-control" required/>
                             <label class="form-label" for="cpassword">Confirm Password</label>
                           </div>
       

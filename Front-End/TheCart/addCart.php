@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +24,6 @@
  <body>
 <?php
     require '../../PHP/Functions.php';
-    session_start();
 	$link = dblink();
 	 if(!isset($_SESSION['LogedIn'])){
         echo '<script type="text/javascript"> window.location = "../login.php"</script>';
