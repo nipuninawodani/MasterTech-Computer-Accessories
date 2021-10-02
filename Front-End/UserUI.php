@@ -6,9 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <title>Profile</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -70,7 +69,7 @@
   </header>
   <!--Main Navigation-->
   <!--Main layout-->
-  <main style="margin-top: 58px">
+  <main style="margin-top: 110px">
   <!--Section: My Profile-->
        <section class="mb-4" id="profile">
         <div class="card">
@@ -119,7 +118,7 @@
               </table> 
               <br>
               <div class="col-md-12 d-flex flex-row-reverse align-items-center" style="padding-bottom:10px;padding-right:50px;">
-              <button type="button" class="btn btn-light  btn-floating flex-shrink-0"><i class="fas fa-pen"></i></button>
+              <button type="button" class="btn btn-light  btn-floating flex-shrink-0" data-mdb-toggle="modal" data-mdb-target="#Modalprofile"><i class="fas fa-pen"></i></button>
               </div>
             </div>
           </div>
@@ -128,31 +127,35 @@
       <!--Section: My Profile-->
       <!-- Section: Main chart -->
       <section class="mb-4" id="track">
+        <?php $track = trackpackage($_SESSION['UserID']) ?>
+        <?php while ($row=mysqli_fetch_array($track)) { 
+          if($row['Status']!="Cancled" and $row['Status']!="Completed"){?>
         <div class="card">
           <div class="card-header py-3">
             <h3 class="mb-0 text-center"><strong>Track Package</strong></h3>
           </div>
           <header class="card-header"> In Process </header>
           <div class="card-body">
-              <h6>Order ID: OD45345345435</h6>
+              <h6>Order ID: <?php echo $row['OrderID']; ?></h6>
               <article class="card">
                   <div class="card-body row">
-                      <div class="col"> <strong>Estimated Delivery time:</strong> <br>04 Oct 2021 </div>
+                      <div class="col"> <strong>Estimated Delivery time:</strong> <br><?php $date= new DateTime($row['OrderDate']); $date->modify('+5 day'); echo $date->format('Y-m-d');?> </div>
                       <div class="col"> <strong>Shipping BY:</strong> <br> BLUEDART, | <i class="fa fa-phone"></i>+94712345678 </div>
-                      <div class="col"> <strong>Status:</strong> <br> Picked by the courier </div>
+                      <div class="col"> <strong>Status:</strong> <br> <?php echo $row['Status']; ?> </div>
                       <div class="col"> <strong>Tracking #:</strong> <br> BD045903594059 </div>
                   </div>
               </article>
               <div class="track">
-                  <div class="step active"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
-                  <div class="step active"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
-                  <div class="step active"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
-                  <div class="step"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Ready for pickup</span> </div>
+                  <div class="step <?php if($row['Status']=="Confirmed" or $row['Status']=="OnTheWay" or $row['Status']=="Delivered"){echo "active";} ?>"> <span class="icon"> <i class="fa fa-check"></i> </span> <span class="text">Order confirmed</span> </div>
+                  <div class="step <?php if($row['Status']=="OnTheWay" or $row['Status']=="Delivered"){echo "active";} ?>"> <span class="icon"> <i class="fa fa-user"></i> </span> <span class="text"> Picked by courier</span> </div>
+                  <div class="step <?php if($row['Status']=="OnTheWay" or $row['Status']=="Delivered"){echo "active";} ?>"> <span class="icon"> <i class="fa fa-truck"></i> </span> <span class="text"> On the way </span> </div>
+                  <div class="step <?php if($row['Status']=="Delivered"){echo "active";} ?>"> <span class="icon"> <i class="fa fa-box"></i> </span> <span class="text">Delivered</span> </div>
               </div>
               <hr>
           </div>
             
         </div>
+      <?php } } ?>
       </section>
       <!-- Section: Main chart -->
   
@@ -185,7 +188,7 @@
 
               <!--Card image-->
               <div class="view overlay">
-                <img src="uploads/<?php echo $row['filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID'];?>" 
+                <img src="uploads/<?php echo $row['Filename']; ?>" class="card-img-top" alt="" href="item?ID=<?php echo $row['ProductID'];?>" 
                 style="width: 250px; height: 250px; object-fit: fill;">
                 <a href="item?ID=<?php echo $row['ProductID']; ?>">
                   <div class="mask rgba-white-slight"></div>
@@ -347,6 +350,63 @@
     </div>
   </div>
 </div>
+
+ <!-- Modal USER -->
+<div class="modal fade" id="Modalprofile" tabindex="-1" aria-labelledby="ModalprofileLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalprofileLabel">Edit Profile</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post" enctype="multipart/form-data">
+                <label for="First_Name" class="form-label">Name</label>
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" id="First_Name" name="First_Name" required placeholder="First Name" value="<?php echo $user['First_Name'] ?>">
+                <input type="text" class="form-control" id="Last_Name" name="Last_Name" required placeholder="Last Name" value="<?php echo $user['Last_Name'] ?>">
+                </div><br>
+        
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email" required placeholder="Email" value="<?php echo $user['Email'] ?>"><br>
+                
+                <label for="Mobile" class="form-label">Mobile</label>
+                <input type="text" class="form-control" id="Address2" name="Mobile" required placeholder="Mobile" value="<?php echo $user['Mobile'] ?>"><br>
+                
+                <label for="Password" class="form-label">Change Password</label>
+                <input type="password" class="form-control" id="Password" name="CurrentPassword" placeholder="Type Current Password">
+                <input type="password" class="form-control" id="NewPassword" name="NewPassword" placeholder="Type New Password">
+                <input type="password" class="form-control" id="ConfPassword" name="ConfPassword" placeholder="Confirm New Password">
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+        <button type="submit" id="profilesubmit" name="profilesubmit" class="btn btn-primary">Save changes</button>
+      </div>
+        <?php if (isset($_POST["profilesubmit"])) {
+          if($_POST["CurrentPassword"]!=''){
+                if(validatepw($_SESSION['UserID'],$_POST["CurrentPassword"])){
+                  if($_POST["NewPassword"]==$_POST["ConfPassword"]){
+
+                    updateuser($_SESSION['UserID'],$_POST["NewPassword"],$_POST["Email"],$_POST["Mobile"],$_POST["First_Name"],$_POST["Last_Name"]);
+
+                  }
+                  else{
+                    echo "<p align='Center'>Password and Password Confirmation does not match</p>";
+                  }
+
+                }
+                else{
+                    echo "<p align='Center'>Current Password is invalid</p>";
+                }
+            }
+            updateuser($_SESSION['UserID'],'',$_POST["Email"],$_POST["Mobile"],$_POST["First_Name"],$_POST["Last_Name"]);
+        }?>
+    </form>
+    </div>
+  </div>
+</div>
+
 
   </body>
 </html>

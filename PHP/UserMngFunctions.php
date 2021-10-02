@@ -128,4 +128,18 @@ function updateuser($UserID,$Password,$Email,$Mobile,$First_Name,$Last_Name){
 
 }
 
+function trackpackage($UserID){
+
+	$link = dblink();
+
+	$sql= "SELECT mastertech.ordertb.* FROM mastertech.ordertb Where ordertb.UserID = '$UserID'"; 
+
+	$result = mysqli_query($link,$sql);
+
+	if($result){
+		return $result;
+	} 
+
+}
+
 ?>
