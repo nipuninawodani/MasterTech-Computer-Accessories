@@ -84,7 +84,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Order Conformation</title>
     <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
@@ -93,8 +93,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
     <!-- MDB -->
+	   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="../../css/mdb.min.css" />
-    <link rel="stylesheet" href="./OrderConfirmationEmail.css" />
+    <link rel="stylesheet" href="/OrderConfirmationEmail.css" />
 
     <style type="text/css">
         body,
@@ -205,7 +207,7 @@
     <!-- Right elements -->
     <div class="d-flex align-items-center">
       <!-- Icon -->
-      <a class="text-reset me-3" href="../Front-End/TheCart/my.php">
+      <a class="text-reset me-3" href="../../../Front-End/TheCart/my.php">
         <i class="fas fa-shopping-cart"></i>
       </a>
       <?php
