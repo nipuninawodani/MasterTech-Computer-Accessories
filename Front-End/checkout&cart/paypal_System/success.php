@@ -419,7 +419,7 @@
                                             </tr>
                                             <tr>
                                                 <td width="75%" align="left" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"> total discount</td>
-                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   $discount= $sum+2000-$payment_gross*200;
+                                                <td width="25%" align="right" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 5px 10px;"><?php   $discount= $sum+2000-($payment_gross*200);
 													echo $discount;?> </td>
                                             </tr>
 											 
